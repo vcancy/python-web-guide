@@ -7,7 +7,7 @@ import sphinx.environment
 from docutils.utils import get_source_line
 
 
-def _warn_node(self, msg, node):
+def _warn_node(self, msg, node, **kw):
     """ Monkey patch to ignore specific errors """
     if not msg.startswith(('py:obj reference target not found', 'nonlocal image URI found')):
         self._warnfunc(msg, '%s:%s' % get_source_line(node))
@@ -31,6 +31,7 @@ extensions = [
 
 primary_domain = 'py'
 default_role = 'py:obj'
+highlight_language = "none"
 
 autodoc_member_order = "bysource"
 autoclass_content = "both"

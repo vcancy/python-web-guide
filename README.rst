@@ -1,7 +1,12 @@
 ==============
-天使汇开发指南
+python web 入坑指南
 ==============
 
-作者: 王然 kxxoling@gmail.com
 
 .. image:: https://readthedocs.org/projects/z42/badge/?version=latest
+
+pip install -r requeirements.txt
+make html
+python3 -m http.server
+or
+python -m SimpleHTTPServer
