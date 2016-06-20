@@ -16,8 +16,8 @@ sphinx.environment.BuildEnvironment.warn_node = _warn_node
 
 master_doc = "index"
 
-project = "z42-doc"
-copyright = "2015, ac"
+project = "python-web-guide"
+copyright = "2016, PegasusWang"
 
 version = release = "0.1"
 
