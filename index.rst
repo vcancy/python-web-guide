@@ -6,6 +6,7 @@
     :glob:
     :maxdepth: 1
 
+    base/*
     team/*
     api/*
     backend/index
