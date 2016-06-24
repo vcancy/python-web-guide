@@ -19,7 +19,7 @@ Python入门相对容易又可以干很多事(网站,运维,数据,爬虫等）�
 
 算法与数据结构
 ----------------------------
-编写良好的代码需要了解常用的算法和数据结构，虽然你可能很少会自己实现，但是对于Python语言中一些常用数据结构如list, set, frozenset, dict和collections模块中的OrderedDict, defaultdict, deque, namedtuple, Counter等应该知道什么时候用。
+编写良好的代码需要了解常用的算法和数据结构，虽然你可能很少会自己实现，但是对于Python语言中一些常用数据结构如list, tuple, set, frozenset, dict和collections模块中的OrderedDict, defaultdict, deque, namedtuple, Counter等应该知道什么时候用。
 推荐书籍:
 
 * `《算法导论》 <https://book.douban.com/subject/20432061/>`_
