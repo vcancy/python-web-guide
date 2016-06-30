@@ -18,6 +18,9 @@ Quora等知名应用一开始都是基于Python构建，国内的豆瓣，知乎
 
 * `《Fluent Python》 <https://book.douban.com/subject/26278021/>`_ Python进阶，涉及了很多Python高级主题。
 
+* `《Python3 Cookbook》 <http://python3-cookbook.readthedocs.io/>`_ Python进阶读物。
+
+
 当然还有Python的官方文档作为参考，不过有些文档有些地方比较晦涩，还是推荐书籍入门。网上目前也可以搜到很多免费的电子书。
 如果有时间可以看看国内廖学峰写的Python教程。
 
