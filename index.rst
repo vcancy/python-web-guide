@@ -7,11 +7,12 @@
     :maxdepth: 1
 
     base/*
+    codingstyle/*
+    codingguide/index
     team/*
     api/*
     backend/index
     database/index
-    codingguide/index
     frontend/index
     innertools/index
     skillstack/index
