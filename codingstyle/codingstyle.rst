@@ -65,7 +65,7 @@ Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合P
 
 * 测试最重要的是对架构和设计的影响，不是为了测试而测试。一般难以测试的代码往往是设计不好，耦合严重的代码。没有测试的代码同时也给重构带来压力和隐患。
 
-你可以使用python的unittest或者pytest一些参考书籍:
+你可以使用python的unittest或者pytest进行单元测试。下边是一些参考书籍:
 
 
 * `《pytest: helps you write better programs》 <http://pytest.org/latest/>`_

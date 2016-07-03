@@ -3,3 +3,4 @@ build/*
 _build/*
 .ropeproject
 .DS_Store
+.todo_cache
