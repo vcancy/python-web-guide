@@ -4,7 +4,7 @@
 
 .. toctree::
     :glob:
-    :maxdepth: 1
+    :maxdepth: 2
 
     base/*
     codingstyle/*
@@ -19,4 +19,5 @@
     devtools/index
     mobile/index
     sso/index
+    python-note/index
     *

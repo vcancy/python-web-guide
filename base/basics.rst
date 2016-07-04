@@ -52,6 +52,7 @@ Linux系统
 推荐：
 
 
+* `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《CONQUERING THE COMMAND LINE》 <http://conqueringthecommandline.com/book/>`_
   掌握这上面的命令基本就可以满足日常需求了。
 * `《鸟哥的Linux私房菜.基础学习篇》 <https://book.douban.com/subject/4889838/>`_
@@ -63,7 +64,7 @@ Linux系统
 对于技能需求可以在拉勾上搜一下Python的职位，看看各个公司对Python的要求。或者你可以写个拉勾网的爬虫，对数据做一个简单的统计，笔者当初找工作就是这么干的。
 推荐一些文章供参考:
 
-* `《后端都要学习什么？》 <https://www.zhihu.com/question/24952874>`_
-* `《PYTHON后端相关技术/工具栈》 <http://www.wklken.me/posts/2014/07/26/python-tech-stack.html>`_
-* `《PYTHON招聘需求与技能体系》 <http://www.wklken.me/posts/2013/12/21/python-jd.html>`_
 * `《web开发路线图》 <http://skill.phodal.com/>`_
+* `《后端都要学习什么？》 <https://www.zhihu.com/question/24952874>`_
+* `《PYTHON招聘需求与技能体系》 <http://www.wklken.me/posts/2013/12/21/python-jd.html>`_
+* `《PYTHON后端相关技术/工具栈》 <http://www.wklken.me/posts/2014/07/26/python-tech-stack.html>`_
