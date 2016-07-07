@@ -28,7 +28,7 @@ Quora等知名应用一开始都是基于Python构建，国内的豆瓣，知乎
 
 算法与数据结构
 ----------------------------
-编写良好的代码需要了解常用的算法和数据结构，虽然你可能很少会自己实现，但是对于Python语言中一些常用数据结构如list, tuple, set, frozenset, dict和collections模块中的OrderedDict, defaultdict, deque, namedtuple, Counter等应该知道什么时候用。最主要的还是了解算法中递归，二分等常用思想，写出高效易用的代码。
+编写良好的代码需要了解常用的算法和数据结构，虽然你可能很少会自己实现，但是对于Python语言中一些常用数据结构如list, tuple, set, frozenset, dict和collections模块中的OrderedDict, defaultdict, deque, namedtuple, Counter等应该知道什么时候用。最主要的还是了解算法中递归，二分等常用思想，写出高效易用的代码。如果你想在线练习，可以做一些Acm基础题或者去leetcode等网站刷题。
 推荐书籍:
 
 * `《算法导论》 <https://book.douban.com/subject/20432061/>`_
