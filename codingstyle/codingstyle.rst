@@ -38,7 +38,6 @@ Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合P
     if c < a < b:
         pass
 
-
     # bad
     i = 0
     while i < mylist_length:
@@ -49,7 +48,18 @@ Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合P
     for element in mylist:
        do_something(element)
 
-一些参考帮助写出Pythonic的代码:
+    # bad, 不要使用默认可变对象作为默认参数
+    def f(a, b=[])
+        pass
+
+    # good
+    def f(a, b=None):
+        if b is None:
+            b = []
+
+
+
+Python有一些语法上的坑，比如默认参数只计算一次，不要使用可变类型作为默认参数等，看多了写多了就知道了。一些参考帮助写出Pythonic的代码:
 
 
 * `《Pythonic到底是什么玩意儿？》 <http://blog.csdn.net/gzlaiyonghao/article/details/2762251>`_ 赖勇浩的博客
