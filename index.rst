@@ -8,6 +8,7 @@
 
     base/*
     codingstyle/*
+    idiom/*
     codingguide/index
     team/*
     api/*
