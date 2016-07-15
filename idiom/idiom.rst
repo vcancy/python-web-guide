@@ -34,19 +34,26 @@ Python交换变量
    x, y = y, x
 
 
+Python中替代三目运算符?:
+---------------------------------------------------------------
+.. code-block:: python
+
+   # bad
+   a = 10
+   b = 5
+   if a > b:
+       c = a
+   else:
+       c = b
+   # good
+   c = a if a > b else b
+
+
 拼接字符列表时，用join方法去实现
 ---------------------------------------------------------------
 .. code-block:: python
 
    # bad
-   str_list = ['I', 'am', 'a', 'bug']
-   res_str = ''
-   for s in str_list:
-       res_str += e
-
-   # good
-   str_list = ['I', 'am', 'a', 'bug']
-   res_str = ''.join(str_list)
 
 
 格式化字符时多使用format函数
