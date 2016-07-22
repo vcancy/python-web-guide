@@ -60,5 +60,11 @@ Git
     # 防止http协议每次都要输入密码：
     git config --global credential.helper 'cache --timeout=36000000'      #秒数
 
+    # 暂存和恢复
+    git stash
+    git stash apply
+    git stash apply stash@{1}
+    git stash pop # 重新应用储藏并且从堆栈中移走
+
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
