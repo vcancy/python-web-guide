@@ -51,12 +51,21 @@ Linux系统
 比如常用的文件操作，目录操作，进程操作等。你可以使用类unix系统mac或者linux版本ubuntu作为学习环境。
 推荐：
 
-
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《CONQUERING THE COMMAND LINE》 <http://conqueringthecommandline.com/book/>`_
   掌握这上面的命令基本就可以满足日常需求了。
 * `《鸟哥的Linux私房菜.基础学习篇》 <https://book.douban.com/subject/4889838/>`_
   浅显易懂，入门Linux命令的好书。
+
+
+数据库
+----------
+现在用得比较多的有三种类型的数据库，关系型数据库（mysql等），文档型数据库（mongodb等），和内存型数据库（redis等）。三种数据库各有优势和特色，后端程序员需要了解下不同类型数据库的使用方法和应用场景，灵活应用到后端代码中。关于各种数据库网上已经有不少资料，读者可以自行搜索学习。
+
+
+版本控制
+----------
+目前最流行的应该就是git了。版本控制工具是多人协作必不可少的工具，入门的程序员需要掌握基本的git命令，可以把github作为个人练习的工具。
 
 
 后端技术栈
