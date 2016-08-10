@@ -8,6 +8,8 @@
 --------------------------------------
 不一致的开发风格会给协作开发带来困难，同时也妨碍代码阅读，读代码的时间是多于写代码的，所以有必要统一编码规范。推荐使用pep8或者其子集作为代码规范，使用vim插件python-mode开启pep8和pylint对代码就行检测。如果使用其他编辑器或者IDE工具最好也使用相关插件使代码符合规范。工程上的代码应该尽可能保持清晰易懂，推荐看看requests等优秀的开源库学习下。强烈建议新手看看以下两个参考写出格式规范的代码。
 
+
+* `《PEP8.org》 <http://pep8.org/>`_
 * `《PEP 8 -- Style Guide for Python Code》 <https://www.python.org/dev/peps/pep-0008/>`_
 * `《Google开源项目风格指南-Python风格指南》 <http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/>`_ google风格的docstring比较赞
 

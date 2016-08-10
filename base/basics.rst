@@ -12,6 +12,8 @@ Quora等知名应用一开始都是基于Python构建，国内的豆瓣，知乎
 产品。这里不想挑起语言之争，php，nodejs，java，ruby等都有丰富的生态环境。不过目前来看，技术选型用Python在招聘、学习、培训、敏捷开发等方面还是一个比较折中的选择。
 推荐一下几本个人认为比较好的Python书籍:
 
+* `《python-guide》 <http://docs.python-guide.org/>`_ requests作者写的guide
+
 * `《A Byte of Python》 <http://python.swaroopch.com/>`_ 一百多页的小书，可以快速熟悉Python语言。
 
 * `《Python核心编程》 <https://book.douban.com/subject/26801374/>`_ 比较全面的Python书籍，介绍了Python语言的方方面面。
@@ -19,6 +21,7 @@ Quora等知名应用一开始都是基于Python构建，国内的豆瓣，知乎
 * `《Fluent Python》 <https://book.douban.com/subject/26278021/>`_ Python进阶，涉及了很多Python高级主题。
 
 * `《Python3 Cookbook》 <http://python3-cookbook.readthedocs.io/>`_ Python进阶读物。
+
 * `《Python高级编程》 <http://www.dongwm.com/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/>`_ 小明明的python高级编程
 
 
