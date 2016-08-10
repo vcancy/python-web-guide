@@ -82,6 +82,7 @@ Python有一些语法上的坑，比如默认参数只计算一次，不要使�
 你可以学习使用下python的unittest或者pytest等进行单元测试，以保证代码质量。下边是一些参考书籍:
 
 
+* `《Tips for agile developers》 <http://web2.0coder.com/archives/92>`_
 * `《pytest: helps you write better programs》 <http://pytest.org/latest/>`_
 * `《代码整洁之道》 <https://book.douban.com/subject/5442024/>`_
 * `《编写可读代码的艺术》 <https://book.douban.com/subject/10797189/>`_
