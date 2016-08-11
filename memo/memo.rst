@@ -33,7 +33,10 @@ virtual box虚拟机和windows主机共享目录方法：安装增强工具；wi
 `sudo mount -t vboxsf ubuntu_share /mnt/share/`
 
 文件字符串批量替换
-grep oldString -rl /path | xargs sed -i "s/oldString/newString/g" 
+`grep oldString -rl /path | xargs sed -i "s/oldString/newString/g"`
+
+递归删除某一类型文件
+`find . -name "*.bak" -type f -delete`
 
 
 Tmux
