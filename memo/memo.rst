@@ -38,6 +38,22 @@ virtual box虚拟机和windows主机共享目录方法：安装增强工具；wi
 递归删除某一类型文件
 `find . -name "*.bak" -type f -delete`
 
+代码搜索ag, 比ack快
+
+.. code-block:: python
+
+    sudo apt-get install silversearcher-ag    # ubuntu
+    brew install ag
+    ag string dir/    # search dir
+    ag readme$    # regular expression
+    ag -Q .rb    # Literal Expression Searches, search for the exact pattern
+    ag string -l    # Listing Files (-l)
+    ag string -i    # Case Insensitive Searches (-i)
+    ag string -G py$    # 搜索应py结尾的文件
+    ag readme -l --ignore-dir=railties/lib    # 忽略文件夹
+    ag readme -l --ignore-dir="*.rb"    # 忽略特性类型文件
+    .agignore    # 用来忽略一些vcs，git等文件。
+
 
 Tmux
 -------------------------------------------------------------
