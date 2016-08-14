@@ -72,19 +72,39 @@ crontab
     */5 * *  * * /root/pyhome/crawler/lagou/changeip.sh >> /root/pyhome/crawler/lagou/ip.log 2>&1
 
 
-    # 可以用如下方式执行依赖其他模块的python脚本
+可以用如下方式执行依赖其他模块的python脚本，用run.sh执行run.py，记得chmod +x
+
+.. code-block:: python
 
     #!/usr/bin/env bash
     PREFIX=$(cd "$(dirname "$0")"; pwd)
     cd $PREFIX
     source ~/.bashrc
 
-    python -u proxy_check.py    # -u 参数强制刷新输出
+    python -u run.py    # -u 参数强制刷新输出
 
 
+对于python脚本，给main函数加上装饰器@single_process可以保证只有一个该脚本会执行, pip install single_process，比如下面这个run.py
+
+.. code-block:: shell
+
+    #!/usr/bin/env python
+    # -*- coding:utf-8 -*-
+
+    import time
+    from single_process import single_process    # pip install single_process
 
 
-* `《crontab》 <http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html>`_
+    @single_process    # 保证不会同时执行，原理请看single_process源码
+    def main():
+        time.sleep(10)
+        print(time.time())
+
+    if __name__ == '__main__':
+        main()
+
+
+* `《crontab快速参考》 <http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html>`_
 
 Tmux
 -------------------------------------------------------------
