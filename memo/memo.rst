@@ -72,7 +72,7 @@ crontab
     */5 * *  * * /root/pyhome/crawler/lagou/changeip.sh >> /root/pyhome/crawler/lagou/ip.log 2>&1
 
 
-可以用如下方式执行依赖其他模块的python脚本，用run.sh执行run.py，记得chmod +x
+可以用如下方式执行依赖其他模块的python脚本，用run.sh执行run.py，记得chmod +x可执行权限
 
 .. code-block:: python
 
@@ -82,6 +82,7 @@ crontab
     source ~/.bashrc
 
     python -u run.py    # -u 参数强制刷新输出
+    date
 
 
 对于python脚本，给main函数加上装饰器@single_process可以保证只有一个该脚本会执行, pip install single_process，比如下面这个run.py
