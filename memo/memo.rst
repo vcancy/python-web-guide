@@ -28,17 +28,19 @@ Mac
 Linux相关
 ---------------------------------------------------------------
 
-virtual box虚拟机和windows主机共享目录方法：安装增强工具；win主机设置共享目录例如ubuntu_share；在ubuntu里建立/mnt/share后使用命令：
+.. code-block:: python
 
-`sudo mount -t vboxsf ubuntu_share /mnt/share/`
+    # virtual box虚拟机和windows主机共享目录方法：安装增强工具；win主机设置共享目录例如ubuntu_share；在ubuntu里建立/mnt/share后使用命令：
 
-文件字符串批量替换
-`grep oldString -rl /path | xargs sed -i "s/oldString/newString/g"`
+    sudo mount -t vboxsf ubuntu_share /mnt/share/
 
-递归删除某一类型文件
-`find . -name "*.bak" -type f -delete`
+    # 文件字符串批量替换
+    grep oldString -rl /path | xargs sed -i "s/oldString/newString/g"
 
-代码搜索ag, 比ack快
+    # 递归删除某一类型文件
+    find . -name "*.bak" -type f -delete
+
+代码搜索用ag, 比ack快
 
 .. code-block:: python
 
@@ -54,6 +56,35 @@ virtual box虚拟机和windows主机共享目录方法：安装增强工具；wi
     ag readme -l --ignore-dir="*.rb"    # 忽略特性类型文件
     .agignore    # 用来忽略一些vcs，git等文件。
 
+
+crontab
+-------------------------------------------------------------
+分、时、日、月、周
+
+.. code-block:: python
+
+    # 记得bashrc里边
+    EXPORT EDITOR=vim
+    export PYTHONIOENCODING=UTF-8
+
+    # crontab注意：绝对路径；环境变量；
+    0 */5 * * * python -u /root/wechannel/crawler/sougou_wechat/sougou.py >> /root/wechannel/crawler/sougou_wechat/log 2>&1
+    */5 * *  * * /root/pyhome/crawler/lagou/changeip.sh >> /root/pyhome/crawler/lagou/ip.log 2>&1
+
+
+    # 可以用如下方式执行依赖其他模块的python脚本
+
+    #!/usr/bin/env bash
+    PREFIX=$(cd "$(dirname "$0")"; pwd)
+    cd $PREFIX
+    source ~/.bashrc
+
+    python -u proxy_check.py    # -u 参数强制刷新输出
+
+
+
+
+* `《crontab》 <http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html>`_
 
 Tmux
 -------------------------------------------------------------
