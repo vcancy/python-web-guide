@@ -137,5 +137,8 @@ Git
     git stash apply stash@{1}
     git stash pop # 重新应用储藏并且从堆栈中移走
 
+    # 手残pull错了分支就
+    git reset --hard HEAD~
+
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
