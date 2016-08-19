@@ -21,4 +21,5 @@
     mobile/index
     sso/index
     python-note/index
+    memo/*
     *
