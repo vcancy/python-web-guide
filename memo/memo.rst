@@ -22,6 +22,11 @@ Mac
 
    # 文件字符串批量替换
    find . -name \*.py -exec sed -i '' 's/old/new/g' {} \;
+   # copy that data into the system’s paste buffer
+   cat file.txt | pbcopy
+   # The pbpaste command lets you take data from the system’s paste buffer and write it to standard out.
+   pbcopy < birthday.txt
+   pbpaste | ag name
 
 
 
@@ -39,6 +44,18 @@ Linux相关
 
     # 递归删除某一类型文件
     find . -name "*.bak" -type f -delete
+
+    # 监控某一日志文件变化
+    tail -f t.log
+
+    # 类似mac pbcopy, apt-get install xsel
+    cat README.TXT | xsel  
+    cat README.TXT | xsel -b # 如有问题可以试试-b选项  
+    xsel < README.TXT  
+    # 将readme.txt的文本放入剪贴板  
+   
+    xsel -c  
+    # 清空剪贴板  
 
 代码搜索用ag, 比ack快
 
