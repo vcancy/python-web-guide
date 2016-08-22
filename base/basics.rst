@@ -9,7 +9,7 @@
 Python入门相对容易又可以干很多事(网站,运维,数据,爬虫等），是一门方便的工具语言。2016年TIOBE排名显示Python已经名列第四，成为脚本语言之首。
 国外的Youtube，Instagram，Pinterest，Reddit，
 Quora等知名应用一开始都是基于Python构建，国内的豆瓣，知乎等也是Python应用的典型。这也给了国内Python开发者一阵强心剂，Python的生态环境可以支撑起重量级的
-产品。这里不想挑起语言之争，php，nodejs，java，ruby等都有丰富的生态环境。不过目前来看，技术选型用Python在招聘、学习、培训、敏捷开发等方面还是一个比较折中的选择。
+产品。这里不想挑起语言之争，php，nodejs，java，ruby等都有丰富的生态环境。不过目前来看，技术选型用Python在招聘、学习、培训、敏捷开发等方面还是一个比较折中的选择（主要在于人，而不是语言）。
 推荐一下几本个人认为比较好的Python书籍:
 
 * `《python-guide》 <http://docs.python-guide.org/>`_ requests作者写的guide
