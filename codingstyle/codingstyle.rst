@@ -11,7 +11,8 @@
 * `《PEP8.org》 <http://pep8.org/>`_
 * `《PEP 8 -- Style Guide for Python Code》 <https://www.python.org/dev/peps/pep-0008/>`_
 * `《Google开源项目风格指南-Python风格指南》 <http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/>`_ google风格的docstring比较赞
-
+* `《API_coding_style》 <http://deeplearning.net/software/pylearn/v2_planning/API_coding_style.html>`_
+* `《code-example》 <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`_ 
 
 一个简洁的代码规范：
 
