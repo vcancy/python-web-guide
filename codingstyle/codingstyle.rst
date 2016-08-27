@@ -12,10 +12,10 @@
 * `《PEP 8 -- Style Guide for Python Code》 <https://www.python.org/dev/peps/pep-0008/>`_
 * `《Google开源项目风格指南-Python风格指南》 <http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/>`_ google风格的docstring比较赞
 * `《API_coding_style》 <http://deeplearning.net/software/pylearn/v2_planning/API_coding_style.html>`_
-* `《code-example》 <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`_ 
+* `《code-example》 <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`_
 * `《编写优雅代码》 <http://www.kancloud.cn/kancloud/sina-boot-camp/64003>`_  新浪微博的培训课程，可以学习一下
 * `《烂代码的那些事》 <http://blog.2baxb.me/archives/1343>`_  Axb的自我修养，大神的文章
-* `《三种docstring示例》 <http://bwanamarko.alwaysdata.net/napoleon/format_exception.html>`_ 
+* `《三种docstring示例》 <http://bwanamarko.alwaysdata.net/napoleon/format_exception.html>`_
 
 
 一个简洁的代码规范：
@@ -110,9 +110,11 @@ Python有一些语法上的坑，比如默认参数只计算一次，不要使�
 
 * KISS原则，Keep It Simple, Stupid。能简单的绝对不要复杂，不要炫耀代码技巧，简单可读最重要，后人会感谢你的。
 * DRY原则。就算咱不懂设计模式，只要代码复杂重复了就及时抽取出来，至少不会碰到大问题。
+* 一次只做一件事。尽量避免复杂度过高的逻辑，尽量做到代码简单，意图明确。
 * 高内聚，低耦合。写代码的时候想着怎么测试它就能避免过度复杂，耦合严重的代码。
 * 代码应当易于理解。 《代码大全》、《编写可读代码的艺术》、《代码整洁之道》啥的都是告诉你代码最好自解释，好理解。记住代码首先是给人看的，其次才是让机器执行的，不要过度设计。
 * 不要过早优化。根据二八定律，大部分性能瓶颈只在20%的部分，这些才是真正需要优化的地方。
+* 不要炫技。合适的地方使用合适的技巧，不要过度炫耀语法糖导致维护和理解困难。
 * Think about future, design with flexibility, but only implement for production. 尽量设计良好，避免繁杂和冗余。好的架构和设计都是不断演进的。
 * 文档化。哪些东西该文档化，哪些该注释需要做好，以便新手可以尽快上手。尽量做到代码即文档，tornado的文档和代码就是典范。
 * 不要放过任何错误和异常，一定要做好记录。血泪教训，使用Sentry或其他工具记录好异常发生的信息，为定位bug提供便利，web端的bug一般不好复现。
@@ -142,7 +144,7 @@ Python有一些语法上的坑，比如默认参数只计算一次，不要使�
 
 注释
 --------------------------------------
-有经验的人都知道看别人的代码是一件很痛苦的事情，尤其是没有任何注释的代码（看别人的代码总有一种想骂人的感觉）。代码除了完成需求外，最重要的就是维护和协作，除非你觉得你做的项目活不过仨月(或你自己玩玩的项目随便你怎么艹)，否则就一定要重视代码质量，防止代码腐化(破窗)以至难以协作和维护。有时候比写注释更难的是知道何时写，写什么注释？python里有规范的docstring用来给类和函数进行注释，除了说明功能外，关于github,stackoverflow链接、复杂的传入传出参数（比如嵌套字典作为参数这种你都不注释就很不合适了)，类型说明、需求文档和bug的jira地址等都可以注释。凡是你回头看代码一眼看不出来干啥的，都应该有适当的注释，方便自己也方便别人。当然，最重要的是代码清晰易读，好的命名和编写风格的代码往往是自解释的，看代码大致就可以看出功能。建议就是给所有的模块、类和函数都加上注释，除非一眼能看出来这个东西干啥，否则都应该简洁注释下，让别人不用一行行看你的代码就大概知道你这个东西是干啥的。最后注意的就是一旦函数更改及时更新注释。qiniu的sdk写得就不错，可以去github看看。总之，"Explicit is better than implicit.", 代码里不要有隐晦的东西，一时偷懒将来可能会付出几倍的维护代价，请对将来的自己和他人负责。
+有经验的人都知道看别人的代码是一件很痛苦的事情，尤其是没有任何注释的代码（看别人的代码总有一种想艹他祖宗的感觉）。代码除了完成需求外，最重要的就是维护和协作，除非你觉得你做的项目活不过仨月(或你自己玩玩的项目随便你怎么艹)，否则就一定要重视代码质量，防止代码腐化(破窗)以至难以协作和维护。有时候比写注释更难的是知道何时写，写什么注释？python里有规范的docstring用来给类和函数进行注释，除了说明功能外，关于github,stackoverflow链接、复杂的传入传出参数（比如嵌套字典作为参数这种你都不注释就很不合适了)，类型说明、需求文档和bug的jira地址等都可以注释。凡是你回头看代码一眼看不出来干啥的，都应该有适当的注释，方便自己也方便别人。当然，最重要的是代码清晰易读，好的命名和编写风格的代码往往是自解释的，看代码大致就可以看出功能。建议就是给所有的模块、类和函数都加上注释，除非一眼能看出来这个东西干啥，否则都应该简洁注释下，让别人不用一行行看你的代码就大概知道你这个东西是干啥的。最后注意的就是一旦函数更改及时更新注释。qiniu的sdk写得就不错，可以去github看看。总之，"Explicit is better than implicit.", 代码里不要有隐晦的东西，一时偷懒将来可能会付出几倍的维护代价，请对将来的自己和他人负责。
 
 * `《python docstring》 <http://bwanamarko.alwaysdata.net/napoleon/format_exception.html>`_
 
@@ -163,4 +165,7 @@ Code Review
 
 * `《调试九法》 <http://www.wklken.me/posts/2015/11/29/debugging-9-rules.html>`_
 
-尽量写出对自己也对其他人负责的代码，上边费了牛劲都是在阐述这个显而易见但是没多少人严格遵守的东西。一开始的负责会为以后协作和维护带来极大便利。
+尽量写出对自己也对其他人负责的代码，上边费了牛劲都是在阐述这个显而易见但是没多少人严格遵守的东西。用动态语言写大型项目维护起来要稍麻烦，
+很多新手写代码不注重可维护性，甚至自己写的代码回头自己看都一脸懵逼，问了一句这代码TM是干啥的？
+一开始的负责会为以后协作和维护带来极大便利（当然你想干两天就走让其他人擦屁股就当我没说）。
+最后，很多东西我也在摸索，上面的玩意你就当小白的踩坑记录，随着理解和经验的加深我会不定期更新本篇内容。
