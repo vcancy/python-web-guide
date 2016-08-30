@@ -30,7 +30,7 @@ Mac
 
 
 
-Linux相关
+Ubuntu相关
 ---------------------------------------------------------------
 
 .. code-block:: python
@@ -56,6 +56,9 @@ Linux相关
    
     xsel -c  
     # 清空剪贴板  
+
+    # 可以把代码文件贴到paste.ubuntu.com共享，此命令返回一个网址sudo apt-get install pastebinit 
+    pastebinit -i [filename]
 
 代码搜索用ag, 比ack快
 
