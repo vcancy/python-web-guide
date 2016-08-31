@@ -60,6 +60,13 @@ Ubuntu相关
     # 可以把代码文件贴到paste.ubuntu.com共享，此命令返回一个网址sudo apt-get install pastebinit 
     pastebinit -i [filename]
 
+
+    # json格式化输出
+    echo '{"foo": "lorem", "bar": "ipsum"}' | python -m json.tool
+    python -m json.tool my_json.json
+    # 或者apt-get intsall jq
+    jq . <<< '{ "foo": "lorem", "bar": "ipsum"  }'
+
 代码搜索用ag, 比ack快
 
 .. code-block:: python
