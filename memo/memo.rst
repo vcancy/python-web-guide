@@ -189,3 +189,4 @@ Git
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《slide show》 <http://slideshow-s9.github.io/>`_
+* `《markdown sheet》 <http://commonmark.org/help/>`_
