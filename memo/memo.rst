@@ -173,7 +173,7 @@ Git
     git diff master -- '*.c' '*.h'
 
 
-Html ppt 制作分享用的
+用markdown文件制作html ppt
 -------------------------------------------------------------
 
 .. code-block:: python
@@ -184,7 +184,7 @@ Html ppt 制作分享用的
    gem install slideshow
    slideshow install deck.js
    sudo  pip install https://github.com/joh/when-changed/archive/master.zip
-   when-changed rest.md slideshow  build rest.text -t deck.js
+   when-changed rest.md slideshow  build rest.md -t deck.js
 
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
