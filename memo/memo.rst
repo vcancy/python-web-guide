@@ -12,6 +12,8 @@ Python
    python3.4 -m http.server
    python -m SimpleHTTPServer    # python2
 
+   python -u    # 刷新缓冲，执行脚本重定向结果到文件时候比较有
+
    # logging
    FATAL(50) > ERROR(40) > WARNING(30) > INFO(20) > DEBUG(10)
 
