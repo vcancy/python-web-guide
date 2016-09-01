@@ -173,4 +173,17 @@ Git
     git diff master -- '*.c' '*.h'
 
 
+Html ppt 制作分享用的
+-------------------------------------------------------------
+
+.. code-block:: python
+
+   apt-add-repository ppa:brightbox/ruby-ng
+   apt-get update
+   apt-get install ruby2.2
+   gem install slideshow
+   slideshow install deck.js
+
+
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
+* `《slide show》 <http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html>`_
