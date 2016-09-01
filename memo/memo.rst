@@ -51,15 +51,15 @@ Ubuntu相关
     tail -f t.log
 
     # 类似mac pbcopy, apt-get install xsel
-    cat README.TXT | xsel  
-    cat README.TXT | xsel -b # 如有问题可以试试-b选项  
-    xsel < README.TXT  
-    # 将readme.txt的文本放入剪贴板  
-   
-    xsel -c  
-    # 清空剪贴板  
+    cat README.TXT | xsel
+    cat README.TXT | xsel -b # 如有问题可以试试-b选项
+    xsel < README.TXT
+    # 将readme.txt的文本放入剪贴板
 
-    # 可以把代码文件贴到paste.ubuntu.com共享，此命令返回一个网址sudo apt-get install pastebinit 
+    xsel -c
+    # 清空剪贴板
+
+    # 可以把代码文件贴到paste.ubuntu.com共享，此命令返回一个网址sudo apt-get install pastebinit
     pastebinit -i [filename]
 
 
@@ -183,9 +183,9 @@ Html ppt 制作分享用的
    apt-get install ruby2.2
    gem install slideshow
    slideshow install deck.js
-   sudo  pip install https://github.com/joh/when-changed/archive/master.zip   
-   when-changed rest.md slideshow  build rest.text -t deck.js   
+   sudo  pip install https://github.com/joh/when-changed/archive/master.zip
+   when-changed rest.md slideshow  build rest.text -t deck.js
 
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
-* `《slide show》 <http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html>`_
+* `《slide show》 <http://slideshow-s9.github.io/>`_
