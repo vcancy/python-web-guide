@@ -167,5 +167,8 @@ Git
     # 手残pull错了分支就
     git reset --hard HEAD~
 
+    # 指定文件类型diff
+    git diff master -- '*.c' '*.h'
+
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
