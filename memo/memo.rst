@@ -183,6 +183,8 @@ Html ppt 制作分享用的
    apt-get install ruby2.2
    gem install slideshow
    slideshow install deck.js
+   sudo  pip install https://github.com/joh/when-changed/archive/master.zip   
+   when-changed rest.md slideshow  build rest.text -t deck.js   
 
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
