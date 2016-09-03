@@ -76,6 +76,8 @@ Linux系统
 对于技能需求可以在拉勾上搜一下Python的职位，看看各个公司对Python的要求。或者你可以写个拉勾网的爬虫，对数据做一个简单的统计，笔者当初找工作就是这么干的。
 推荐一些文章供参考:
 
+
+* `《全栈增长工程师指南》 <https://github.com/phodal/growth-ebook>`_
 * `《web开发路线图》 <http://skill.phodal.com/>`_
 * `《后端都要学习什么？》 <https://www.zhihu.com/question/24952874>`_
 * `《PYTHON招聘需求与技能体系》 <http://www.wklken.me/posts/2013/12/21/python-jd.html>`_
