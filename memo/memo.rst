@@ -171,6 +171,8 @@ Git
 
     # 指定文件类型diff
     git diff master -- '*.c' '*.h'
+    # 带有上下文的diff
+    git diff master --no-prefix -U1000
 
 
 用markdown文件制作html ppt
