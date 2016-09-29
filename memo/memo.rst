@@ -29,6 +29,7 @@ Mac
    # The pbpaste command lets you take data from the system’s paste buffer and write it to standard out.
    pbcopy < birthday.txt
    pbpaste | ag name
+   pbpaste > filename
 
 
 
