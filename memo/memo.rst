@@ -69,6 +69,10 @@ Ubuntu相关
     # 或者apt-get intsall jq
     jq . <<< '{ "foo": "lorem", "bar": "ipsum"  }'
 
+
+    # 进程相关
+    dmesg | egrep -i -B100 'killed process'   # 查看被杀死进程信息
+
 代码搜索用ag, 比ack快
 
 .. code-block:: python
