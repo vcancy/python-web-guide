@@ -41,6 +41,9 @@ Ubuntu相关
 
     sudo mount -t vboxsf ubuntu_share /mnt/share/
 
+    # 映射capslock 为　ctrl
+    setxkbmap -layout us -option ctrl:nocaps
+
     # 文件字符串批量替换
     grep oldString -rl /path | xargs sed -i "s/oldString/newString/g"
 
