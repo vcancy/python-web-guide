@@ -42,6 +42,9 @@ Ubuntu相关
 
     sudo mount -t vboxsf ubuntu_share /mnt/share/
 
+    # 映射capslock 为　ctrl
+    setxkbmap -layout us -option ctrl:nocaps
+
     # 文件字符串批量替换
     grep oldString -rl /path | xargs sed -i "s/oldString/newString/g"
 
@@ -69,6 +72,10 @@ Ubuntu相关
     python -m json.tool my_json.json
     # 或者apt-get intsall jq
     jq . <<< '{ "foo": "lorem", "bar": "ipsum"  }'
+
+
+    # 进程相关
+    dmesg | egrep -i -B100 'killed process'   # 查看被杀死进程信息
 
 代码搜索用ag, 比ack快
 
@@ -172,6 +179,8 @@ Git
 
     # 指定文件类型diff
     git diff master -- '*.c' '*.h'
+    # 带有上下文的diff
+    git diff master --no-prefix -U1000
 
 
 用markdown文件制作html ppt
@@ -191,3 +200,4 @@ Git
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《slide show》 <http://slideshow-s9.github.io/>`_
 * `《markdown sheet》 <http://commonmark.org/help/>`_
+* `《CONQUERING THE COMMAND LINE》 <http://conqueringthecommandline.com/book/>`_
