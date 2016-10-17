@@ -158,6 +158,17 @@ Git
 
 .. code-block:: python
 
+    # .gitconfig配置用如下配置可以使用pycharm的diff和merge工具（已经安装pycharm）
+    [diff]
+        tool = pycharm
+    [difftool "pycharm"]
+        cmd = /usr/local/bin/charm diff "$LOCAL" "$REMOTE" && echo "Press enter to continue..." && read
+    [merge]
+        tool = pycharm
+        keepBackup = false
+    [mergetool "pycharm"]
+        cmd = /usr/local/bin/charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+
     # 用来review：
     git log --since=1.days --committer=PegasusWang --author=PegasusWang
     git diff commit1 commit2
@@ -181,6 +192,7 @@ Git
     git diff master -- '*.c' '*.h'
     # 带有上下文的diff
     git diff master --no-prefix -U1000
+
 
 
 用markdown文件制作html ppt
