@@ -10,6 +10,7 @@ Python入门相对容易又可以干很多事(网站,运维,数据,爬虫等）�
 国外的Youtube，Instagram，Pinterest，Reddit，
 Quora等知名应用一开始都是基于Python构建，国内的豆瓣，知乎，果壳等也是Python应用的典型。这也给了国内Python开发者一阵强心剂，Python的生态环境可以支撑起重量级的
 产品。这里不想挑起语言之争，php，nodejs，java，ruby等都有丰富的生态环境。不过目前来看，技术选型用Python在招聘、学习、培训、敏捷开发等方面还是一个比较折中的选择（主要在于人，而不是语言）。
+python，ruby之类的语言优势在于其生产力，你能在极短时间内就搭建出原型从而赢得产品竞争。
 推荐一下几本个人认为比较好的Python书籍:
 
 * `《python-guide》 <http://docs.python-guide.org/>`_ requests作者写的guide
@@ -74,6 +75,8 @@ Linux系统
 后端技术栈
 ----------
 对于技能需求可以在拉勾上搜一下Python的职位，看看各个公司对Python的要求。或者你可以写个拉勾网的爬虫，对数据做一个简单的统计，笔者当初找工作就是这么干的。
+另外，真正做项目还需要你熟悉python的各种库和框架，比如django/flask/tornado/requests/sqlalchemy/unittest/celery等等，掌握了合适的工具才能快速上手做东西，公司恨不得你第一天入职第二天就能写项目。
+所以，在你入了门以后请尽快熟悉python web的技术栈。公司不管你会什么算法，只在乎你的生产力。
 推荐一些文章供参考:
 
 
