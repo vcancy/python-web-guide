@@ -210,8 +210,8 @@ Git
    slideshow install deck.js
    sudo  pip install https://github.com/joh/when-changed/archive/master.zip
    when-changed rest.md slideshow  build rest.md -t deck.js
-   # mac: brew install fswatch
-   fswatch ~/path/to/watch ~/script/to/run/when/files/change.sh
+   # mac: brew install fswatch, http://stackoverflow.com/questions/1515730/is-there-a-command-like-watch-or-inotifywait-on-the-mac
+   fswatch -o ~/path/to/watch | xargs -n1 ~/script/to/run/when/files/change.sh
 
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
