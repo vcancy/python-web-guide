@@ -194,7 +194,7 @@ Git
     # 指定文件类型diff
     git diff master -- '*.c' '*.h'
     # 带有上下文的diff
-    git diff master --no-prefix -U1000
+   j git diff master --no-prefix -U999
 
 
 
@@ -210,6 +210,8 @@ Git
    slideshow install deck.js
    sudo  pip install https://github.com/joh/when-changed/archive/master.zip
    when-changed rest.md slideshow  build rest.md -t deck.js
+   # mac: brew install fswatch
+   fswatch ~/path/to/watch ~/script/to/run/when/files/change.sh
 
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
