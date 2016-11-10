@@ -12,10 +12,13 @@ Python
    python3.4 -m http.server
    python -m SimpleHTTPServer    # python2
 
-   python -u    # 刷新缓冲，执行脚本重定向结果到文件时候比较有
+   python -u    # 刷新缓冲，执行脚本重定向结果到文件时候比较有用
 
    # logging
    FATAL(50) > ERROR(40) > WARNING(30) > INFO(20) > DEBUG(10)
+
+   # 使用virtualenv制定python版本
+   virtualenv -p /usr/bin/python2.7 ENV2.7
 
 
 Mac
@@ -158,6 +161,17 @@ Git
 
 .. code-block:: python
 
+    # .gitconfig配置用如下配置可以使用pycharm的diff和merge工具（已经安装pycharm）
+    [diff]
+        tool = pycharm
+    [difftool "pycharm"]
+        cmd = /usr/local/bin/charm diff "$LOCAL" "$REMOTE" && echo "Press enter to continue..." && read
+    [merge]
+        tool = pycharm
+        keepBackup = false
+    [mergetool "pycharm"]
+        cmd = /usr/local/bin/charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+
     # 用来review：
     git log --since=1.days --committer=PegasusWang --author=PegasusWang
     git diff commit1 commit2
@@ -181,6 +195,7 @@ Git
     git diff master -- '*.c' '*.h'
     # 带有上下文的diff
     git diff master --no-prefix -U1000
+
 
 
 用markdown文件制作html ppt
