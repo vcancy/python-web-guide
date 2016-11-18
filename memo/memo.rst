@@ -25,7 +25,7 @@ Mac
 ---------------------------------------------------------------
 .. code-block:: python
 
-   # 文件字符串批量替换
+   # 文件字符串批量替换，git项目里替换的时候注意指定文件类型，防止破坏git信息
    find . -name \*.py -exec sed -i '' 's/old/new/g' {} \;
    # copy that data into the system’s paste buffer
    cat file.txt | pbcopy
@@ -40,6 +40,9 @@ Ubuntu相关
 ---------------------------------------------------------------
 
 .. code-block:: python
+
+    # 查看版本
+    lsb_release -a
 
     # virtual box虚拟机和windows主机共享目录方法：安装增强工具；win主机设置共享目录例如ubuntu_share；在ubuntu里建立/mnt/share后使用命令：
 
