@@ -154,6 +154,8 @@ Tmux
 
    tmux rename -t oriname newname
    tmux att -t name -d               # -d 不同窗口全屏
+   # 如果手贱在本机tmux里又ssh到服务器又进入服务器的tmux怎么办
+   c-b c-b d
 
 
 Git
