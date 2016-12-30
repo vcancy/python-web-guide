@@ -13,8 +13,9 @@
 - zsh。替代原生的bash shell，提供了好多方便的特性。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码。
 - item2(mac)。替代原生的终端。
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
-- autojump。方便在命令行里来回跳转。  
+- autojump。方便在命令行里来回跳转。
 
+* `《使用vim+tmux+zsh+autojump高效工作》 <http://ningning.today/2016/11/09/tools/vim-tmux-zsh-autojump/>`_
 
 日志收集工具
 --------------------------------------
