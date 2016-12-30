@@ -193,6 +193,8 @@ Git
 
     # 手残pull错了分支就
     git reset --hard HEAD~
+    # 手残add错了就
+    git reset file # git reset 撤销所有add
 
     # 指定文件类型diff
     git diff master -- '*.c' '*.h'
