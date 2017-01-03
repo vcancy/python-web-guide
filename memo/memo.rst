@@ -204,6 +204,15 @@ Git
    j git diff master --no-prefix -U999
 
 
+vim
+----
+
+.. code-block:: vim
+
+    " http://stackoverflow.com/questions/9104706/how-can-i-convert-spaces-to-tabs-in-vim-or-linux
+   :set tabstop=2      " To match the sample file
+   :set noexpandtab    " Use tabs, not spaces
+   :%retab!            " Retabulate the whole file，替换tab为空格
 
 用markdown文件制作html ppt
 -------------------------------------------------------------
