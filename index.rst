@@ -10,6 +10,7 @@
     codingstyle/*
     codingtools/*
     idiom/*
+    algorithms/*
     codingguide/index
     team/*
     api/*
