@@ -505,7 +505,7 @@ Abstract Factory(抽象工厂: 解决复杂对象创建问题)
 --------------
 
 7: The Flyweight Pattern(享元模式: 实现对象复用从而改善资源使用)
-____________________________________________________________________
+-------------------------------------------------------------------
 
     Flyweight design pattern is a technique used to minimize memory usage and improve performance by introducing data sharing between similar objects.
 
@@ -947,8 +947,8 @@ dispatching来实现，以一个事件驱动系统来说明：
 12: The Interpreter Pattern(解释器模式：用来实现Domain Specific Language(DSL))
 ------------------------------------------------------------------------------
 
-本章我们实现一个简单的控制大门Gate类的DSL。使用python3.5内置的\ `pyparsing <http://infohost.nmt.edu/tcc/help/pubs/pyparsing/web/index.html>`__\ 来解析我们定义的控制大门的语法命令。
-pyparsing自带了很多有用的函数和类帮助我们从文本中抽取需要的信息，比如我们方便地处理c++源文件中的注释:
+本章我们实现一个简单的控制大门Gate类的DSL。使用\ `pyparsing <http://infohost.nmt.edu/tcc/help/pubs/pyparsing/web/index.html>`__\ 来解析我们定义的控制大门的语法命令。
+pyparsing自带了很多有用的函数和类帮助我们从文本中抽取需要的信息，比如我们方便地处理c++源文件中的注释:(`pip install pyparsing`)
 
 ::
 
