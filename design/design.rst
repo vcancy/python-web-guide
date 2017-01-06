@@ -250,6 +250,7 @@ Abstract Factory(抽象工厂: 解决复杂对象创建问题)
    inserts copies into it of the objects found in the original."
 
 ::
+
     import copy
     from collections import OrderedDict
 
