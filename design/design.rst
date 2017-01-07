@@ -18,8 +18,11 @@ Patterns》的读书笔记，涵盖大部分设计模式(力求pythonic实现)�
 
 先来看三种创建模式中的第一种工厂模式。
 解释：处理对象创建，客户端可以申请一个对象而不用知道对象被哪个class创建。可以方便地解耦对象的使用和创建。有两种实现，工厂方法和抽象工厂.
-### Factory
-Method(工厂方法)：执行单独的函数，通过传参提供需要的对象的信息。通过一个demo看看例子:
+
+Method(工厂方法)：
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+执行单独的函数，通过传参提供需要的对象的信息。通过一个demo看看例子:
 
 ::
 
@@ -57,7 +60,7 @@ Method(工厂方法)：执行单独的函数，通过传参提供需要的对象
         return connector(filepath)
 
 Abstract Factory(抽象工厂: 解决复杂对象创建问题)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 工厂方法适合对象种类较少的情况，如果有多种不同类型对象需要创建，使用抽象工厂模式。以实现一个游戏的例子说明，在一个抽象工厂类里实现多个关联对象的创建：
 
@@ -1422,3 +1425,75 @@ Peters在2002年设计的结合了合并排序和插入排序的\ `Timsort <http
     class MyClass(BaseClass, metaclass=Singleton):
         pass
 
+
+--------------
+
+面向过程与面向对象
+--------------------------------------
+设计模式讲完了，来看看python中OOP的相关东西。笔者在经历过的两家公司见到过各种python程序员，之前的公司有python高手习惯写OOP风格的(给我很深影响)，目前所在公司大部分人对python的面向对象不是很熟，写出来的基本都是过程式的。
+
+- 过程式: 基本都是一个个函数(function)来实现功能，你给我一些参数，我对参数做出各种操作，返回需要的结果。
+- 面向对象：把资源抽象成一个类，数据(data)和方法(method)的集合。在构造函数中进行数据属性的初始化，在方法中进行对象数据的各种操作。
+
+哪种方式更好这个我暂时没有定论，编程规范也不会说强制你使用哪种风格。编码中往往没有绝对正确的，只有相对更优的，如果不好定论，那就一致，易读，易用，易维护的风格优先。
+
+--------------
+
+python中的抽象基类
+--------------------------------------
+在python中我们可以使用内置的abc(abstract base class)模块来实现抽象基类。什么时候需要一个抽象基类呢？
+
+- 抽象基类是没法被实例化的。
+- 抽象基类中定义抽象方法强制子类去实现。
+
+::
+
+    # 为了实现这两个特性，我们可以这么写
+    class Base:
+        def foo(self):
+            raise NotImplementedError()
+
+        def bar(self):
+            raise NotImplementedError()
+
+    class Concrete(Base):
+        def foo(self):
+            return 'foo() called'
+
+        # Oh no, we forgot to override bar()...
+        # def bar(self):
+        #     return "bar() called"
+
+但是这么写依然可以实例化Base，python2.6以后引入了abc模块帮助我们实现这个功能。
+
+::
+
+    from abc import ABCMeta, abstractmethod
+
+    class Base(metaclass=ABCMeta):
+        @abstractmethod
+        def foo(self):
+            pass
+
+        @abstractmethod
+        def bar(self):
+            pass
+
+    class Concrete(Base):
+        def foo(self):
+            pass
+        # We forget to declare bar() again...
+
+使用这种方式如果没有在子类里实现bar方法你是没有办法实例化子类的。
+
+* `《Abstract Base Classes in Python》 <https://dbader.org/blog/abstract-base-classes-in-python>`_
+* `《http://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python》 <http://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python>`_
+* `《https://docs.python.org/2/library/abc.html》 <https://docs.python.org/2/library/abc.html>`_
+
+
+--------------
+
+python中的Mixin
+--------------------------------------
+Mixin是为了给一个类扩充功能用的，它也没法被实例化。我们可以在Mixin类里实现一些方法给类扩充功能。你可能会问了，那为啥不直接写在
+类里头，比如用@staticmethod方法(我就有这个疑问)？我的理解是这样的，为了『高内聚』。如果你用过pylint检测代码，你会发现你在写类的一个方法时，如果在写一个method时没有使用到任何self里的东西，pylint会给提示『R0201 Method could be a function [pylint]』，意思是这个方法可以可以单独写成一个函数，不必要写在类里。也就是说，只有一个类里实现的方法都是使用了self里的数据时才能成为高内聚的（我不知道我这样理解对不对）。例子：flask_login插件有个UserMixin给定义的用户类实现登录功能。

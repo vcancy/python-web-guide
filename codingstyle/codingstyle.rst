@@ -132,13 +132,13 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 
 还有OOP那一套:
 
+* 单一职责原则(Single-Responsibility Principle)
 * 开闭原则(Open-Closed Principle)
-* 依赖倒置原则(Dependence Inversion Principle)
-* 接口隔离原则(Interface Segregation Principle)
 * 里氏代换原则(Liskov Substitution Principle)
+* 接口隔离原则(Interface Segregation Principle)
+* 依赖倒置原则(Dependence Inversion Principle)
 * 迪米特原则(Law of Demeter)
 * 合成复用原则(Composite/Aggregate Reuse Principle)
-* 单一职责原则(Single-Responsibility Principle)
 
 
 python代码坏味道(新手经常犯的错误)
@@ -151,10 +151,11 @@ python代码坏味道(新手经常犯的错误)
 - 变量名乱起，看不出类型，加重理解负担。我在想是不是动态语言用匈牙利命名法要好一些
 - 不遵守pep8，没有pylint检测，打开代码一堆语法警告，老子的编辑器满眼都是warnning，编辑器用不好就老老实实用pycharm，用编辑器就老老实实装好语法检测和pylint检测插件，没有插件请考虑换一个editor
 - 没有单元测试，不知道怎么写测试（print大法好？）。没有一点专业精神，或许和python大部分都是自学的业余选手有关。
-- 超长函数，没有复用和拆分，我智商低，不能理解好几屏都翻不完的，见谅。这么长居然还tm能工作，牛逼
+- 超长函数，没有复用和拆分，抱歉我智商低，不能理解好几屏都翻不完的，见谅。这么长居然还tm能工作，牛逼(我发现越是新手写的代码越难理解)
 - 到处print，debug的时候加上，上线再删除（累不累亲？），logging模块很受冷落
 - 上来就try/except了，把异常都捕获了，吞掉异常导致排错困难
 - 没注意可变类型和非可变类型，传入可变类型并在函数里修改了参数，坑。。。
+- 滥用 `(*args, **kwargs)` 导致函数接口模糊，有类似接口应该明确用docstring写明参数。
 - 没有逻辑分块，没有美感（这个就算了），就算不限制一行超过80列，也不能写一行写几百列吧，左右转头脑瓜子疼
 
 嗯，一开始就开启pep8和pylint检测能显著提升代码质量（各种错误警告逼着你写出高智力代码）。咱写不了诗一样的代码，也不能写shǐ 一样的代码。
