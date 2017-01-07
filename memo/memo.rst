@@ -213,9 +213,13 @@ vim
    :set tabstop=2      " To match the sample file
    :set noexpandtab    " Use tabs, not spaces
    :%retab!            " Retabulate the whole file，替换tab为空格
+   map <F4> :%retab! <CR> :w <CR> " 映射一个命令
 
    "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjF6JzH8aTRAhXiqVQKHUQBDcIQFggcMAA&url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F71323%2Fhow-to-replace-a-character-by-a-newline-in-vim&usg=AFQjCNGer9onNl_RExCUdE75ctTvVx8WGA&sig2=WrcRh9RFNvN6bUZoHpJvDg
    "vim替换成换行符使用\r不是\n
+   " 多行加上引号 http://stackoverflow.com/questions/9055998/vim-add-tag-to-multiple-lines-with-surround-vim"
+   :1,3norm yss"
+
 
 用markdown文件制作html ppt
 -------------------------------------------------------------
