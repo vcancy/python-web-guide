@@ -15,6 +15,8 @@
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
 - autojump。方便在命令行里来回跳转。
 
+一定要有个趁手的开发工具，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道。
+
 * `《使用vim+tmux+zsh+autojump高效工作》 <http://ningning.today/2016/11/09/tools/vim-tmux-zsh-autojump/>`_
 
 日志收集工具
