@@ -104,8 +104,7 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 * `《代码整洁之道》 <https://book.douban.com/subject/5442024/>`_
 * `《编写可读代码的艺术》 <https://book.douban.com/subject/10797189/>`_
 * `《重构-改善既有代码设计》 <https://book.douban.com/subject/4262627/>`_
-* `《软件调试修炼之道》 <https://book.douban.com/subject/6398127/>`_
-  了解下调试和跟踪技术。
+* `《软件调试修炼之道》 <https://book.douban.com/subject/6398127/>`_ 了解下调试和跟踪技术。
 
 
 一些常见原则
