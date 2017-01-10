@@ -356,3 +356,4 @@ EAFP可以理解成一切按正常的逻辑编码，不用管可能出现的错�
 * `《Python高级编程slide》 <http://www.dongwm.com/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/>`_
 * `《Effective Python》 <https://book.douban.com/subject/26312313/>`_
 * `《编写高质量代码：改善Python程序的91个建议》 <https://book.douban.com/subject/25910544/>`_
+* `《Code Like a Pythonista: Idiomatic Python》 <http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html>`_
