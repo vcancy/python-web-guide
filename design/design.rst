@@ -1433,7 +1433,7 @@ Peters在2002年设计的结合了合并排序和插入排序的\ `Timsort <http
 设计模式讲完了，来看看python中OOP的相关东西。笔者在经历过的两家公司见到过各种python程序员，之前的公司有python高手习惯写OOP风格的(给我很深影响)，目前所在公司大部分人对python的面向对象不是很熟，写出来的基本都是过程式的。
 
 - 过程式: 基本都是一个个函数(function)来实现功能，你给我一些参数，我对参数做出各种操作，返回需要的结果。
-- 面向对象：把资源抽象成一个类，数据(data)和方法(method)的集合。在构造函数中进行数据属性的初始化，在方法中进行对象数据的各种操作。
+- 面向对象：把资源抽象成一个类，数据(data)和方法(method)的集合。在构造函数中进行数据属性的初始化，在方法中进行对象数据的各种操作。实际在python里，一切皆对象。
 
 哪种方式更好这个我暂时没有定论，编程规范也不会说强制你使用哪种风格。编码中往往没有绝对正确的，只有相对更优的，如果不好定论，那就一致，易读，易用，易维护的风格优先。一般来说，能用函数实现的优先使用函数，相比类更简单易维护。如果多个过程共享一些状态（操作+数据），这时候使用类就比较适合。使用类的时候尽量保持继承层级简单，如果同样可以完成功能，优先使用组合而非继承。
 
@@ -1484,7 +1484,7 @@ python中的抽象基类
             pass
         # We forget to declare bar() again...
 
-使用这种方式如果没有在子类里实现bar方法你是没有办法实例化子类的。
+使用这种方式如果没有在子类里实现bar方法你是没有办法实例化子类的。合理使用抽象基类定义明确的接口。另外应该优先使用collections定义的抽象基类，比如要实现一个容器我们可以继承 collections.Container
 
 * `《Abstract Base Classes in Python》 <https://dbader.org/blog/abstract-base-classes-in-python>`_
 * `《http://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python》 <http://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python>`_
