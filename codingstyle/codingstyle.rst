@@ -83,7 +83,7 @@ Python有一些语法上的坑，比如默认参数只计算一次，不要使�
 * `《Learning the Pythonic Way》 <https://www.cs.cmu.edu/~srini/15-441/F11/lectures/r04-python.pdf>`_ 一个cmu的课件
 * `《Writing Idiomatic Python3》 <http://share.sm3.su/writing_idiomatic_python_3.pdf>`_ 一本免费小书
 * `《编写高质量代码：改善Python程序的91个建议》 <https://book.douban.com/subject/25910544/>`_ 给国人的书捧捧场^_^
-* `《好好写代码》 <好好写代码>`_ 豆瓣工程师董伟明的文章
+* `《Code Like a Pythonista: Idiomatic Python》 <http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html>`_ 
 
 
 敏捷与TDD
