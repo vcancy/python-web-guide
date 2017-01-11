@@ -67,7 +67,7 @@ Python中替代三目运算符?:
     str1 = "myname : %s my age : %d" % (name, age)
     # good
     str2 = "myname : {} my age {}".format(name, age)
-    
+
 
 使用列表或者字典comprehension
 ---------------------------------------------------------------
@@ -102,7 +102,7 @@ Python中替代三目运算符?:
    # good
    if l:    # 实际调用l.__len__() == 0
        pass
-   
+
    # bad
    if something == None:
    # good, None 是单例对象
@@ -133,16 +133,16 @@ Python中替代三目运算符?:
    def function(l = []):
     l.append(1)
     return l
- 
+
     print function()
     print function()
-    print function()  
+    print function()
 
     # print
     [1]
     [1, 1]
     [1, 1, 1]
-        
+
     # good 使用None作为可变对象占位符
     def function(l=None):
         if l is None:
@@ -160,22 +160,22 @@ Python中替代三目运算符?:
         for x in range(1, 3):
             for y in range(1, 3):
                 print(str(x + y) + '\n')
- 
+
     def print_subtraction_table():
         for x in range(1, 3):
             for y in range(1, 3):
                 print(str(x - y) + '\n')
- 
+
     def print_multiplication_table():
             for x in range(1, 3):
                 for y in range(1, 3):
                     print(str(x * y) + '\n')
- 
+
     def print_division_table():
         for x in range(1, 3):
             for y in range(1, 3):
                 print(str(x / y) + '\n')
- 
+
     print_addition_table()
     print_subtraction_table()
     print_multiplication_table()
@@ -183,12 +183,12 @@ Python中替代三目运算符?:
 
     # good, python一切都是对象，可以函数作为参数，类似技巧可以用来简化代码
     import operator as op
- 
+
     def print_table(operator):
         for x in range(1, 3):
             for y in range(1, 3):
                 print(str(operator(x, y)) + '\n')
- 
+
     for operator in (op.add, op.sub, op.mul, op.div):
         print_table(operator)
 
@@ -215,7 +215,7 @@ EAFP可以理解成一切按正常的逻辑编码，不用管可能出现的错�
         except NameError:
             print 'person must be not null!'
 
-其实用EAFP风格的代码最大的好处是代码逻辑清晰，而LBYL会导致本来两句话说清楚的事，往往因为穿插了很多条件检查的语句使代码逻辑变得混乱。
+其实用EAFP风格的代码最大的好处是代码逻辑清晰，而LBYL会导致本来两句话说清楚的事，往往因为穿插了很多条件检查的语句使代码逻辑变得混乱。Python社区更提倡EAFP形式的。
 
 
 用dict对象完成switch...case...的功能
@@ -275,7 +275,7 @@ EAFP可以理解成一切按正常的逻辑编码，不用管可能出现的错�
             return 1
         else:
             return int(some_object)
- 
+
     print(get_size('hello'))
     print(get_size([1, 2, 3, 4, 5]))
     print(get_size(10.0))
@@ -300,10 +300,10 @@ EAFP可以理解成一切按正常的逻辑编码，不用管可能出现的错�
     class Connection(object):
     def execute(self, sql):
         raise Exception('ohoh, exception!')
- 
+
     def close(self):
         print 'closed the Connection'
- 
+
     try:
         conn = Connection()
         conn.execute('select * from t_users')
@@ -314,16 +314,16 @@ EAFP可以理解成一切按正常的逻辑编码，不用管可能出现的错�
     class Connection(object):
     def execute(self, sql):
         raise Exception('ohoh, exception!')
- 
+
     def close(self):
         print 'closed the Connection'
- 
+
     def __enter__(self):
         return self
- 
+
     def __exit__(self, errorType, errorValue, error):
         self.close()
- 
+
     with Connection() as conn:
         conn.execute('select * from t_users')
 
@@ -357,3 +357,4 @@ EAFP可以理解成一切按正常的逻辑编码，不用管可能出现的错�
 * `《Effective Python》 <https://book.douban.com/subject/26312313/>`_
 * `《编写高质量代码：改善Python程序的91个建议》 <https://book.douban.com/subject/25910544/>`_
 * `《Code Like a Pythonista: Idiomatic Python》 <http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html>`_
+* `《The Little Book of Python Anti-Patterns》 <http://docs.quantifiedcode.com/python-code-patterns/>`_
