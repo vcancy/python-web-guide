@@ -207,6 +207,16 @@ Git
     git reset <file>
     git reset    # undo all
 
+    # 查看add后的diff
+    git diff --staged
+
+    # rebase改变历史, 永远不要用在master分之，别人有可能使用你的分之时也不要用
+    # only change history for commits that have not yet been pushed
+    # master has changed since I stared my feature branch, and I want bo bring my branch up to date with master. - Dont't merge. rebase
+    # rebase: finds the merge base; cherry-picks all commits; reassigns the branch pointer.
+    # then git push -f
+    # git rebase --abort
+
 
 vim
 ----
