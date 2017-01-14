@@ -23,7 +23,7 @@
 - 格式请遵守pep8,务必开启编辑器的pylint和pep8检测。vim请试试python-mode插件。
 - 模块、类和函数请使用docstring格式注释，除显而易见的代码，每个函数应该简洁地说明函数作用，函数参数说明和类型，返回值和类型。对于复杂的传入参数和返回值最好把示例附上。如有引用，可以把jira，github，stackoverflow，需求文档地址附上。 良好的文档和注释很考验人的判断（何时注释）和表达能力（注释什么）。
 - 动态语言的变量命名尽量可以从名称就知道其类型，比如url_list, info_dict_list，降低阅读和理解的难度。(我的感觉就是动态语言易编写，写不好后期更难维护)
-- 风格上衡量不了请参考知名开源项目的做法。以可读性和维护性作为标准。
+- 风格上衡量不了请参考知名开源项目的做法。以可读性和维护性作为标准。(比如知名网站reddit的python代码已经开源了，可以作为参考)
 
 * `《Python 工匠：善用变量来改善代码质量》 <http://www.zlovezl.cn/articles/python-using-variables-well/>`_ 动态语言命名尽量可以表达出类型，否则不好维护
 
@@ -168,7 +168,7 @@ python代码坏味道(新手经常犯的错误)
 - 保持函数参数尽量使简单数据类型，你传入dict不写docstring我知道字典有哪些字段？
 - 函数要么修改传入的可变参数，要么返回一个值。请不要两者同时做。
 - 超长函数，没有复用和拆分，抱歉我智商低，不能理解好几屏都翻不完的，见谅。这么长居然还tm能工作，牛逼(我发现越是新手写的代码越难理解,我实习那会总被说代码写得像面条)
-- 函数圈复杂度太高，一堆嵌套逻辑判断，导致测试难以覆盖到所有分之，单元测试几乎就没法写
+- 函数圈复杂度太高，一堆嵌套逻辑判断，导致测试难以覆盖到所有分之，单元测试几乎就没法写，恩，你压根不写单元测试就当我没说。
 - 没注意可变类型和非可变类型，传入可变类型并在函数里修改了参数(无意的修改)，坑。。。
 - 滥用 `(*args, **kwargs)` 导致函数接口模糊，有类似接口应该明确用docstring写明参数，"Explicity is better than implicity"，不要为了偷懒把代码写得隐晦。
 - 返回多个值可以使用namedtuple封装，比用下标更直观
@@ -181,7 +181,7 @@ python代码坏味道(新手经常犯的错误)
 嗯，一开始就开启pep8和pylint检测能显著提升代码质量（各种错误警告逼着你写出规范的代码）。咱写不了诗一样的代码，也不能写shǐ 一样的代码，维护一个ugly的代码仓库能有效减少你的寿命。可能很多东西对老鸟来说都是显而易见的，不过菜鸟和高级菜鸟们还是需要多多练习积累经验。慢慢摸索吧骚年。。。。。。
 
 难以维护的Python代码
-=====================================================================
+--------------------------------------
 
 ::
 
@@ -199,7 +199,8 @@ python代码坏味道(新手经常犯的错误)
 上面是一段java和python的对比，用来说明为什么python难以维护。java版本一眼就能看出来传入参数的类型和返回值，但是遗憾的是python看不出来，在python中基本只有通过docstring你才能知道传入参数的类型。当项目大了以后，维护一份没有文档和注释的python项目基本就是灾难。笔者曾很喜欢python语言，认为python是“伪代码”语言，但是有了维护python旧代码的经验后，我开始怀疑python是不是适合构建大型项目。当然很多知名应用是python构建的，我觉得老外们软件工程做得还是不错的，把控好代码质量和单元测试（比如Quora创始人曾经解释过他们为什么选择了python）。但是我经历的一些使用python的项目工程方面却比较糟糕，代码维护起来非常吃力，开始让我对python产生严重怀疑。java虽然写起来繁琐，但是不容易出错，动态语言写起来爽，但是维护和重构起来吃力，并且容易出错。我个人感觉就是使用动态语言要严格把控代码质量和文档，用好pylint对代码静态检测。
 
 重视细节
-=====================================================================
+--------------------------------------
+
 命名
 --------------------------------------
 
@@ -253,7 +254,7 @@ Docstring应该包括什么?
 - 适当注释，仔细衡量，不要隐晦也不要多余。
 - 及时更新。
 
-很多东西都需要自己斟酌，不要矫枉过正，比如说需要注释你就写一堆恶心的注释，说遵守pep8尽量不超过80列你连url都要拆成两行，我。。。。。。如果有些规范相冲突，你就以代码的可读性为标准，所有标准都是为了良好的代码设计的。我最怕和随意的程序员一起干活，随意就是写个函数print下就觉得正确了，没有docstring和注释，写的接口让别人难以使用。公司项目毕竟不是自己过家家，我现在就是自己的小项目也会注重规范（自己维护起来也方便，不要相信你的记忆力）。很多用python的小公司就是很不规范，维护起来真心累。也希望所有看到这里的python学习者可以把规范重视起来(那知名开源项目文档都相当不错)，这也是一个职业程序员应该具备的素养。毕竟大部分人不是造轮子的人，能把业务逻辑实现地简单优雅易维护也是一种能力。
+很多东西都需要自己斟酌，不要矫枉过正，比如说需要注释你就写一堆恶心的注释，说遵守pep8尽量不超过80列你连url都要拆成两行，我。。。。。。如果有些规范相冲突，你就以代码的可读性为标准，所有标准都是为了良好的代码设计的。我最怕和随意的程序员一起干活，随意就是写个函数print下就觉得正确了，没有docstring和注释，写的接口让别人难以使用。公司项目毕竟不是自己过家家，我现在就是自己的小项目也会注重规范（自己维护起来也方便，不要相信你的记忆力）。很多用python的小公司就是很不规范，维护起来真心累。也希望所有看到这里的python学习者可以把规范重视起来(很多知名开源项目文档都相当不错)，这也是一个职业程序员应该具备的素养。毕竟大部分人不是造轮子的人，能把业务逻辑实现地简单优雅易维护也是一种能力。
 
 
 * `《google docstring示例》 <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`_
@@ -294,3 +295,29 @@ Code Review
 很多新手写代码不注重可维护性，甚至自己写的代码回头自己看都一脸懵逼，问了一句这代码TM是干啥的？
 一开始的负责会为以后协作和维护带来极大便利（当然你想干两天就走让其他人擦屁股就当我没说）。
 最后，很多东西我也在摸索，上面的玩意你就当小白的踩坑记录，随着理解和经验的加深我会不定期更新本篇内容。另外我发现网上大部分是教程性的东西，对于python相关的工程性的东西很少，我很疑惑难道大部分公司的python项目都写得相当规范？没人吐槽？反正我是踩过坑，希望看到过本章的人能把python代码质量重视起来。
+
+
+
+最后来，跟我一起大声朗读《The Zen of Python》
+
+::
+
+    Beautiful is better than ugly.
+    Explicit is better than implicit.
+    Simple is better than complex.
+    Complex is better than complicated.
+    Flat is better than nested.
+    Sparse is better than dense.
+    Readability counts.
+    Special cases aren't special enough to break the rules.
+    Although practicality beats purity.
+    Errors should never pass silently.
+    Unless explicitly silenced.
+    In the face of ambiguity, refuse the temptation to guess.
+    There should be one-- and preferably only one --obvious way to do it.
+    Although that way may not be obvious at first unless you're Dutch.
+    Now is better than never.
+    Although never is often better than *right* now.
+    If the implementation is hard to explain, it's a bad idea.
+    If the implementation is easy to explain, it may be a good idea.
+    Namespaces are one honking great idea -- let's do more of those!
