@@ -218,6 +218,26 @@ Git
     # git rebase --abort
 
 
+Git工作流
+------------
+
+.. code-block:: shell
+
+   git checkout master    # 切到master
+   git pull origin master     # 拉取更新
+   git checkout -b newbranch    # 新建分之，名称最好起个有意义的，比如jira号等
+
+   # 开发中。。。
+   git fetch origin master    # fetch master
+   git rebase origin/master    #
+
+   # 开发完成等待合并到master
+   git rebase -i origin/master
+   git checkout master
+   git merge newbranch
+   git push origin master
+
+
 vim
 ----
 
