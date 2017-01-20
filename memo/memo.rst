@@ -198,6 +198,17 @@ Git
     # 手残add错了就
     git reset file # git reset 撤销所有add
 
+    # 手残直接在master分之改了
+    git reset --soft HEAD^
+    git branch new_branch
+    git checkout new_branch
+    git commit -a -m "..."
+	# 或者
+    git reset --soft HEAD^
+	git stash
+    git checkout new_branch
+	git stash pop
+
     # 指定文件类型diff
     git diff master -- '*.c' '*.h'
     # 带有上下文的diff
