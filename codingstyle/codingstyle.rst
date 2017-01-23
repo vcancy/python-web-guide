@@ -202,6 +202,114 @@ python代码坏味道(新手经常犯的错误)
 重视细节
 --------------------------------------
 
+版式
+--------------------------------------
+
+良好的代码排版可以让人理解代码更容易，一点经验:
+
+- 尽量遵守pep8，除了行长度可以适当放宽，比如django使用120列。
+- 合理使用换行使代码更易理解，同时更美观
+- 合理使用空行对代码块逻辑进行分隔，使层次清晰。
+- 不要使用太长的行(别超出120列)，否则分屏查看或合并代码的时候很不方便 ，你得来回移动编辑器指针，对笔者这种喜欢分屏的简直就是灾难。
+
+::
+
+    # 分行之前，我见过最长的得俩屏幕连起来才能看完
+    daily_report_data = db.session.query(Data.event_date, func.sum(Data.revenue).label('revenue'), func.sum(Data.payout).label('payout')).filter(Data.tag != Data.TagEnum.arbitrage).filter(Data.event_date < self._next_month_date).filter(Data.event_date >= self._this_month_date).filter(Data.finance_type == Data.TypeEnum.normal).group_by(Data.event_date).all()
+
+    # 分行之后
+    daily_report_data = db.session.query(
+        Data.event_date,
+        func.sum(Data.revenue).label('revenue'),
+        func.sum(Data.payout).label('payout')
+    ).filter(
+        Data.tag != Data.TagEnum.arbitrage
+    ).filter(
+        Data.event_date < self._next_month_date
+    ).filter(
+        Data.event_date >= self._this_month_date
+    ).filter(
+        Data.finance_type == Data.TypeEnum.normal
+    ).group_by(
+        Data.event_date
+    ).all()
+
+
+你看看大概各需要几秒才能分别理解上边的代码，分行之后能在三秒之内大致理解代码是干啥的，但是太长行你光移动编辑器指针就要花几秒。所以有时候排版还是很重要的，为了快速理解代码你要用上各种手段，尽量让代码更直观。当然有时候你拿不定注意怎么样选择的时候，就以一种最容易理解的方式写，下边是笔者常用的一些分行方式，有利于写出遵守pep8的代码:
+
+::
+
+    from some_module import (
+        a_long_variable_name, b_long_variable_name, c_long_variable_name,
+        d_long_variable_name
+    )
+
+    if a_long_variable_name and b_long_variable_name and c_variable_name \
+            and d_variable:
+
+        pass
+
+
+    if (a_long_variable_name and b_long_variable_name
+        and c_long_variable_name and d_long_variable_name):
+
+        pass
+
+
+    a_long_list_comprehension = [person.name
+                                 for person in db.session.query(Person.name)]
+
+
+    a_long_dict_comprehension = {
+        person.id: person.name
+        for person in db.session.query(Person.name, Person.id)
+    }
+
+
+    employee_id_list = [
+        ins.id for ins in Employee.get_role_team_members(
+            role_int, team_int, ['id']
+        )
+    ]
+
+
+    def long_variable_function_name_and_function_params(a_long_variable_name,
+                                                        b_long_variable_name,
+                                                        c_long_variable_name,
+                                                        d_long_variable_name):
+        pass
+
+
+
+    def long_variable_function_name_and_function_params(
+        a_long_variable_name,
+        b_long_variable_name,
+        c_long_variable_name,
+        d_long_variable_name
+    ):
+        pass
+
+
+    return {
+        'code': ErrorCode.OPERATOR_FAILED_NEED_TOKEN,
+        'msg': ErrorCode.OPERATOR_FAILED_NEED_TOKEN_MSG,
+        'data': {}
+    }, status_codes.unauthorized
+
+
+    new_employee = Employee.get_by_id(new_employee_id)
+    (
+        changed_advertiser_ids,
+        changed_account_ids
+    ) = assign_employee_advertiser_and_account(employee, new_employee)
+
+
+    result = a_very_very_very_very_very_very_very_very_long_function_name(
+        a_long_variable_name, b_long_variable_name,
+        c_long_variable_name, d_long_variable_name
+    )
+
+
 命名
 --------------------------------------
 
