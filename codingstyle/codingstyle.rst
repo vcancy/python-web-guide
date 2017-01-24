@@ -312,7 +312,7 @@ python代码坏味道(新手经常犯的错误)
 命名
 --------------------------------------
 
-首先你要遵守pep8的规定，使用惯用法来命名。或者根据你们公司的python编码规范（我估计你们公司没有）
+首先你要遵守pep8的规定，使用惯用法来命名。或者根据你们公司的python编码规范（如果你们公司有的话）
 
 - joined_lower for functions, methods, attributes
 - ALL_CAPS for constants
