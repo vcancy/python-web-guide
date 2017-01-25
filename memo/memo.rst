@@ -193,6 +193,9 @@ Git
     git stash apply stash@{1}
     git stash pop # 重新应用储藏并且从堆栈中移走
 
+    # 删除远程分之
+    git push origin --delete {the_remote_branch}
+
     # 手残pull错了分支就
     git reset --hard HEAD~
     # 手残add错了就
