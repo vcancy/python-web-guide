@@ -38,7 +38,7 @@ Python支持多重编程范式，过程式(Procedural)，面向对象(OOP)，简
 
 何谓Pythonic?
 --------------------------------------
-Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合Python的惯用法，使用的都是Python的语法糖。比如从其他语言转到Python
+Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合Python的惯用法，使用的都是Python的语法糖(我觉得可以翻译为『地道』)。比如从其他语言转到Python
 的写出来的代码很可能受到以前思维方式的影响，写出来的代码不够Pythonic:
 比如:
 
