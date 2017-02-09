@@ -351,7 +351,7 @@ python代码坏味道(新手经常犯的错误)
 
 这个是google的docstring示例,是我比较推崇的一种格式。还是那个问题，动态语言没有类型声明，所以复杂函数要在docstring里写清楚传入参数和返回值的描述和类型。良好的docstring能让维护代码的人一眼就看明白这个函数是怎么使用的，即使内部很复杂，也尽量保持接口简单，容易使用。经常有人传出个嵌套字典（dict的key是主键，每个key对应的value里还有字典），这种相对复杂的数据结构还不注释，每次看这种函数都要打断点看返回结构。这种就是典型的接口易用性差，只在意实现功能，完全不管别人使用，合作起来比较心累。
 
-- Docstrings = How to use code
+- Docstrings = How to use code。代码约定
 - Comments = Why & how code works
 
 Docstring应该包括什么?接口易用性

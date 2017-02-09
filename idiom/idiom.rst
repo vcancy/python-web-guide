@@ -215,7 +215,7 @@ EAFP可以理解成一切按正常的逻辑编码，不用管可能出现的错�
         except NameError:
             print 'person must be not null!'
 
-其实用EAFP风格的代码最大的好处是代码逻辑清晰，而LBYL会导致本来两句话说清楚的事，往往因为穿插了很多条件检查的语句使代码逻辑变得混乱。Python社区更提倡EAFP形式的。
+其实用EAFP风格的代码最大的好处是代码逻辑清晰，而LBYL会导致本来两句话说清楚的事，往往因为穿插了很多条件检查的语句使代码逻辑变得混乱。Python社区更提倡EAFP形式的。另外还有一个原因，在高并发场景下， if条件如果是个表达式，会造成一致性问题，这个时候必须用EAFP形式。这个可以参考Glow团队的技术博客[Glow cache structure](http://tech.glowing.com/cn/glow-cache-structure).
 
 
 用dict对象完成switch...case...的功能
