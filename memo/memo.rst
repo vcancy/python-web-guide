@@ -193,12 +193,15 @@ Git
     git stash apply stash@{1}
     git stash pop # 重新应用储藏并且从堆栈中移走
 
+    # 删除远程分之
+    git push origin --delete {the_remote_branch}
+
     # 手残pull错了分支就
     git reset --hard HEAD~
     # 手残add错了就
     git reset file # git reset 撤销所有add
 
-    # 手残直接在master分之改了
+    # 手残直接在master分之改了并且add了
     git reset --soft HEAD^
     git branch new_branch
     git checkout new_branch
@@ -208,6 +211,10 @@ Git
 	git stash
     git checkout new_branch
 	git stash pop
+    # 如果改了master但是没有add比较简单，三步走
+    git stash
+    git checkout -b new_branch
+    git stash pop
 
     # 指定文件类型diff
     git diff master -- '*.c' '*.h'
