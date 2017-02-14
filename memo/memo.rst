@@ -289,6 +289,13 @@ vim
    jfswatch -o ~/path/to/watch | xargs -n1 ~/script/to/run/when/files/change.sh
    fswatch -o ./*.py  | xargs -n1  ./runtest.sh    # 比如写单元测试的时候修改后就让测试执行
 
+Benchmark
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+    sudo apt-get install apache2-utils
+    ab -c 并发数量 -n 总数量 url
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《slide show》 <http://slideshow-s9.github.io/>`_
