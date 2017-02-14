@@ -134,12 +134,12 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 还有OOP那一套，当你设计一个类的时候需要有所注意:
 
 * 单一职责原则(Single-Responsibility Principle)
-* 开闭原则(Open-Closed Principle)
-* 里氏代换原则(Liskov Substitution Principle)
-* 接口隔离原则(Interface Segregation Principle)
-* 依赖倒置原则(Dependence Inversion Principle)
-* 迪米特原则(Law of Demeter)
-* 合成复用原则(Composite/Aggregate Reuse Principle)
+* 开闭原则(Open-Closed Principle): 对修改关闭，对扩展开放。
+* 里氏代换原则(Liskov Substitution Principle): 所有使用基类的地方都可以使用子类替换。
+* 接口隔离原则(Interface Segregation Principle): 不要强制客户端使用他们不需要的接口。
+* 依赖倒置原则(Dependence Inversion Principle): 高层模块不应该依赖于底层模块，他们都应该依赖于抽象。
+* 迪米特原则(Law of Demeter):
+* 合成复用原则(Composite/Aggregate Reuse Principle):
 
 
 python代码坏味道(新手经常犯的错误)
@@ -191,7 +191,7 @@ python代码坏味道(新手经常犯的错误)
 ORM相关：
 
 - 优先使用ORM，相比sql语句更加容易维护，同时避免了sql注入。
-- 获取对象的时候尽量传入需要的字段，减少数据传输同时还能避免拼对象的时间消耗。
+- 获取对象的时候尽量传入需要的字段(数据表列)，减少数据传输同时还能避免拼对象的时间消耗，python构建对象比较耗时。
 - 注意不要在循环里使用查询语句，合并查询语句。比如不要在for循环中使用一个对象的relation查询(懒加载的时候，每次调用都会查询数据库)
 
 嗯，一开始就开启pep8和pylint检测能显著提升代码质量（各种错误警告逼着你写出规范的代码）。咱写不了诗一样的代码，也不能写shǐ 一样的代码，维护一个ugly的代码仓库能有效减少你的寿命。可能很多东西对老鸟来说都是显而易见的，不过菜鸟和高级菜鸟们还是需要多多练习积累经验。慢慢摸索吧骚年。。。。。。如果能主动读一读《代码大全》《编程匠艺》《clean code》之类的书更好，别人会更乐意和你一起合作编程，不然你总会心想『天呐，千万别让我改那个家伙的代码，我宁愿离职！！！』
