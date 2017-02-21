@@ -195,6 +195,8 @@ ORM和数据库相关：
 - 获取对象的时候尽量传入需要的字段(数据表列)，减少数据传输同时还能避免拼对象的时间消耗，python构建对象比较耗时。
 - 注意不要在循环里使用查询语句，合并查询语句。比如不要在for循环中使用一个对象的relation查询(懒加载的时候，每次调用都会查询数据库)
 - 注意隐式类型转换导致的全表扫描。大家可以搜一下《数据库30条军规》，有一些坑应该避免。
+- 数据库设计规范：[Mysql互联网业务数据库设计规范](http://verynull.com/2017/02/18/MySQL%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/)
+- Mysql需要存储表情：`CREATE DATABASE mydb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`
 
 文档注释相关:
 
