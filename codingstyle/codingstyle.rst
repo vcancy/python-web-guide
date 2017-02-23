@@ -28,6 +28,7 @@
 - 阿里最近开源了一个规范《阿里巴巴Java开发手册》，网上可以很容易搜到，写得比较细，建议新手下载来看看，有不少实战干货，很多思想是通用的，其实python的unittest等模块很多都是直接借鉴了java。
 
 * `《Python 工匠：善用变量来改善代码质量》 <http://www.zlovezl.cn/articles/python-using-variables-well/>`_ 动态语言命名尽量可以表达出类型，否则不好维护
+* `《Python最佳实践》 <http://www.dongwm.com/archives/Python%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/>`_  董伟明的文章
 
 编程范式
 --------------------------------------
