@@ -83,6 +83,10 @@ Ubuntu相关
     # 进程相关
     dmesg | egrep -i -B100 'killed process'   # 查看被杀死进程信息
 
+    # scp
+    scp someuser@192.168.199.1:/home/someuser/file ./    # 远程机器拷贝到本机
+    scp ./file someuser@192.168.199.1:/home/someuser/    # 拷贝到远程机器
+
 代码搜索用ag, 比ack快
 
 .. code-block:: python
