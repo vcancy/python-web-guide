@@ -11,7 +11,7 @@
 
 How to select datastructures for ADT
 1. Dose the data structure provie for the storage requirements as specified by the domain of the ADT?
-2.  Does the data structure provide the data access and manipulation functionality to fully implement the ADT?
+2. Does the data structure provide the data access and manipulation functionality to fully implement the ADT?
 3. Effcient implemention?  based on complexity analysis.
 
 下边代码是个简单的示例，比如实现一个简单的Bag类，先定义其具有的操作，然后我们再用类的magic
