@@ -156,11 +156,13 @@ python代码坏味道(新手经常犯的错误)
 - 上来就整一个不知道啥意思的magic number，大学老师没教你不要滥用幻数？使用Enum或者dict都能替代掉无意义的幻数。总有人偷懒使用幻数，别人看懵逼的。
 - 上来就 `from shit import *,` 为了偷懒有可能会导致同名覆盖问题，还会让开发工具找不到定义，工程上不要这么用。
 - 包导入顺序混乱，没有按照pep8要求，实际上rope等工具能自动帮你整理顺序，我现在就是偷懒随意写，直接让rope给我整理。(标准库，三方库，本地库，同级按照字典序，vim的话可以用rope插件自动整理顺序)
-- 导入最好按照模块导入，使用的时候用module.func使用，防止from module import func的时候可能遇到的循环引用问题。
+- 导入最好按照模块导入，使用的时候用module.func使用，防止from module import func的时候可能遇到的循环引用问题(模块设计不够合理)。
 - 变量名乱起，表意不明，推断不出类型，加重理解负担。我在想是不是动态语言用匈牙利命名法要好一些，命名尽量要可以看出类型，比如复数表示容器类型，nums，cnts等后缀表示数值。动态语言一大诟病就是容易类型容易出错。
 - 不遵守pep8，没有pylint检测，打开代码一堆语法警告，老子的编辑器满眼都是warnning，编辑器用不好就老老实实用pycharm，用编辑器就老老实实装好语法检测(pep8)和pylint检测插件，没有插件请考虑换一个editor。我个人的感觉就是python代码很容易写得难以维护，请务必加上pylint检测，帮助提高代码质量。还是推荐不想折腾编辑器的直接用好pycharm。
 - 没有逻辑分块，一点都不重视排版，没有美感（这个就算了），就算不限制一行超过80列，也不能写一行写几百列吧，左右转头脑瓜子疼(请不要用tab，全用空格)。使用良好的分行，空格使代码更美观，逻辑更清晰。
 
+* `《https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module》 <https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module>`_
+* `《https://docs.python.org/3/faq/programming.html#how-can-i-have-modules-that-mutually-import-each-other》 <https://docs.python.org/3/faq/programming.html#how-can-i-have-modules-that-mutually-import-each-other>`_
 
 异常相关：
 
@@ -396,7 +398,7 @@ Docstring应该包括什么?接口易用性
 - 描述参数，返回值和会抛出的异常。我举个简单的例子， `def f(date): pass` ，仅仅看date这个参数你不知道传入str还是datetime.date，如果传入字符串又有很多格式的字符串，需要哪种格式？所以这个时候一个简单的描述 `date (str): 'YYYY-MM-DD'` 就能让使用函数的人一下子明白了。当然如果有单元测试实际上测试代码也是很好的文档，我们通过单元测试就知道怎么传值。另外使用了 `**kwargs` 如果都不说明就太不厚道了
 - 使用注意事项。复杂的使用可以有demo示例说明。
 - 需求文档，使用的api或者github, stackoverflow等链接。比如有个很trick的实现是你查阅 stackoverflow解决的，可以附上地址帮助阅读代码的人找到出处。对如复杂的需求实现，附上需求文档也会帮助他人理解。使用了第三方或者自己造的api，附上地址可以让新人快速上手了解。这些都是一些小细节，但是却可以给自己和维护代码的人带来巨大的便利。
-- 大家都很懒，但是还是尽可能用极其简洁明了的话给所有的模块、类和函数来几句描述（为什么需要这个模块、类、函数？这个模块、类会在在哪里被使用？它完成了什么功能）？如果能很简单描述出来，说明代码功能明确，写得至少不算烂^_^
+- 大家都很懒，但是还是尽可能用极其简洁明了的话给所有的模块、类和函数来几句描述（为什么需要这个模块、类、函数？这个模块、类会在在哪里被使用？它完成了什么功能）？如果能很简单描述出来，说明代码功能明确，写得至少不算烂^_^。无法简单描述的话说明代码可能需要拆分。
 
 注释怎么写?
 
