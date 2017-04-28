@@ -10,7 +10,6 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
 你可以使用强大的电子书阅读软件 `calibre <https://calibre-ebook.com/>`_ 下载epub格式阅读。
 
 
-
 .. image:: https://readthedocs.org/projects/z42/badge/?version=latest
 
 .. code-block:: python
@@ -25,4 +24,4 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
 文档采用rst格式书写，用 `readthedocs <https://readthedocs.org/>`_ 托管。一个快速的rst语法demo `教程 <http://azuwis.github.io/sphinx_demo/demo.html>`_。 如果使用vim编写可以使用rst插件 `riv.vim <https://github.com/Rykka/riv.vim>`_ 配合 `InstantRst <https://github.com/Rykka/InstantRst>`_ 本地预览，定期pull一下拉取更新。
 欢迎你fork一份然后添加自己的章节，本书主要面对经验尚浅的同学作为自学的指导手册，内容来自笔者工作经验总结。
 本电子版书集合了之前同事的智慧结晶，感谢你们带我入坑。
-本指南同时会有一些不负责任的吐槽。
+本指南同时会有一些不负责任的吐槽。学到东西的请狂点奇数次star，让笔者有动力更新更多业界实战干货。
