@@ -87,6 +87,10 @@ Ubuntu相关
     scp someuser@192.168.199.1:/home/someuser/file ./    # 远程机器拷贝到本机
     scp ./file someuser@192.168.199.1:/home/someuser/    # 拷贝到远程机器
 
+    # tar
+    tar zxvf FileName.tar.gz    # 解压
+    tar zcvf FileName.tar.gz DirName    # 压缩
+
 代码搜索用ag, 比ack快
 
 .. code-block:: python
