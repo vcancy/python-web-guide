@@ -15,6 +15,7 @@
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
 - autojump。方便在命令行里来回跳转目录。
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
+- tldr: 更好的man手册
 
 一定要有个趁手的开发工具，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1','l','0','O'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。
 
