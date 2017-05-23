@@ -12,13 +12,16 @@ Python
    python3.4 -m http.server
    python -m SimpleHTTPServer    # python2
 
-   python -u    # 刷新缓冲，执行脚本重定向结果到文件时候比较有用
+   python -u script.py   # 刷新缓冲，执行脚本重定向结果到文件时候比较有用
 
    # logging
    FATAL(50) > ERROR(40) > WARNING(30) > INFO(20) > DEBUG(10)
 
    # 使用virtualenv制定python版本
    virtualenv -p /usr/bin/python2.7 ENV2.7
+
+   # pyenv 安装多个版本的 python : https://github.com/pyenv/pyenv
+   # pyenv-virtualenv https://github.com/pyenv/pyenv-virtualenv
 
 
 Mac
@@ -86,6 +89,10 @@ Ubuntu相关
     # scp
     scp someuser@192.168.199.1:/home/someuser/file ./    # 远程机器拷贝到本机
     scp ./file someuser@192.168.199.1:/home/someuser/    # 拷贝到远程机器
+
+    # tar
+    tar zxvf FileName.tar.gz    # 解压
+    tar zcvf FileName.tar.gz DirName    # 压缩
 
 代码搜索用ag, 比ack快
 
@@ -293,6 +300,10 @@ vim
    # mac: brew install fswatch, http://stackoverflow.com/questions/1515730/is-there-a-command-like-watch-or-inotifywait-on-the-mac
    jfswatch -o ~/path/to/watch | xargs -n1 ~/script/to/run/when/files/change.sh
    fswatch -o ./*.py  | xargs -n1  ./runtest.sh    # 比如写单元测试的时候修改后就让测试执行
+
+   # 也可以使用下边的工具用 Jupyter 做 slideshow，最大的特点是直接在浏览器里敲代码交互演示
+   # Reveal.js - Jupyter/IPython Slideshow Extension, also known as live_reveal
+   # https://github.com/damianavila/RISE
 
 Benchmark
 -------------------------------------------------------------
