@@ -492,6 +492,9 @@ Code Review
 --------------------------------------
 笔者认为code review是一件非常重要的事情，可以有效防止代码腐化，同时方便同事了解业务。可以在公司搭建Phabricator（facebook在用）类似工具进行代码review。可惜小公司流程不严格，codereview总是坚持不下去，要不就是被同事吐槽总是给他挑刺。实际上如果是新手能够从code review当中快速学到很多东西，比如编程惯用法，摆脱不良编码习惯，不良设计和难以维护的代码等。review的时候对事不对人，代码如果有明显缺陷快速记录个TODO等待review后修正，以一种开放和学习的心态看待review，慢慢整个团队的实力和代码质量就会提高。review就是个互相学习进步的过程，正规的团队都应该严格遵守，而不只是走走流程。
 
+- 建立 review 检查表，防止不合理、过于复杂、明显缺陷、可读性差的代码。
+- 对事不对人，review 和被 review 的人都要以一种开放和学习的良好心态看待 review，共同进步。
+
 * `《https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html》 <https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html>`_
 
 日志与异常记录
