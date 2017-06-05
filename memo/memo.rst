@@ -207,10 +207,17 @@ Git
     # 删除远程分之
     git push origin --delete {the_remote_branch}
 
+    # 手残 add 完以后输入错了 commit 信息
+    git commit --amend
+
+    # 撤销 add （暂存）
+    git reset -- file
+
+    # 撤销修改
+    git checkout -- file
+
     # 手残pull错了分支就
     git reset --hard HEAD~
-    # 手残add错了就
-    git reset file # git reset 撤销所有add
 
     # 手残直接在master分之改了并且add了
     git reset --soft HEAD^
