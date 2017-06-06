@@ -254,6 +254,9 @@ Git
     # then git push -f
     # git rebase --abort
 
+    # 全局 ignore, 对于不同编辑器协作的人比较有用
+    git config --global core.excludesfile ~/.gitignore_global
+
 
 Git工作流
 ------------
@@ -268,7 +271,7 @@ Git工作流
    git fetch origin master    # fetch master
    git rebase origin/master    #
 
-   # 开发完成等待合并到master
+   # 开发完成等待合并到master，推荐使用 rebase 保持线性的提交历史
    git rebase -i origin/master
    git checkout master
    git merge newbranch
