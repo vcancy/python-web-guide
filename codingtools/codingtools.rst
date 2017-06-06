@@ -4,11 +4,12 @@
 =====================================================================
 
 
-工欲善其事，必先利其器
+工欲善其事，必先利其器(装逼工具)
 --------------------------------------------------
 
 - Pycharm。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。
-- vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE。其他优秀的编辑器sublime，atom，vscode，emacs等不熟，根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)
+- vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE。其他优秀的编辑器sublime，atom，vscode，emacs等不熟，根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
+- meld/vimdiff: 文本比对工具。
 - tmux。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。
@@ -17,7 +18,7 @@
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
 - tldr: 更好的man手册
 
-一定要有个趁手的开发工具，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1', 'l', 'I', '0', 'O', 'S', '5'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。
+一定要有个趁手的开发工具，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1', 'l', 'I', '0', 'O', 'S', '5'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。最后注意你用编辑器的话一定要用 pylint，pep8 检测插件，否则不遵守规范可能会导致用 IDE 打开项目后一堆警告(别人会想问候你祖宗的)。
 
 * `《使用vim+tmux+zsh+autojump高效工作》 <http://ningning.today/2016/11/09/tools/vim-tmux-zsh-autojump/>`_
 
@@ -30,24 +31,36 @@
 - pyflakes
 - bandit: 用于Python代码的安全性分析，openstack 的项目 https://github.com/openstack/bandit
 - rope，可以用来重构等，功能强大。笔者经常用rope自动帮我重新整理导入的包顺序。
-- python-mode: 一个vim插件，有很多 python 补全，语法检测等支持。
+- python-mode: 一个vim插件，有很多 python 补全，语法检测等支持。并且集成了很多 python 工具。
 - jedi-vim: 一个 vim 插件，python 支持补全和重构。注意和 rope 的自动补全有冲突，不要同时启用。
+- Pyreverse: 代码 UML 生成工具, 帮助我们理解继承关系 (https://pythonhosted.org/theape/documentation/developer/explorations/explore_graphs/explore_pyreverse.html)
+- Epydoc: Automatic API Documentation Generation for Python
+- 2to3/python-modernize: python2 转 python3 工具。目前 Instagram 已经全面迁移到 python3
 
 
 我觉得对于动态语言使用好静态代码检测工具还是很有必要的，最好集成在你的开发工具里(比如使用vim的python-mode插件可以很容易整合这几个代码检测工具)，辅助你写出高质量代码，否则大型动态语言项目维护起来就是灾难。python会给你一种代码很好写的错觉，不严格要求经常会写出来难以维护的烂代码，甚至导致代码仓库失控。通过 pep8、pylint、mccae 检测过的代码如果警告和错误都消除以后，从代码风格来说基本是没有大问题的，笔者一开始用的时候也是各种警告，修正过很多代码警告以后，以后代码就越来越规范和整洁了。
 
+项目工具
+--------------------------------------
+- pigar: 找出项目使用到的依赖库
+- buildout: 项目构建工具
+- pyenv/virtualenv： 多版本管理
+
 
 测试工具
 --------------------------------------
-py.test
-nosetest
-unittest
+- py.test
+- nosetest
+- unittest
+- tox
 
 文档工具
 --------------------------------------
-gitbook
-sphinx + readthedoc （代码即文档）
-swagger
+- google doc
+- gitbook + markdown
+- sphinx + readthedoc （代码即文档），python 项目很多在用这个生成文档
+- swagger
+- jupyter notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做 slideshow，非常好的工具
 
 日志、异常收集工具
 --------------------------------------
@@ -70,9 +83,14 @@ swagger
 - http
 - postman
 
+数据库工具
+--------------------------------------
+- mycli: mysql 命令行补全等。https://github.com/dbcli/mycli
+- MysqlWorkbench: mysql 客户端工具。
 
 效率工具
 --------------------------------------
-- 番茄工作法：人长期专注的时间是有限的，找到适合自己的最佳番茄钟，并且每个时间段都专注于一件事。
-- teambiation: todo list 工具。今天做了什么；计划做什么；哪些困难导致工作被阻塞；今天学到了什么。(类似于开发日志之类的玩意)
+- 番茄工作法：人长期专注的时间是有限的，找到适合自己的最佳番茄钟，并且每个时间段都专注于一件事，每件事分清轻重缓急。在休息时间处理喝水、上厕所等杂事，做几个深呼吸给脑瓜子充点氧。
+- teambiation/trello: todo list 工具。今天做了什么；计划做什么；哪些困难导致工作被阻塞(实在搞不定的记下来及时向同事求助)；发现了什么问题；今天学到了什么。(类似于开发日志之类的玩意，每天都是真正做了事情的，并且最好每天都是学到了新东西的)
 - 音乐：选择类似于《阿尔法波高效记忆音乐》《巴洛克学习音乐》等，能帮助你隔绝噪音。反正笔者听歌的时候会想歌词反而会打扰思路，一般就是听这种不怎么让你瞎想的音乐。
+- 复盘。无论是写代码、做需求、改bug等，事后反思总结。分析并且记录耗时的地方和可以改进的地方(怎么让自己涨点记性)，对于一些错误或者坑也可以记录成文档当做团队的知识财富。

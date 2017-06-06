@@ -75,6 +75,7 @@ python一大优势在于数量丰富的库，灵活使用各种python库能帮�
 目前最流行的应该就是git了。版本控制工具是多人协作必不可少的工具，入门的程序员需要掌握基本的git命令，可以把github作为个人练习的工具。
 
 * `《语义化版本控制》 <http://semver.org/lang/zh-CN/>`_
+* `《Pro Git》 <https://git-scm.com/book/en/v2>`_
 
 专业素养
 ----------
