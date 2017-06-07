@@ -294,6 +294,9 @@ vim
    " 多行加上引号 http://stackoverflow.com/questions/9055998/vim-add-tag-to-multiple-lines-with-surround-vim"
    :1,3norm yss"
 
+   # Git 插件
+   Plugin 'tpope/vim-fugitive' # 在 vim 里执行 :Gblame 可以看到当前文件每行代码的提交人和日期，方便找人背锅
+
 
 用markdown文件制作html ppt
 -------------------------------------------------------------

@@ -46,6 +46,9 @@
 - buildout: 项目构建工具
 - pyenv/virtualenv： 多版本管理
 
+Api 工具
+--------------------------------------
+- checklist: http://python.apichecklist.com/
 
 测试工具
 --------------------------------------

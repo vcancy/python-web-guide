@@ -4,3 +4,4 @@ _build/*
 .ropeproject
 .DS_Store
 .todo_cache
+database/Mysql_bast_practice.htm
