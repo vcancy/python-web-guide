@@ -295,8 +295,9 @@ vim
    :1,3norm yss"
 
    # Git 插件
-   Plugin 'tpope/vim-fugitive' # 在 vim 里执行 :Gblame 可以看到当前文件每行代码的提交人和日期，方便找人背锅
+   Plugin 'tpope/vim-fugitive' # 在 vim 里执行 :Gblame 可以看到当前文件每行代码的提交人和日期，方便找人背锅或者咨询，炒鸡好用
 
+* `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
 用markdown文件制作html ppt
 -------------------------------------------------------------
