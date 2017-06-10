@@ -63,7 +63,7 @@ Api 工具
 - gitbook + markdown
 - sphinx + readthedoc （代码即文档），python 项目很多在用这个生成文档
 - swagger: 适合写 restful 文档
-- jupyter notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做 slideshow，非常好的工具
+- jupyter notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做代码交互式 slideshow，非常好的工具
 
 日志、异常收集工具
 --------------------------------------
