@@ -234,6 +234,10 @@ Git
     git checkout -b new_branch
     git stash pop
 
+    # rename branch
+    git branch -m <oldname> <newname>
+    git branch -m <newname> # rename the current branch
+
     # 指定文件类型diff
     git diff master -- '*.c' '*.h'
     # 带有上下文的diff
@@ -295,7 +299,7 @@ vim
    :1,3norm yss"
 
    # Git 插件
-   Plugin 'tpope/vim-fugitive' # 在 vim 里执行 :Gblame 可以看到当前文件每行代码的提交人和日期，方便找人背锅或者咨询，炒鸡好用
+   Plugin 'tpope/vim-fugitive' # 在 vim 里执行 :Gblame 可以看到当前文件每行代码的提交人和日期，找人背锅或者咨询的神器
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
