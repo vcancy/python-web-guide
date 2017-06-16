@@ -7,7 +7,7 @@
 工欲善其事，必先利其器(装逼工具)
 --------------------------------------------------
 
-- Pycharm。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。
+- Pycharm。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)
 - vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE。其他优秀的编辑器sublime，atom，vscode，emacs等不熟，根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
 - meld/vimdiff: 文本比对工具。
 - tmux。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
@@ -16,9 +16,10 @@
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
 - autojump。方便在命令行里来回跳转目录。
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
+- tig: text-mode interface for git. 喜欢命令行的可以尝试下。
 - tldr: 更好的man手册
 
-一定要有个趁手的开发工具，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1', 'l', 'I', '0', 'O', 'S', '5'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。最后注意你用编辑器的话一定要用 pylint，pep8 检测插件，否则不遵守规范可能会导致用 IDE 打开项目后一堆警告(别人会想问候你祖宗的)。
+一定要有个趁手的开发工具，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道(提升编辑效率的秘诀在于多用键盘快捷键，少用鼠标，以及可以高度定制的编辑器)。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1', 'l', 'I', '0', 'O', 'S', '5'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。最后注意你用编辑器的话一定要用 pylint，pep8 检测插件，否则不遵守规范可能会导致用 IDE 打开项目后一堆警告(别人会想问候你祖宗的)。
 
 * `《使用vim+tmux+zsh+autojump高效工作》 <http://ningning.today/2016/11/09/tools/vim-tmux-zsh-autojump/>`_
 
@@ -64,6 +65,7 @@ Api 工具
 - sphinx + readthedoc （代码即文档），python 项目很多在用这个生成文档
 - swagger: 适合写 restful 文档
 - jupyter notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做代码交互式 slideshow，非常好的工具
+- Confluence: 适合作为团队的项目文档工具，团队大了以后文档还是很重要的。
 
 日志、异常收集工具
 --------------------------------------
@@ -88,8 +90,8 @@ Api 工具
 
 抓包工具
 --------------------------------------
-- mitmproxy: 命令行抓包工具
-- charles: 抓包软件
+- mitmproxy: 用 python 实现的终端命令行抓包工具
+- charles: 抓包软件(收费)
 
 
 数据库工具
