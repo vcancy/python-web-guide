@@ -275,7 +275,7 @@ Git工作流
    git fetch origin master    # fetch master
    git rebase origin/master    #
 
-   # 开发完成等待合并到master，推荐使用 rebase 保持线性的提交历史
+   # 开发完成等待合并到master，推荐使用 rebase 保持线性的提交历史，但是记住不要在公众分之搞，如果有无意义的提交也可以用 rebase -i 压缩提交
    git rebase -i origin/master
    git checkout master
    git merge newbranch
