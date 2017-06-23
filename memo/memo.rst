@@ -281,6 +281,9 @@ Git工作流
    git merge newbranch
    git push origin master
 
+   # 压缩提交
+   git rebase -i HEAD~~    # 最近两次提交
+
 
 vim
 ----
