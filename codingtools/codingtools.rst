@@ -14,6 +14,7 @@
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
+- Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements
 - autojump。方便在命令行里来回跳转目录。
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
 - tig: text-mode interface for git. 喜欢命令行的可以尝试下。 https://github.com/jonas/tig
@@ -64,6 +65,7 @@ DSL
 - nosetest
 - unittest
 - tox
+- mock: mocking makes unit testing easier
 
 文档工具
 --------------------------------------
