@@ -234,6 +234,10 @@ Git
     git checkout -b new_branch
     git stash pop
 
+    # rename branch
+    git branch -m <oldname> <newname>
+    git branch -m <newname> # rename the current branch
+
     # 指定文件类型diff
     git diff master -- '*.c' '*.h'
     # 带有上下文的diff
@@ -271,11 +275,14 @@ Git工作流
    git fetch origin master    # fetch master
    git rebase origin/master    #
 
-   # 开发完成等待合并到master，推荐使用 rebase 保持线性的提交历史
+   # 开发完成等待合并到master，推荐使用 rebase 保持线性的提交历史，但是记住不要在公众分之搞，如果有无意义的提交也可以用 rebase -i 压缩提交
    git rebase -i origin/master
    git checkout master
    git merge newbranch
    git push origin master
+
+   # 压缩提交
+   git rebase -i HEAD~~    # 最近两次提交
 
 
 vim
@@ -295,7 +302,7 @@ vim
    :1,3norm yss"
 
    # Git 插件
-   Plugin 'tpope/vim-fugitive' # 在 vim 里执行 :Gblame 可以看到当前文件每行代码的提交人和日期，方便找人背锅或者咨询，炒鸡好用
+   Plugin 'tpope/vim-fugitive' # 在 vim 里执行 :Gblame 可以看到当前文件每行代码的提交人和日期，找人背锅或者咨询的神器
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 

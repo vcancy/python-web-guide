@@ -84,6 +84,7 @@ python一大优势在于数量丰富的库，灵活使用各种python库能帮�
 不知道或者不重视单元测试（写个函数print下就觉得OK了），不知道怎么写注释和文档（docstring听过吗？）。所以希望学习python的你能遵守工程实践，具备良好的职业素养和编码习惯，推荐阅读《代码大全》《编程匠艺》之类的工程相关的书。
 
 * `《程序员的自我修养》 <https://www.gitbook.com/book/leohxj/a-programmer-prepares/details>`_
+* `《软件工程师实战基本功》 <https://book.douban.com/subject/1225340/>`_
 
 后端技术栈
 ----------
