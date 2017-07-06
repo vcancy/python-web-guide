@@ -15,6 +15,8 @@ python，ruby之类的语言优势在于其生产力，你能在极短时间内�
 
 * `《python-guide》 <http://docs.python-guide.org/>`_ requests作者写的guide
 
+* `《use python》 <http://use-python.readthedocs.io/zh_CN/latest/>`_ use python
+
 * `《A Byte of Python》 <http://python.swaroopch.com/>`_ 一百多页的小书，可以快速熟悉Python语言。
 
 * `《Python核心编程》 <https://book.douban.com/subject/26801374/>`_ 比较全面的Python书籍，介绍了Python语言的方方面面。
