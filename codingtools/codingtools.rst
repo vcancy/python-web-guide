@@ -14,6 +14,8 @@
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
+- Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件。
+- Dash(mac): 强悍的文档查询工具。
 - Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements
 - autojump。方便在命令行里来回跳转目录。
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
@@ -27,7 +29,7 @@
 代码辅助和检测工具
 --------------------------------------
 - pylint: 代码静态检测工具，请务必集成在你的编辑器或者IDE里（推荐）。能帮你少犯很多错误，动态语言写项目要十分谨慎，非常容易犯错。或者在CI加上 hook 每次 push 代码的时候检测。
-- pep8: python代码风格检测工具(推荐)
+- pep8: python代码风格检测工具(推荐)。懒人可以试试 autopep8 工具，自动格式化。所有人的代码都过一遍 pylint 和 autopep8(放宽行长度) 看起来就比较一致了。
 - prospector: 集成了众多python代码检测工具
 - mccabe: 圈复杂度检测工具。McCabe 是一种度量程序复杂度的方法，如果单个子程序复杂度过高，或许就需要拆分逻辑提高程序的易读性。
 - pyflakes
