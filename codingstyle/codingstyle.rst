@@ -109,7 +109,7 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 * `《Tips for agile developers》 <http://web2.0coder.com/archives/92>`_
 * `《pytest: helps you write better programs》 <http://pytest.org/latest/>`_
 * `《代码整洁之道》 <https://book.douban.com/subject/5442024/>`_
-* `《编写可读代码的艺术》 <https://book.douban.com/subject/10797189/>`_
+* `《编写可读代码的艺术》 <https://book.douban.com/subject/10797189/>`_ 代码首先是写给人看的
 * `《重构-改善既有代码设计》 <https://book.douban.com/subject/4262627/>`_
 * `《软件调试修炼之道》 <https://book.douban.com/subject/6398127/>`_ 了解下调试和跟踪技术。
 
@@ -119,12 +119,12 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 对于什么是好代码，什么是坏代码我现在还没有太多经验，但是最近工作接手别人的代码感觉困难重重，还是too naive啊。每个人实力不同，风格不同，一起协作的时候确实会遇到很多问题和分歧。感觉code review啥的还是很有必要的，可以让菜鸟学习下老鸟的经验，也可以让老鸟指导下菜鸟的失误，同时避免过于个人化的糟糕风格（比如让人想立马离职的高达成百上千行的复杂函数，比如上来一堆不知道干啥的幻数，比如上来就 `form shit import *` 导致俺的编辑工具找不到定义，比如整个项目没有一行测试代码，比如不知道用logger，全用print+眼珠子瞅，一个bug找半天，比如没有pep8检测导致你的环境打开别人的代码彪了一堆警告......)。说好的规范呢，说好的设计模式呢，说好的高内聚低耦合呢？说好的KISS原则呢？说好的DYR原则呢？其实俺只是想多活几年，至少不要到三十岁头发掉光。啥设计模式的可以不用，能干活的代码就行，牢记几个原则，没事的时候对复杂的东西重构下，代码不能自解释的搞搞文档，不被队友坑同时不坑队友，俺就心满意足了 ，遇到坑队友就等着加班和折寿吧:(。最后还是列举一下常用原则、思想和注意事项吧(最好import this看看python之禅，很多思想是通用的):
 
 * KISS原则，Keep It Simple, Stupid。能简单的绝对不要复杂，不要炫耀代码技巧，简单可读最重要，后人会感谢你的，控制复杂度。
-* DRY原则，Don't Repeat Yourself。代码复杂重复了就及时抽取出来，至少不会碰到大问题。当然不要矫枉过正，过度追求设计和通用可能导致难以维护和理解。重复代码一旦接口变动的时候就是灾难，要修改很多地方，一定要十分警惕代码重复(警惕复制粘贴)。
+* DRY原则，Don't Repeat Yourself。代码复杂重复了就及时抽取出来，至少不会碰到大问题。当然不要矫枉过正，过度追求设计和通用可能导致难以维护和理解。重复代码一旦接口变动的时候就是灾难，要修改很多地方，一定要十分警惕代码重复(警惕复制粘贴)。事不过三原则。
 * YAGNI(You Aren't Gonna Need It)，不要猜测性编码，不用的及时删除，估计以后也不太可能会用到，冗余的无用代码会给维护者带来很多混淆和麻烦。Build the simplest thing that we need right now
 * SLAP(Single Level of Abstraction Principle): 保持一个方法中的代码在同一个抽象层。
 * Clean Coder Rule: Always leave the code cleaner than you found it.
 * 快速失败，灵活使用断言。契约式编程(先验条件和后置条件)，越早失败，越容易排查错误。
-* 增量式编程。及时清理技术债务，防止『破窗』。及时重构不合理代码，及时进行测试。
+* 增量式编程。及时清理技术债务，代码坏味道，防止『破窗』。及时重构不合理代码，及时进行测试。
 * 隐藏复杂性。如果复杂性避免不了，应该尽让内部复杂，接口要保持简单易用，而不要因为业务逻辑复杂就堆砌一堆shit.
 * 一次只做一件事(Do one thing, and do it well)。尽量避免复杂度过高的逻辑，尽量做到代码简单，意图明确。
 * 高内聚，低耦合。模块化。层次化。意义相近的东西应该放到同一个地方。写代码的时候想着怎么测试它就能避免过度复杂，耦合严重的代码。
@@ -135,7 +135,7 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 * 自动化。重复执行的任务应该使之自动化，你用的python是写自动化脚本最合适的语言。
 * Think about future, design with flexibility, but only implement for production. 尽量设计良好，避免繁杂和冗余。好的架构和设计都是不断演进的。
 * 文档化。哪些东西该文档化，哪些该注释需要做好，以便新手可以尽快上手。尽量做到代码即文档，tornado的文档和代码就是典范。
-* 服务化。项目做大了以后及时拆分业务，保持单个代码仓库大小在一定规模。
+* 服务化。项目做大了以后及时拆分业务，保持单个代码仓库大小在一定规模。超大规模的代码仓库在部署和维护上会遇到很多问题。
 * 不要直接吞掉任何非预知错误和异常，一定要做好记录。血泪教训，使用Sentry或其他工具记录好异常发生的信息，为定位bug提供便利，web端的bug一般不好复现。
 * 墨菲定律：只要有错误发生的可能性，这种错误就一定会发生。所以对代码质量要严格要求，不要心存侥幸。
 * 单元测试:F.I.R.S.T原则(Fast，Independent，Repeatable，Self-Validating，Timely)
@@ -190,6 +190,7 @@ python代码坏味道(新手经常犯的错误)
 
 * `《https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module》 <https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module>`_
 * `《https://docs.python.org/3/faq/programming.html#how-can-i-have-modules-that-mutually-import-each-other》 <https://docs.python.org/3/faq/programming.html#how-can-i-have-modules-that-mutually-import-each-other>`_
+* `《unmaintainable-code》 <https://github.com/Droogans/unmaintainable-code>`_ 从反面教材学习如何编写 maintainable code
 
 异常相关：
 
@@ -264,7 +265,7 @@ ORM和数据库相关：
 
 ::
 
-	# python 没有 docstring 维护基本就靠命名了
+	# python 没有 docstring 维护基本就靠命名了，对于复杂参数的类型没有注释看起来心累 
     def isRankingBetter(self, customer,topranking):
         testranking = getRanking(customer)
         return testranking > topranking
@@ -275,7 +276,7 @@ ORM和数据库相关：
         return testranking > topranking;
     }
 
-上面是一段java和python的对比，用来说明为什么python难以维护。java版本一眼就能看出来传入参数的类型和返回值，但是遗憾的是python看不出来，在python中基本只有通过docstring你才能知道传入参数的类型。当项目大了以后，维护一份没有文档和注释的python项目基本就是灾难。笔者曾很喜欢python语言，认为python是“伪代码”语，表达能力强，但是有了维护python旧代码的经验后，我开始怀疑python是不是适合构建大型项目。当然很多知名应用是python构建的，我觉得老外们软件工程做得还是不错的，把控好代码质量和单元测试（比如Quora创始人曾经解释过他们为什么选择了python,他们不喜欢java的冗长繁琐，C#被微软束缚，facebook因为历史遗留问题使用php并不意味着php是个好选择,Quora最后选择python并通过严格的单元测试控制质量）。但是我经历的一些使用python的项目工程方面却比较糟糕，代码维护起来非常吃力，开始让我对python产生严重怀疑。java虽然写起来繁琐，但是不容易出错，动态语言写起来爽，但是维护和重构起来吃力，并且容易出错(写稍微大型的项目时要充分认识到这个问题)。我个人感觉就是使用动态语言要严格把控代码质量和文档，强制用pylint对代码静态检测，否则项目大了难以维护，python或许更适合有代码洁癖的人写，比较严肃的大型工程还是推荐java。踩过这些坑之后，希望你以后写python工程的时候注重代码的docstring，易读性，接口易用性，正确性等，不然写着爽后来也是要付出很大的维护代价的，实现功能仅仅是代码项目中的一小环。
+上面是一段java和python的对比，用来说明为什么python难以维护。java版本一眼就能看出来传入参数的类型和返回值，但是遗憾的是python看不出来，在python中基本只有通过docstring你才能知道传入参数的类型。当项目大了以后，维护一份没有文档和注释的python项目基本就是灾难。笔者曾很喜欢python语言，认为python是“伪代码”语，表达能力强，但是有了维护python旧代码的经验后，我开始怀疑python是不是适合构建大型项目(python写多了以后反而越来越不喜欢动态语言)。当然很多知名应用是python构建的，我觉得老外们软件工程做得还是不错的，把控好代码质量和单元测试（比如Quora创始人曾经解释过他们为什么选择了python,他们不喜欢java的冗长繁琐，C#被微软束缚，facebook因为历史遗留问题使用php并不意味着php是个好选择,Quora最后选择python并通过严格的单元测试控制质量）。但是我经历的一些使用python的项目工程方面却比较糟糕，代码维护起来非常吃力，开始让我对python产生严重怀疑。java虽然写起来繁琐，但是不容易出错，动态语言写起来爽，但是维护和重构起来吃力，并且容易出错(写稍微大型的项目时要充分认识到这个问题)。我个人感觉就是使用动态语言要严格把控代码质量和文档，强制用pylint对代码静态检测，否则项目大了难以维护，python或许更适合有代码洁癖的人写，比较严肃的大型工程还是推荐java。踩过这些坑之后，希望你以后写python工程的时候注重代码的docstring，易读性，接口易用性，正确性等，不然写着爽后来也是要付出很大的维护代价的，实现功能仅仅是代码项目中的一小环。
 
 重视细节
 --------------------------------------
@@ -461,7 +462,7 @@ ORM和数据库相关：
 Docstring应该包括什么?接口易用性
 
 - 意图(目的)。解释为什么需要它？有些对你来说很明显的东西对其他人来说不一定很明显。最好能用一句话描述意图和功能，简单明了。笔者在接手项目看代码的时候，很多时候知道代码做了啥，但是却不知道为啥需要以及在哪些地方会需要这些代码？
-- 描述参数，返回值和会抛出的异常。我举个简单的例子， `def f(date): pass` ，仅仅看date这个参数你不知道传入str还是datetime.date，如果传入字符串又有很多格式的字符串，需要哪种格式？所以这个时候一个简单的描述 `date (str): 'YYYY-MM-DD'` 就能让使用函数的人一下子明白了。当然如果有单元测试实际上测试代码也是很好的文档，我们通过单元测试就知道怎么传值。另外使用了 `**kwargs` 如果都不说明就太不厚道了
+- 描述参数，返回值和会抛出的异常。我举个简单的例子， `def f(date): pass` ，仅仅看date这个参数你不知道传入str还是datetime.date，如果传入字符串又有很多格式的字符串，需要哪种格式？所以这个时候一个简单的描述 `date (str): 'YYYY-MM-DD'` 就能让使用函数的人一下子明白了。当然如果有单元测试实际上测试代码也是很好的文档，我们通过单元测试就知道怎么传值。另外使用了 `**kwargs` 如果都不说明就太不厚道了。对于传入的复杂的数据类型，最好注释下，否则看代码会非常蒙逼
 - 使用注意事项。复杂的使用可以有demo示例说明。
 - 需求文档，使用的api或者github, stackoverflow等链接。比如有个很trick的实现是你查阅 stackoverflow解决的，可以附上地址帮助阅读代码的人找到出处。对如复杂的需求实现，附上需求文档也会帮助他人理解。使用了第三方或者自己造的api，附上地址可以让新人快速上手了解。这些都是一些小细节，但是却可以给自己和维护代码的人带来巨大的便利。
 - 大家都很懒，但是还是尽可能用极其简洁明了的话给所有的模块、类和函数来几句描述（为什么需要这个模块、类、函数？这个模块、类会在在哪里被使用？它完成了什么功能）？如果能很简单描述出来，说明代码功能明确，写得至少不算烂^_^。无法简单描述的话说明代码可能需要拆分。另外涉及到业务的代码一般还需要链接一下业务文档帮助后人理解和上手。
@@ -512,6 +513,14 @@ Docstring应该包括什么?接口易用性
 --------------------------------------
 团队项目开发前的统一三要素：统一需求/开发文档，统一代码规范，统一环境（编译/测试/发布）。
 很多程序员是懒得写文档的，仿佛牛逼的程序员不需要写。但是看人家真正牛逼的开源项目比如flask和tornado等，无论是代码还是文档都做得相当棒。对于一些项目，有些东西如部署步骤；常用命令等还是可以记录下来的，可以使用wiki或者readthedoc，gitbooks等文档工具记录一下，方便新人上手。如果不知道记录啥，就把你发现不止一次会用到的东西文档化。个人认为需求文档也应该有历史记录，方便接手的人可以快速了解业务和需求变更。数据库字段的含义也应该及时记录和更新。
+
+Readme Driven Development:
+- Explain the system's pupose. (What is the business reason ? Why are we here?)
+- Describe the scope. (What defines what the system does and doesn't do?)
+- Summarise what it does. (What does it actually do? What is it for?)
+
+只有少数很复杂的系统需要详细的文档，架构图、UML、数据模型、处理流程、业务逻辑等需要整理成文档。Write the minimum vialbe system documentation.
+
 
 代码分支与代码管理
 --------------------------------------
