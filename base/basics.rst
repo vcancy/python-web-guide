@@ -87,7 +87,7 @@ python一大优势在于数量丰富的库，灵活使用各种python库能帮�
 比如著名网站reddit代码已经开源，大部分python实现，可以参考下。另外很多著名的python库，比如requests/flask等也可以作为参考。从笔者短暂的从业经历来看，大部分自学python的人不怎么遵守代码规范（pep8），
 不知道或者不重视单元测试（写个函数print下就觉得OK了），不知道怎么写注释和文档（docstring听过吗？）。所以希望学习python的你能遵守工程实践，具备良好的职业素养和编码习惯，推荐阅读《代码大全》《编程匠艺》之类的工程相关的书。
 
-* `《程序员的自我修养》 <https://www.gitbook.com/book/leohxj/a-programmer-prepares/details>`_
+* `《程序员的职业素养》 <https://book.douban.com/subject/11614538/>`_
 * `《软件工程师实战基本功》 <https://book.douban.com/subject/1225340/>`_
 
 后端技术栈

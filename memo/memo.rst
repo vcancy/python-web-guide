@@ -72,7 +72,8 @@ Ubuntu相关
     xsel -c
     # 清空剪贴板
 
-    # 可以把代码文件贴到paste.ubuntu.com共享，此命令返回一个网址sudo apt-get install pastebinit
+    # 可以把代码文件贴到paste.ubuntu.com共享，此命令返回一个网址
+    # sudo apt-get install pastebinit; sudo pip install configobj
     pastebinit -i [filename]
 
 
