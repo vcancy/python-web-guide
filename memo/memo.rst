@@ -286,6 +286,36 @@ Git工作流
    git rebase -i HEAD~~    # 最近两次提交
 
 
+Git hook
+------------
+比如我们要在每次 commit 之前运行下单测，进入项目的 .git/hooks 目录， "cp pre-commit.sample pre-commit" 修改内容如下:
+
+.. code-block:: bash
+
+    #!/bin/sh
+
+    if git rev-parse --verify HEAD >/dev/null 2>&1
+    then
+        against=HEAD
+    else
+        # Initial commit: diff against an empty tree object
+        against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+    fi
+
+    # Redirect output to stderr.
+    exec 1>&2
+
+    if /your/path/bin/test:    # 这里添加需要运行的测试脚本
+    then
+        exit 0
+    else
+        exit 1
+    fi
+
+    # If there are whitespace errors, print the offending file names and fail.
+    exec git diff-index --check --cached $against --
+
+
 vim
 ----
 
