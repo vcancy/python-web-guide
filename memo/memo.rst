@@ -37,6 +37,20 @@ Mac
    pbpaste | ag name
    pbpaste > filename
 
+如何发送 mac 通知，可以用来做提示
+
+.. code-block:: python
+
+   # https://stackoverflow.com/questions/17651017/python-post-osx-notification
+
+   import os
+
+   def notify(title, text):
+       os.system("""
+                 osascript -e 'display notification "{}" with title "{}"'
+                 """.format(text, title))
+
+   notify("开会啦", "Go Go Go !!!")
 
 
 Ubuntu相关
