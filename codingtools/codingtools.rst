@@ -8,7 +8,7 @@
 --------------------------------------------------
 
 - Pycharm。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)
-- vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE。其他优秀的编辑器sublime，atom，vscode，emacs等不熟，根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码，缺点就是补全和跳转支持不完善，也可以 Pycharm  和 vim插件配合。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
+- vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE(本人装了六七十个插件，满足各种变态的编辑需求)。其他优秀的编辑器sublime，atom，vscode，emacs等不熟，根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码，缺点就是补全和跳转支持不完善，也可以 Pycharm  和 vim插件配合。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
 - meld/vimdiff: 文本比对工具。
 - tmux。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
@@ -31,6 +31,7 @@
 --------------------------------------
 - pylint: 代码静态检测工具，请务必集成在你的编辑器或者IDE里（推荐）。能帮你少犯很多错误，动态语言写项目要十分谨慎，非常容易犯错。或者在CI加上 hook 每次 push 代码的时候检测。
 - pep8: python代码风格检测工具(推荐)。懒人可以试试 autopep8 工具，自动格式化。所有人的代码都过一遍 pylint 和 autopep8(放宽行长度) 看起来就比较一致了。
+- autopep8/yapf: python 代码自动格式化工具，懒人必备。都可以集成到 vim 里，比如使用  Plugin 'Chiel92/vim-autoformat'  工具一键格式化
 - prospector: 集成了众多python代码检测工具
 - mccabe: 圈复杂度检测工具。McCabe 是一种度量程序复杂度的方法，如果单个子程序复杂度过高，或许就需要拆分逻辑提高程序的易读性。
 - pyflakes
