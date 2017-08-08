@@ -515,6 +515,7 @@ Docstring应该包括什么?接口易用性
 很多程序员是懒得写文档的，仿佛牛逼的程序员不需要写。但是看人家真正牛逼的开源项目比如flask和tornado等，无论是代码还是文档都做得相当棒。对于一些项目，有些东西如部署步骤；常用命令等还是可以记录下来的，可以使用wiki或者readthedoc，gitbooks等文档工具记录一下，方便新人上手。如果不知道记录啥，就把你发现不止一次会用到的东西文档化。个人认为需求文档也应该有历史记录，方便接手的人可以快速了解业务和需求变更。数据库字段的含义也应该及时记录和更新。
 
 Readme Driven Development:
+
 - Explain the system's pupose. (What is the business reason ? Why are we here?)
 - Describe the scope. (What defines what the system does and doesn't do?)
 - Summarise what it does. (What does it actually do? What is it for?)
@@ -594,11 +595,12 @@ Code Quality: Simple, Well-tested, Bug free, Clear, Refactored, Documented, Exte
 
 个人开发习惯
 ------------------------------------
-- 确保正确了解需求。
+
+- 确保正确了解需求；需求分析；适当设计。
 - 番茄工作法。确保编码期间足够专注。
-- 编写边测。虽没有使用 TDD 开发的习惯，但是对于稍复杂的逻辑就要写单测，以便及时发现错误，越早发现越容易修复。我习惯用文件变动监控工具(when-changed fswatch等)检测文件变动，每次保存文件自动跑相关测试(比如 nose pytest 等都可以执行单个文件或类的测试)。
-- 注释先行。写下一个类或者函数之前先想好它的功能，按照功能命名，之后写简单的注释描述其意图和功能，通常不超过三句话，大部分时间只有一句话(只做一件事)。
-- 善用工具。比如笔者使用的 vim 插件 python-mode 集成了 pylint、pep8、pyflakes、autopep8 等功能，方便快速检测代码是否有语法错误和规范问题。
+- 边写边测。虽没有使用 TDD 开发的习惯，但是对于稍复杂的逻辑就要写单测，以便及时发现错误，越早发现越容易修复。我习惯用文件变动监控工具(when-changed fswatch等)检测文件变动，每次保存文件自动跑相关测试(比如 nose pytest 等都可以执行单个文件或类的测试,你可以快速验证当前代码是否有问题，及时修改或者重构)。
+- 注释先行。写下一个模块、类或者函数之前先想好它的功能，按照功能命名，之后写简单的注释描述其意图和功能，通常不超过三句话，虽然大部分时间只有一句话(只做一件事) ，但是能快速让后来的维护者了解你的意图。
+- 善用工具。比如笔者使用的 vim 插件 python-mode 集成了 pylint、pep8、pyflakes、autopep8 等功能，方便快速检测代码是否有语法错误和规范问题。每次保存文件后我都会在 vim 里执行一遍 pylint 和 pep8 检测，确保代码在规范上没问题。
 
 
 警惕某种程序猿

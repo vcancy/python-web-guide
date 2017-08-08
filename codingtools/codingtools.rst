@@ -51,6 +51,7 @@
 - pigar: 找出项目使用到的依赖库
 - buildout: 项目构建工具
 - pyenv/virtualenv： 多版本管理
+- cookiecutter: 一系列项目模板生成工具，懒人必备。https://github.com/audreyr/cookiecutter
 
 Api 工具
 --------------------------------------
@@ -115,6 +116,10 @@ DSL
 --------------------------------------
 - mycli: mysql 命令行补全等。https://github.com/dbcli/mycli
 - MysqlWorkbench/Sequel Pro: mysql 客户端工具。
+
+绘图工具
+--------------------------------------
+processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求
 
 效率工具
 --------------------------------------
