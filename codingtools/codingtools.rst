@@ -103,6 +103,7 @@ DSL
 - httpie
 - postman
 - httpbin.org
+- curl/requests 互相转化: https://github.com/oeegor/curlify https://github.com/spulec/uncurl
 
 抓包工具
 --------------------------------------
