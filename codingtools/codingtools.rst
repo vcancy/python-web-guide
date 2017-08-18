@@ -99,8 +99,10 @@ DSL
 --------------------------------------
 - ipdb/pdb
 - curl
-- http
+- https://curl.trillworks.com/ 把 curl 命令参数转成 requests 代码
+- httpie
 - postman
+- httpbin.org
 
 抓包工具
 --------------------------------------
