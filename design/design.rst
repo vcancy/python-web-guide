@@ -518,10 +518,13 @@ Abstract Factory(抽象工厂: 解决复杂对象创建问题)
 
     Flyweight design pattern is a technique used to minimize memory usage and improve performance by introducing data sharing between similar objects.
 
-OOP编程中容易出现对象创建带来的性能和内存占用问题，需要满足以下条件： -
-需要使用大量对象(python里我们可以用\_\_slots\_\_节省内存占用) -
-对象太多难以存储或解析大量对象。 -
-对象识别不是特别重要，共享对象中对象比较会失败。
+OOP编程中容易出现对象创建带来的性能和内存占用问题，需要满足以下条件：
+
+- 需要使用大量对象(python里我们可以用\_\_slots\_\_节省内存占用)
+- 对象太多难以存储或解析大量对象。
+- 对象识别不是特别重要，共享对象中对象比较会失败。
+
+经常使用对象池技术来实现共享对象，比如数据库中经常使用连接池来减少开销，预先建立一些连接池，每次取一个连接和数据库交互。
 
 ::
 
@@ -1137,7 +1140,7 @@ Formatter"来解释发布订阅模式，一种数据可以有多个格式化Form
 
     # 先装下pip3 install state_machine
     from state_machine import (
-    acts_as_state_machine, State, Event, before, after, InvalidStateTransition
+        acts_as_state_machine, State, Event, before, after, InvalidStateTransition
     )
 
 
