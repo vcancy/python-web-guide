@@ -349,6 +349,10 @@ vim
    # Git 插件
    Plugin 'tpope/vim-fugitive' # 在 vim 里执行 :Gblame 可以看到当前文件每行代码的提交人和日期，找人背锅或者咨询的神器
 
+   # 直接在 vim 里 diff 文件，比如打开了两个文件
+   :windo diffthis
+   :diffoff!
+
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
 用markdown文件制作html ppt
