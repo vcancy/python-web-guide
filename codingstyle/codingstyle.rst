@@ -26,6 +26,7 @@
 - 动态语言的变量命名尽量可以从名称就知道其类型，比如url_list, info_dict_list，降低阅读和理解的难度。(我的感觉就是动态语言易编写，写不好后期更难维护)
 - 风格上衡量不了请参考知名开源项目的做法。以可读性和维护性作为标准。(比如知名网站reddit的python代码已经开源了，可以作为参考，强烈建议大家克隆一份，经常拉取更新，看看人家怎么写的python代码)
 - 阿里最近开源了一个规范《阿里巴巴Java开发手册》，网上可以很容易搜到，写得比较细，建议新手下载来看看，有不少实战干货，很多思想是通用的，其实python的unittest等模块很多都是直接借鉴了java。还有新浪微博的《新兵训练营系列课程》
+- 给一些小团队的建议就是所有人统一用 pylint 和 autopep8 工具， pylint 检测代码有没有明显缺陷，autopep8 用来整理格式(类似于 golang 的 gofmt)，至少在风格上就不用在费心统一格式了。
 
 * `《Python 工匠：善用变量来改善代码质量》 <http://www.zlovezl.cn/articles/python-using-variables-well/>`_ 动态语言命名尽量可以表达出类型，否则不好维护
 * `《Python最佳实践》 <http://www.dongwm.com/archives/Python%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/>`_  董伟明的文章
@@ -101,6 +102,7 @@ Python有一些语法上的坑，比如默认参数只计算一次，不要使�
 你可以学习使用下python的unittest或者pytest等进行单元测试，以保证代码质量。个人工作经验也表明，难以测试的代码往往是设计不太好的代码。
 update: 经验表明，TDD未必是必要的，但是单元测试是很必要的。如果是新项目建议为所有的复杂函数写单元测试，为项目质量保证。大项目如果没有单元测试修改bug和重构会有很大风险。
 另外一般写测试之前先写个失败的例子(比如我会在测试函数开头加上 assert 0 失败一下确保我这个测试函数真正跑了的，我见过不止一次由于命名没有加test开头压根就没跑测试函数的，还以为测试通过了)，确定测试是真正运行了的，因为之前出现过乌龙，单测函数命名没有用 test 开头结果导致根本就没有运行这个测试用例，后来修正了以后跑失败了，如果先失败一次就会避免这个问题，说白了就是保证你的测试用例确实是跑了的。
+感兴趣可以试试极限编程中的测试驱动开发和结对编程。
 下边是一些参考:
 
 * `《COMPREHENSIVE GUIDE TO CODE QUALITY: BEST PRACTICES AND TOOLS》 <http://codingsans.com/blog/code-quality>`_
@@ -186,7 +188,7 @@ python代码坏味道(新手经常犯的错误)
 - 变量名乱起，表意不明，推断不出类型，加重理解负担。我在想是不是动态语言用匈牙利命名法要好一些，命名尽量要可以看出类型，比如复数表示容器类型，nums，cnts等后缀表示数值(通过后缀和词性来使名称更容易被推断出来含义)。动态语言一大诟病就是容易类型出错。
 - 不遵守pep8，没有pylint检测，打开代码一堆语法警告，老子的编辑器满眼都是warnning，编辑器用不好就老老实实用pycharm，用编辑器就老老实实装好语法检测(pep8)和pylint检测插件，没有插件请考虑换一个editor。我个人的感觉就是python代码很容易写得难以维护，请务必加上pylint检测，帮助提高代码质量。还是推荐不想折腾编辑器的直接用好pycharm。
 - 没有逻辑分块，一点都不重视排版，没有美感（这个就算了），就算不限制一行超过80列，也不能写一行写几百列吧，左右转头脑瓜子疼(请不要用tab，全用空格，不要有多余空白，vim有类似插件去除无用空白的)。使用良好的分行，空格使代码更美观，逻辑更清晰。
-- 不要一行写太多逻辑，比如嵌套的列表推导。(Raymond's rule: One logical line of code equals one sentence in English)。好的代码读起来应该和读英文差不多，从上到下知道每一步都干了什么。
+- 不要一行写太多逻辑，比如嵌套的列表推导。(Raymond's rule: One logical line of code equals one sentence in English)。好的代码读起来应该和读英文差不多，从上到下知道每一步都干了什么。不要轻易为了代码技巧缩短行数，易读性更重要。
 
 * `《https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module》 <https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module>`_
 * `《https://docs.python.org/3/faq/programming.html#how-can-i-have-modules-that-mutually-import-each-other》 <https://docs.python.org/3/faq/programming.html#how-can-i-have-modules-that-mutually-import-each-other>`_
@@ -433,7 +435,7 @@ ORM和数据库相关：
 - 适当使用"匈牙利"命名法(能从命名推断类型)。比如一个变量明显是字典或者集合，加上后缀可能会更易理解，我个人是强烈建议通过前缀或者后缀增强名称的含义和类型（个人经验，有争议，不过我确实感觉这种代码更容易阅读理解，否则看一个变量看不出类型维护起来超级痛苦）
 - 含义精确，具体胜于抽象。不要频繁使用诸如data，info，result，handle，process等概念太广泛的词汇给变量命名，不要使用偏门的简写，为了代码可读性冗余一些都可以(实际上对于现代语言长命名有一定好处，能减少冲突，容易 grep)。模棱两可的命名往往代表着某种警告（比如内聚不合理，不是单一职责等）。命名要能凸显出右侧表达式结果的类型和含义。
 - 给函数命名的一个好办法：首先考虑应该给这个函数写上一句怎样的注释，然后想办法将注释变成函数名称。（来自《重构》）
-- 术语表。其实项目如果能建立术语表比较好，要不每个项目都用不同的词语命名比较混乱。命名会直接影响对代码语义的理解，还是要非常重视的。
+- 术语表和命名规范。其实项目如果能建立术语表比较好，要不每个项目都用不同的词语命名比较混乱。命名会直接影响对代码语义的理解，还是要非常重视的。
 
 (注意这几个词语：『函数function』指有返回值的函数，『过程procedure』指无返回值的函数，『方法method』指的是类中的函数)
 
