@@ -276,6 +276,10 @@ Git
     # 全局 ignore, 对于不同编辑器协作的人比较有用
     git config --global core.excludesfile ~/.gitignore_global
 
+    # 拉取别人远程分支，在 .git/config 里配置好
+    git fetch somebody somebranch
+    git checkout -b somebranch origin/somebranch
+
 
 Git工作流
 ------------
