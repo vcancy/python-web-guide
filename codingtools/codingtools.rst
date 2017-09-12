@@ -11,6 +11,7 @@
 - vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE(本人装了六七十个插件，满足各种变态的编辑需求)。其他优秀的编辑器sublime，atom，vscode，emacs等不熟，根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码，缺点就是补全和跳转支持不完善，也可以 Pycharm  和 vim插件配合。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
 - meld/vimdiff: 文本比对工具。
 - tmux。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
+- tmate: https://tmate.io 终端共享工具，结对编程
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
@@ -84,7 +85,7 @@ DSL
 日志、异常收集工具
 --------------------------------------
 
-- Sentry
+- Sentry: 用来记录异常非常好用，能看到完善的栈信息，方便排错。
 - Fluentd
 
 管理及运维工具(devops很火)
