@@ -23,6 +23,9 @@ Python
    # pyenv 安装多个版本的 python : https://github.com/pyenv/pyenv
    # pyenv-virtualenv https://github.com/pyenv/pyenv-virtualenv
 
+   # 格式化 json
+   cat some.json | python -m json.tool
+
 
 Mac
 ---------------------------------------------------------------
