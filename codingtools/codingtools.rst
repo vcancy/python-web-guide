@@ -54,6 +54,7 @@
 - buildout: 项目构建工具
 - pyenv/virtualenv： 多版本管理
 - cookiecutter: 一系列项目模板生成工具，懒人必备。https://github.com/audreyr/cookiecutter
+- yeoman: http://yeoman.io/generators/ 前端项目生成工具
 
 Api 工具
 --------------------------------------
