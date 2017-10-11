@@ -611,7 +611,7 @@ Code Quality: Simple, Well-tested, Bug free, Clear, Refactored, Documented, Exte
 
 - 认识和熟悉所在团队中的成员（笔者之前一直做得不够好，这一条远比想象中重要，内向性格有时候会比较吃亏），良好的沟通和协调能力能帮助你更快完成(或者委托)任务。
 - 确保正确了解需求，确保熟悉所做的业务；需求分析；适当设计。流程图或者文档有时候可以帮助理清楚业务。比如知乎有 rfc 机制，每次做一个稍微大点的需求都需要写设计文档。
-- 番茄工作法，劳逸结合。确保编码期间足够专注。一次只做一件事。快速迭代。
+- 番茄工作法，劳逸结合(working smart rather than working hard)。长时间专注写代码是非常消耗精力的。确保编码期间足够专注。一次只做一件事。快速迭代。
 - 边写边测，增量式编程。虽没有使用 TDD 开发的习惯，但是对于稍复杂的逻辑就要写单测，以便及时发现错误，越早发现越容易修复(修复成本随时间指数增加)。我习惯用文件变动监控工具(when-changed fswatch等)检测文件变动，每次保存文件自动跑相关测试(比如 nose pytest 等都可以执行单个文件或类的测试,你可以快速验证当前代码是否有问题，及时修改或者重构)。TDD 的好处之一就是改善设计，自顶向下考虑，笔者有时候也会尝试用 TDD。
 - 注释先行，意图导向，牢记可读性可维护性。写一个模块、类或者函数之前先想好它的功能，按照功能命名，之后写简单的注释描述其意图和功能，通常不超过三句话，虽然大部分时间只有一句话(只做一件事) ，但是能快速让后来的维护者了解你的意图。
 - 文档驱动编程(Document Driven Development):比如写一个脚本的时候，应该在文件头部注明需求地址 url(保证代码是可追溯的)，写下实现方式和目的等。有时候对于很复杂的业务逻辑笔者会用自然语言描述步骤，之后再用代码实现。对于需要经常维护的代码，必要的文档是值得的。
@@ -622,6 +622,21 @@ Code Quality: Simple, Well-tested, Bug free, Clear, Refactored, Documented, Exte
 - 结对编程。结对编程和TDD是极限编程中大力提倡的，国内似乎没有多少公司在实践，一般帮助新人了解项目或者带实习生的时候，结对能帮助新人快速上手。最简单的方式两个人共用一台电脑，或者使用 tmux attach 到同一个 session 里（不过只能用 vim/emacs 等终端编辑器了），两个人可以同时编辑代码，相当基情。
 
 平常可以留心下周围优秀的同事都有哪些好习惯，我们可以学习并改善下自己的开发流程。
+
+- 12 Schedule Time to Lower Technical Debt
+- 11 Favor Hign Cohesion(low cyclomatic complexity)
+- 10 Favor Losse Coupling
+- 9 Program with Intention(Simple Design: Passes the tests; Revieals intention; No duplication; Fewest elements)
+- 8 Avoid Primitive Obsession(Imperative code is packed with accidental complexity)
+- 7 Prefer Clear Code over Clever Code
+- 6 Apply Zinsser's Principle on Writing(Simplicity;Clarity;Brevity;Humanity)
+- 5 Comment Why, not What
+- 4 Avoid Long Methods--Apply SLAP (long is not about length of code, but levels of abstraction)
+- 3 Give Good Meaningful Names (if we can't name it appropriately, it may be a sign we've not yet understood its true purpose)
+- 2 To Tactical Code Reviews
+- 1 Reduce State & State Mutation
+
+Think more, type less. Aim for minimalism, fewer states, less mutability, and just enough code for the known, relevant parts of the problem.
 
 
 《The Zen of Python》
