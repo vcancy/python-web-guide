@@ -124,6 +124,8 @@ DSL
 --------------------------------------
 - mycli: mysql 命令行补全等。https://github.com/dbcli/mycli
 - MysqlWorkbench/Sequel Pro: mysql 客户端工具。
+- Medis: redis client 工具
+- MongoChef: Mongodb 客户端工具
 
 绘图工具
 --------------------------------------
