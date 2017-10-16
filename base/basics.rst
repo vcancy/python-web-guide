@@ -72,7 +72,7 @@ Linux系统
 
 python相关库的使用
 -------------------
-python一大优势在于数量丰富的库，灵活使用各种python库能帮助我们快速做出产品。作为web开发者，你需要了解常用python库和框架的使用，比如django/flask/sqlalchemy/requests/pandas等。
+python一大优势在于数量丰富的库，灵活使用各种python库能帮助我们快速做出产品。作为web开发者，你需要了解常用python库和框架的使用，比如django/flask/tornado/sqlalchemy/requests/pandas等。
 
 版本控制
 ----------
@@ -88,6 +88,10 @@ Nginx 目前很流行，使用比较广泛，推荐学习和使用。
 前端知识
 __________
 基本的 html，css，javascript 需要有所了解。很多后端工程师需要做一些工具或者管理后台之类的，了解前端知识会有帮助。
+
+学习和搜索能力
+__________
+初学者碰到的大部分技术问题都是可以通过 google 解决的，用好 google/stackoverflow/github 和各种技术论坛、牛人博客等能帮助你了解最新的技术。
 
 专业素养
 ----------
