@@ -10,13 +10,14 @@
 - Pycharm。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)
 - vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE(本人装了六七十个插件，满足各种变态的编辑需求)。其他优秀的编辑器sublime，atom，vscode，emacs等根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码，和本地体验一样，缺点就是补全和跳转支持不完善，也可以 Pycharm  和 vim插件配合。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
 - neovim: 新时代的 vim，我在这个配置(https://github.com/PegasusWang/vim-config)上自定义了自己的配置，使用起来性能和反应速度上远超原生的老古董 vim，目前笔者已经全面迁移到 neovim，用着很爽
+- vimium: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作。
 - meld/vimdiff: 文本比对工具。
 - tmux。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
 - tmate: https://tmate.io 终端共享工具，结对编程
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
-- Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件。
+- Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件。可以用 python 编写一些自己的 workflow 提高效率，比如把时间戳转成日期等。
 - Dash(mac): 强悍的文档查询工具。
 - devdocs.io: 文档查询工具
 - Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements
