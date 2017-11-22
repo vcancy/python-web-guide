@@ -23,7 +23,7 @@ python，ruby之类的语言优势在于其生产力，你能在极短时间内�
 
 * `《Dive Into Python》 <http://www.diveintopython.net/>`_ 一本免费的开源书
 
-* `《Fluent Python》 <https://book.douban.com/subject/26278021/>`_ Python进阶，涉及了很多Python高级主题。
+* `《Fluent Python》 <https://book.douban.com/subject/26278021/>`_ Python阶进的好书，涉及了很多Python高级主题。
 
 * `《Python3 Cookbook》 <http://python3-cookbook.readthedocs.io/>`_ Python进阶读物。
 
@@ -100,7 +100,6 @@ __________
 不知道或者不重视单元测试（写个函数print下就觉得OK了），不知道怎么写注释和文档（docstring听过吗？）。所以希望学习python的你能遵守工程实践，具备良好的职业素养和编码习惯，推荐阅读《代码大全》《编程匠艺》之类的工程相关的书。
 
 * `《程序员的职业素养》 <https://book.douban.com/subject/11614538/>`_
-* `《软件工程师实战基本功》 <https://book.douban.com/subject/1225340/>`_
 
 后端技术栈
 ----------
