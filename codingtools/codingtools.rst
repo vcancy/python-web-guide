@@ -61,6 +61,12 @@
 - cookiecutter: 一系列项目模板生成工具，懒人必备。https://github.com/audreyr/cookiecutter。笔者之前内部项目就直接用 flask-cookiecutter 直接生成的。
 - yeoman: http://yeoman.io/generators/ 前端项目模板生成工具
 
+续持集成
+--------------------------------------
+- gitlab
+- Travis CI
+- Jenkins
+
 Api 工具
 --------------------------------------
 - checklist: http://python.apichecklist.com/
