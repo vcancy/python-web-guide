@@ -13,7 +13,7 @@ Quora等知名应用一开始都是基于Python构建，国内的豆瓣，知乎
 python，ruby之类的动态语言优势在于其生产力，你能在极短时间内就搭建出原型从而赢得产品竞争。
 推荐一下几本个人认为比较好的Python书籍:
 
-* `《python-guide》 <http://docs.python-guide.org/>`_ requests作者写的guide
+* `《python-guide》 <http://docs.python-guide.org/>`_ requests作者写的guide，偏向工程方面
 
 * `《use python》 <http://use-python.readthedocs.io/zh_CN/latest/>`_ use python
 
@@ -23,14 +23,14 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
 
 * `《Dive Into Python》 <http://www.diveintopython.net/>`_ 一本免费的开源书
 
-* `《Fluent Python》 <https://book.douban.com/subject/26278021/>`_ Python进阶的好书，涉及了很多Python高级主题。
+* `《Fluent Python》 <https://book.douban.com/subject/26278021/>`_ Python进阶的好书，没有之一，涉及了很多Python高级主题和实现特性。
 
-* `《Python3 Cookbook》 <http://python3-cookbook.readthedocs.io/>`_ Python进阶读物。
+* `《Python3 Cookbook》 <http://python3-cookbook.readthedocs.io/>`_ Python进阶读物，汇集了很多技巧。
 
-* `《Python高级编程》 <http://www.dongwm.com/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/>`_ 小明明的python高级编程
+* `《Python高级编程》 <http://www.dongwm.com/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/>`_ 豆瓣工程师董伟明先生写的python高级编程 ppt
 
 
-当然还有Python的官方文档作为参考，不过有些文档有些地方比较晦涩，还是推荐书籍入门。网上目前也可以搜到很多免费的电子书。
+当然还有Python的官方文档作为参考，不过有些文档比较晦涩，还是推荐书籍入门。网上目前也可以搜到很多免费的电子书。
 如果有时间可以看看国内廖雪峰写的Python教程，简单易懂，就是跳跃有点大。
 
 
