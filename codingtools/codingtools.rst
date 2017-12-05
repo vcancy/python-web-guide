@@ -124,10 +124,34 @@ DSL
 - mitmproxy: 用 python 实现的终端命令行抓包工具，可以将请求直接导出成 python 代码，笔者经常用来抓包和调试。
 - charles: 抓包软件(收费)
 
+爬虫相关
+--------------------------------------
+- Scrapy: 知名的爬虫框架。生态比较丰富
+- pyspider: 国人写的一个不错的爬虫框架
+- requests: 一般小爬虫用 requests 绰绰有余。
+- lxml/BeautifulSoup/pyquery: 解析 html，xml 等。
+- tornado: 异步的 http client 可以写爬虫
+- redis/celery: 实现队列、异步爬虫。异步方案也比较多
+- phantomjs/puppeteer: 用来处理动态网站。puppeteer 基于 nodejs
+
+RPC
+--------------------------------------
+- thrift: facebook 开源的 rpc 框架
+
+Rest
+--------------------------------------
+- 随便搜吧，各种框架都有，一大把
+
+数据处理
+--------------------------------------
+- pandas: 处理报表经常用，适合处理矩阵、excel 等。配合一些可视化库可以弄报表啥的。
+
+
 压测工具
 --------------------------------------
-- locust: python实现的压测工具。http://locust.io/
+- locust: python实现的压测工具。http://locust.io/， 有 web 界面
 - ab
+- wrk
 
 数据库工具
 --------------------------------------
