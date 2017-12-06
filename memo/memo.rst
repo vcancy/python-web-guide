@@ -237,6 +237,9 @@ Git
     # 手残pull错了分支就
     git reset --hard HEAD~
 
+    # How to revert Git repository to a previous commit?, https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit
+    git reset --hard 0d1d7fc32
+
     # 手残直接在master分之改了并且add了
     git reset --soft HEAD^
     git branch new_branch
