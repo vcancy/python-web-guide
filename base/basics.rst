@@ -51,6 +51,7 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
   一本小白入门Http协议的好书，有大量图片示例。
 * `《Http权威指南》 <https://book.douban.com/subject/10746113/>`_
   Http协议最权威的讲解，大部头著作，可以看看最基础的部分。
+* `《网络爬虫教程》 <https://piaosanlang.gitbooks.io/spiders/01day/README1.html>`_
 
 
 Linux系统
