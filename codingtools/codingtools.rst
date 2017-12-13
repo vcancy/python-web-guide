@@ -92,7 +92,7 @@ DSL
 - gitbook + markdown
 - sphinx + readthedoc （代码即文档），python 项目很多在用这个生成文档
 - swagger: 适合写 restful 文档
-- jupyter notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做代码交互式 slideshow，非常好的工具
+- jupyter(ipython) notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做代码交互式 slideshow，非常好的工具
 - Confluence: 适合作为团队的项目文档工具，团队大了以后文档还是很重要的。
 
 日志、异常收集工具
@@ -144,7 +144,8 @@ Rest
 
 数据处理
 --------------------------------------
-- pandas: 处理报表经常用，适合处理矩阵、excel 等。配合一些可视化库可以弄报表啥的。
+- pandas: 处理报表经常用，适合处理矩阵(DataFrame)、excel 等。配合一些前端可视化库可以弄报表啥的。
+- matplotlib: python 绘图
 
 
 压测工具
