@@ -190,6 +190,7 @@ python代码坏味道(新手经常犯的错误)
 - 不遵守pep8，没有pylint检测，打开代码一堆语法警告，老子的编辑器满眼都是warnning，编辑器用不好就老老实实用pycharm，用编辑器就老老实实装好语法检测(pep8)和pylint检测插件，没有插件请考虑换一个editor。我个人的感觉就是python代码很容易写得难以维护，请务必加上pylint检测，帮助提高代码质量。还是推荐不想折腾编辑器的直接用好pycharm。
 - 没有逻辑分块，一点都不重视排版，没有美感（这个就算了），就算不限制一行超过80列，也不能写一行写几百列吧，左右转头脑瓜子疼(请不要用tab，全用空格，不要有多余空白，vim有类似插件去除无用空白的)。使用良好的分行，空格使代码更美观，逻辑更清晰。
 - 不要一行写太多逻辑，比如嵌套的列表推导。(Raymond's rule: One logical line of code equals one sentence in English)。好的代码读起来应该和读英文差不多，从上到下知道每一步都干了什么。不要轻易为了代码技巧缩短行数，易读性更重要。业务代码能不用奇淫技巧就千万别用，维护起来心累。
+- 统一编辑环境（editorconfig）、导入顺序（isort）、编码规范（autopep8）、静态检测（pylint），甚至统一命名规范和名词术语（不要相信各种中式英语，换一个人就看不懂了）。
 
 * `《https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module》 <https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module>`_
 * `《https://docs.python.org/3/faq/programming.html#how-can-i-have-modules-that-mutually-import-each-other》 <https://docs.python.org/3/faq/programming.html#how-can-i-have-modules-that-mutually-import-each-other>`_
