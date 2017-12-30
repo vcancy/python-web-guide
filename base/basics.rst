@@ -137,3 +137,11 @@ Nginx 目前很流行，使用比较广泛，推荐学习和使用。熟悉 LNMP
 - 学习业务常用数据库 mysql 和 redis，业界用得比较多的数据库。了解关系型数据库 mysql 基础概念、语句、索引优化等，了解内存型数据库 redis 的常用数据结构，使用场景等。
 - 学习 git 版本控制。项目协作的时候都是有版本控制的，方便我们记录、回滚代码等。
 - 在 linux server 部署你的 python web 服务。你需要学习 linux 常用命令，web 服务器 nginx 等。最好能独立部署一个网站出来。
+
+
+系统设计
+----------
+对于有经验的工程师来说，系统设计也是一项重要的能力。比如设计一个短网址服务、简单的 feed
+流系统、推荐系统、发号器服务等。笔者也处于学习中，推荐个资料供参考：
+
+* `《https://github.com/PegasusWang/system-design-primer》 <https://github.com/PegasusWang/system-design-primer>`_
