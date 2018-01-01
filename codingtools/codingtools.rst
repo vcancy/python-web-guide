@@ -26,6 +26,7 @@
 - tig: text-mode interface for git. 喜欢命令行的可以尝试下。 https://github.com/jonas/tig
 - tldr: 更好的man手册
 - EditorConfig: http://editorconfig.org/ 用来统一编辑器配置。如果成员用不同的操作系统和编辑器，建议使用。尤其是对于 python 这种使用缩进的语言
+- mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
 
 一定要有个趁手的开发工具(它甚至比你女朋友都重要)，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道(提升编辑效率的秘诀在于多用键盘快捷键，少用鼠标，以及可以高度定制、和扩展功能的编辑器)。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1', 'l', 'I', '0', 'O', 'S', '5'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。最后注意你用编辑器的话一定要用 pylint，pep8 检测插件，否则不遵守规范可能会导致用 IDE 打开项目后一堆警告(别人会想问候你祖宗的)。
 更多 mac 工具可以参考：https://github.com/jaywcjlove/awesome-mac 。搜 awesome-python 或者 awesome-flask 等有很多类似项目。
@@ -89,9 +90,9 @@ DSL
 
 文档工具
 --------------------------------------
-- google doc
-- gitbook + markdown
-- sphinx + readthedoc(或者 mkdocs) （代码即文档），python 项目很多在用这个生成文档。这本小书就是这么写出来的。
+- google doc/石墨: 支持多人协作编辑
+- gitbook + markdown: 可以写文档或电子书
+- sphinx + readthedoc(或者 mkdocs，支持 markdown) （代码即文档），python 项目很多在用这个生成文档。这本小书就是这么写出来的。
 - swagger: 适合写 restful 文档
 - jupyter(ipython) notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做代码交互式 slideshow，非常好的工具
 - Confluence: 适合作为团队的项目文档工具，团队大了以后文档还是很重要的。
