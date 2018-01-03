@@ -283,7 +283,7 @@ python 代码性能优化相关：
 - 常见的 web 后端性能优化措施：
 
   - 批量：批量接口；消除数据库慢查询等
-  - 缓存：使用 redis 等缓存数据，需要注意缓存失效问题
+  - 缓存：使用 redis 等缓存数据，需要注意缓存失效问题(Cache-aside, Write-through, Write-back)
   - 异步：使用 celery 结合消息队列等把任务交给离线 worker 执行，防止阻塞当前请求。或者使用异步框架
   - 并发：使用 gevent(greenlet)、多线程 等并发请求数据
 
