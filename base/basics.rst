@@ -74,6 +74,9 @@ Linux系统
 现在网站业务后端用得比较多的有三种类型的数据库，关系型数据库（mysql等），文档型数据库（mongodb等），和内存型数据库（redis等）。三种数据库各有优势和其使用场景，后端程序员需要了解下不同类型数据库的使用方法和应用场景，灵活应用到后端代码中。关于各种数据库网上已经有不少资料，读者可以自行搜索学习，比较重要的是 mysql 和 redis。
 对大数据感兴趣的可以学习下 Hadoop生态系统。
 
+* `《Designing Data-Intensive Applications》 <https://book.douban.com/subject/26197294/>`_ 了解各种数据模型
+
+
 python相关库的使用
 -------------------
 python一大优势在于数量丰富的库，灵活使用各种python库能帮助我们快速做出产品。作为web开发者，你需要了解常用python库和框架的使用，比如django/flask/tornado/sqlalchemy/requests/pandas等。
@@ -143,4 +146,4 @@ Nginx 目前很流行，使用比较广泛，推荐学习和使用。熟悉 LNMP
 ----------
 对于有经验的工程师来说，系统设计也是一项重要的能力（也是除了存储系统、程序设计、网络通讯、操作系统之外经常被面试考到的）。比如设计一个短网址服务、简单的 feed 流系统、推荐系统、发号器服务等。笔者也处于学习中，推荐个资料供参考：
 
-* `《https://github.com/PegasusWang/system-design-primer》 <https://github.com/PegasusWang/system-design-primer>`_
+* `《https://github.com/PegasusWang/system-design-primer》 <https://github.com/PegasusWang/system-design-primer>`_ 关于系统设计和架构设计相关的资料
