@@ -61,12 +61,3 @@ ag 搜索
 `autojump <https://github.com/joelthelion/autojump>`
 
 * j <dir> 根据最近工作目录记录跳转到最合适的位置。
-
-
-其它批处理命令
-----------------------------------------------
-
-:ref:`42qucc`
-
-deltmp
-递归删除目录中所有 vim 临时文件。
