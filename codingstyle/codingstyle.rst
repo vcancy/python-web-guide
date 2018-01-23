@@ -603,6 +603,8 @@ Code Review(代码复查)
     - commit 信息（commit信息是否准确，比如附上 jira 或者需求文档地址，bug 地址等，有迹可循, 目前团队加上了提交模板，对于 bug fix、新特性、重构等都需要填写对应的模板信息）
 
 * `《https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html》 <https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html>`_
+* `《如何用人类的方式进行 Code Review》 <https://zhuanlan.zhihu.com/p/31581735>`_
+
 
 日志与异常记录
 --------------------------------------
