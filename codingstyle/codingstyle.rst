@@ -31,7 +31,7 @@
 - 阿里最近开源了一个规范《阿里巴巴Java开发手册》，网上可以很容易搜到，写得比较细，建议新手下载来看看，有不少实战干货，很多思想是通用的，其实python的unittest等模块很多都是直接借鉴了java。还有新浪微博的《新兵训练营系列课程》
 - 给一些小团队的建议就是所有人统一用 pylint 和 autopep8 工具， pylint 检测代码有没有明显缺陷，autopep8 用来整理格式(类似于 golang 的 gofmt)，至少在风格上就不用在费心统一格式了，代码洁癖必备。
 
-* `《Python 项目工程实践》 <http://www.zlovezl.cn/articles/python-using-variables-well/>`_  如何构建良好的工程代码
+* `《Python 项目工程实践》 <https://zhuanlan.zhihu.com/p/32902344>`_  如何构建良好的工程代码
 * `《Python 工匠：善用变量来改善代码质量》 <http://www.zlovezl.cn/articles/python-using-variables-well/>`_ 动态语言命名尽量可以表达出类型，否则不好维护
 * `《Python最佳实践》 <http://www.dongwm.com/archives/Python%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/>`_  董伟明的文章
 * `《PYTHON 代码规范小结》 <http://www.wklken.me/posts/2016/11/03/python-code-style.html>`_
