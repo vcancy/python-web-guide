@@ -3,7 +3,8 @@
 编码之前碎碎念(工程实践)
 =====================================================================
 有些人喜欢动态语言的表达能力和灵活性，有些人却讨厌动态语言，认为动态语言工程不友好，性能低、易出错、难重构。在项目中应该结合不同语言的生产力、性能、生态圈、招聘需求、产品周期等，灵活选取，扬长避短。
-动态语言比较适合构建 mvp（最小可用产品），所以很多创业公司或者内部项目在用。以下是笔者从业过程中总结的一些工程实践，因为动态语言本身的特性，需要良好的工程控制保证代码质量。
+动态语言比较适合构建 mvp（最小可用产品），所以很多创业公司或者内部项目在用。以下是笔者从业过程中总结的一些工程实践，因为动态语言本身的特性，需要良好的工程控制保证代码质量，否则将来项目代码仓库可能会失控。
+前目网上关于 python 项目工程的资料比较少，仅供参考。
 
 
 代码风格
@@ -31,7 +32,7 @@
 - 阿里最近开源了一个规范《阿里巴巴Java开发手册》，网上可以很容易搜到，写得比较细，建议新手下载来看看，有不少实战干货，很多思想是通用的，其实python的unittest等模块很多都是直接借鉴了java。还有新浪微博的《新兵训练营系列课程》
 - 给一些小团队的建议就是所有人统一用 pylint 和 autopep8 工具， pylint 检测代码有没有明显缺陷，autopep8 用来整理格式(类似于 golang 的 gofmt)，至少在风格上就不用在费心统一格式了，代码洁癖必备。
 
-* `《Python 项目工程实践》 <https://zhuanlan.zhihu.com/p/32902344>`_  如何构建良好的工程代码
+* `《Python 项目工程实践》 <https://zhuanlan.zhihu.com/p/32902344>`_  如何通过工具构建良好的工程代码
 * `《Python 工匠：善用变量来改善代码质量》 <http://www.zlovezl.cn/articles/python-using-variables-well/>`_ 动态语言命名尽量可以表达出类型，否则不好维护
 * `《Python最佳实践》 <http://www.dongwm.com/archives/Python%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/>`_  董伟明的文章
 * `《PYTHON 代码规范小结》 <http://www.wklken.me/posts/2016/11/03/python-code-style.html>`_
@@ -304,7 +305,7 @@ python 代码性能优化相关：
 
 ::
 
-	# python 没有 docstring 维护基本就靠命名了，对于复杂参数的类型没有注释看起来心累
+    # python 没有 docstring 维护基本就靠命名了，对于复杂参数的类型没有注释看起来心累
     def isRankingBetter(self, customer,topranking):
         testranking = getRanking(customer)
         return testranking > topranking
