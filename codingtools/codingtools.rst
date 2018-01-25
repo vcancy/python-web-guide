@@ -60,7 +60,7 @@
 --------------------------------------
 - pigar: 找出项目使用到的依赖库
 - buildout: 项目构建工具
-- pyenv/virtualenv： 多版本管理
+- pyenv/virtualenv/pipenv：多版本管理
 - cookiecutter: 一系列项目模板生成工具，懒人必备。https://github.com/audreyr/cookiecutter。笔者之前内部项目就直接用 flask-cookiecutter 直接生成的。
 - yeoman: http://yeoman.io/generators/ 前端项目模板生成工具
 

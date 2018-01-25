@@ -56,6 +56,15 @@ Mac
    notify("开会啦", "Go Go Go !!!")
 
 
+Zsh
+---------------------------------------------------------------
+.. code-block:: shell
+
+   # Powerlevel9k 是一个强大的 zsh 主题
+   # iTerm2 + Oh My Zsh + Solarized color scheme + Meslo powerline font + [Powerlevel9k] - (macOS)
+   # https://gist.github.com/kevin-smets/8568070
+
+
 Ubuntu相关
 ---------------------------------------------------------------
 
