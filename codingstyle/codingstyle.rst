@@ -161,6 +161,8 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 * 迪米特原则(Law of Demeter):
 * 合成复用原则(Composite/Aggregate Reuse Principle):
 
+* `《如何在Python里应用SOLID原则》 <http://aju.space/2016/06/17/use-S-O-L-I-D-in-python.html>`_
+
 Unix 哲学(来自《Linux 就是这个范儿》)：
 
 * 模块原则：使用简单的接口拼合简单的部件
