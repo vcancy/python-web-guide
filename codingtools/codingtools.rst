@@ -170,7 +170,11 @@ Rest
 
 绘图工具
 --------------------------------------
-processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求
+- processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求
+
+量化投资
+--------------------------------------
+- tushare: https://github.com/waditu/tushare 有本小白参考书: https://wizardforcel.gitbooks.io/python-quant-uqer/
 
 效率工具
 --------------------------------------
