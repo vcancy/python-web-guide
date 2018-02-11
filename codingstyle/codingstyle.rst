@@ -308,6 +308,8 @@ python 代码性能优化相关：
 * `《常见性能优化策略的总结-美团点评技术博客》 <https://zhuanlan.zhihu.com/p/24401056>`_
 * `《High Performance Python》 <http://ningning.today/2017/07/22/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/the-art-of-readable-code/>`_
 * `《深入理解 Python 异步编程》 <http://mp.weixin.qq.com/s/GgamzHPyZuSg45LoJKsofA>`_
+* `《python性能优化》 <http://www.cnblogs.com/xybaby/p/6510941.html>`_
+* `《程序员必知的Python陷阱与缺陷列表》 <http://www.cnblogs.com/xybaby/p/7183854.html>`_
 
 
 嗯，一开始就开启pep8和pylint检测能显著提升代码质量（各种错误警告逼着你写出规范的代码）。咱写不了诗一样的代码，也不能写shǐ 一样的代码，维护一个ugly的代码仓库能有效减少你的寿命。可能很多东西对老鸟来说都是显而易见的，不过菜鸟和高级菜鸟们还是需要多多练习积累经验。慢慢摸索吧骚年。。。。。。如果能主动读一读《代码大全》《编程匠艺》《clean code》《重构》之类的书更好(或者flask等优秀的开源项目代码)，别人会更乐意和你一起合作编程，不然你总会心想『天呐，千万别让我改那个家伙的代码，我宁愿离职！！！』
@@ -604,7 +606,7 @@ Readme Driven Development:
 
 Code Review(代码复查)
 --------------------------------------
-笔者认为code review是一件非常重要的事情，可以有效防止代码腐化，同时方便同事了解业务(可以说编码规范、代码审查和单元测试是保证代码质量的三个重要工具，没有使用这三个工具之一将来代码都可能难以维护)。可以在公司搭建Phabricator（facebook在用）gitlab 类似工具进行代码review。可惜小公司流程不严格，codereview总是坚持不下去，要不就是被同事吐槽总是给他挑刺。实际上如果是新手能够从code review当中快速学到很多东西，比如编程惯用法，摆脱不良编码习惯，不良设计和难以维护的代码等。review的时候对事不对人，代码如果有明显缺陷快速记录个TODO等待review后修正，以一种开放和学习的心态看待review，慢慢整个团队的实力和代码质量就会提高。review就是个互相学习进步的过程，正规的团队都应该严格遵守，而不只是走走流程。
+笔者认为code review是一件非常重要的事情，可以有效防止代码腐化，同时方便同事了解业务(可以说编码规范、静态分析、代码审查和单元测试是保证代码质量的几个重要工具，没有使用这几个工具之一将来代码都可能难以维护)。可以在公司搭建Phabricator（facebook在用）gitlab 类似工具进行代码review。可惜小公司流程不严格，codereview总是坚持不下去，要不就是被同事吐槽总是给他挑刺。实际上如果是新手能够从code review当中快速学到很多东西，比如编程惯用法，摆脱不良编码习惯，不良设计和难以维护的代码等。review的时候对事不对人，代码如果有明显缺陷快速记录个TODO等待review后修正，以一种开放和学习的心态看待review，慢慢整个团队的实力和代码质量就会提高。review就是个互相学习进步的过程，正规的团队都应该严格遵守，而不只是走走流程。
 
 - 建立 review 检查表，防止不合理、过于复杂、明显缺陷、可读性差的代码。眼睛足够多，bug 无处藏。
 - 建立提交模板，每个提交是需求、bugfix还是啥一目了然，同时贴上需求、jira 等地址，方便追溯。
@@ -629,6 +631,7 @@ Code Review(代码复查)
 对于异常，一定『不要吞掉任何异常』，常有新手上来就try/except，也不区分非退出异常，也没有日志记录(坑啊......)。请先阅读python文档的异常机制，可以使用Sentry等工具记录异常。同时发生异常时候的时间，调用点，栈调用信息，locals()变量等要注意记录，给排查错误带来便利。有些错误的复现是比较困难的，这时候日志和异常的作用就凸显出来了。
 
 * `《每个 Python 程序员都要知道的日志实践》 <http://mp.weixin.qq.com/s?__biz=MzA4MjEyNTA5Mw==&mid=2652564362&idx=1&sn=f33910af004f276bbef7ae52e0757bcb&chksm=8464c3c0b3134ad617bcffd865894344367fdd2995a0d5ff9c4da30e0c158b3d02b3d616f615&mpshare=1&scene=23&srcid=1124K7Ht1FP2A1Fnvi3HTBE5#rd>`_
+* `《日志的艺术（The art of logging）》 <http://www.cnblogs.com/xybaby/p/7954610.html>`_
 
 调试
 --------------------------------------
