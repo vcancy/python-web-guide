@@ -19,6 +19,7 @@
 - meld/vimdiff: 文本比对工具。
 - tmux。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
 - tmate: https://tmate.io 终端共享工具，结对编程
+- asciinema: 终端会话记录工具。https://asciinema.org/
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
