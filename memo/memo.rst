@@ -90,6 +90,9 @@ Mac
    pbpaste | ag name
    pbpaste > filename
 
+   # updatedb https://superuser.com/questions/109590/whats-the-equivalent-of-linuxs-updatedb-command-for-the-mac
+   sudo /usr/libexec/locate.updatedb
+
 如何发送 mac 通知，可以用来做提示
 
 .. code-block:: python
