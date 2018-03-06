@@ -526,7 +526,7 @@ n^2 < n^3 < a^n。
 
         return new_list
 
-6章:Linked Structure
+6章: Linked Structure
 --------------------
 
 list是最常用的数据结构，但是list在中间增减元素的时候效率会很低，这时候linked
@@ -1289,7 +1289,7 @@ implementation <http://www.laurentluce.com/posts/python-dictionary-implementatio
 
 --------------
 
-12章:Advanced Sorting
+12章: Advanced Sorting
 ---------------------
 
 第5章介绍了基本的排序算法，本章介绍高级排序算法。
@@ -1479,7 +1479,7 @@ implementation <http://www.laurentluce.com/posts/python-dictionary-implementatio
 
 --------------
 
-13章:Binary Tree
+13章: Binary Tree
 ---------------------
 
 The binary Tree: 二叉树，每个节点做多只有两个子节点
@@ -1792,7 +1792,7 @@ python内置了heapq模块帮助我们实现堆操作，比如用内置的heapq�
 
 --------------
 
-14章:Search Trees
+14章: Search Trees
 ---------------------
 
 二叉差找树性质：对每个内部节点V， 1. 所有key小于V.key的存储在V的左子树。

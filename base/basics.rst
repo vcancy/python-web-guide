@@ -171,6 +171,7 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 - 面试的时候准备充分。笔者每次面试都会带上纸、笔、简历、电脑等，即使面试没过，至少也让面试官感觉我是有诚意的，给对方留下好印象。
 - 加分项：github、个人技术博客、开源项目、技术论坛帐号等。
 
+* `《interview_python》 <https://github.com/taizilongxu/interview_python>`_ python 面试题
 
 系统设计进阶
 ------------
