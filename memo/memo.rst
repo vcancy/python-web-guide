@@ -251,6 +251,12 @@ Tmux
    # 如果手贱在本机tmux里又ssh到服务器又进入服务器的tmux怎么办
    c-b c-b d
 
+SSH
+-------------------------------------------------------------
+
+.. code-block:: python
+   # https://superuser.com/questions/98562/way-to-avoid-ssh-connection-timeout-freezing-of-gnome-terminal/98565#98565
+   Press Enter, ~, . one after the other to disconnect from a frozen session.
 
 Git
 -------------------------------------------------------------
