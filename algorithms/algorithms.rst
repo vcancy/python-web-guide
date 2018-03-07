@@ -10,6 +10,7 @@
 什么是ADT: 抽象数据类型，学过数据结构的应该都知道。
 
 How to select datastructures for ADT
+
 1. Dose the data structure provie for the storage requirements as specified by the domain of the ADT?
 2. Does the data structure provide the data access and manipulation functionality to fully implement the ADT?
 3. Effcient implemention?  based on complexity analysis.
@@ -472,10 +473,10 @@ n^2 < n^3 < a^n。
 
     def bubble_sort(seq):    # O(n^2), n(n-1)/2 = 1/2(n^2 + n)
         n = len(seq)
-        for i in range(n-1):
-            for j in range(i+n-1):    # 每一轮冒泡如果满足条件交换相邻的元素
-                if seq[j] > seq[j+1]:
-                    seq[j], seq[j+1] = seq[j+1], seq[j]    # swap seq[j], seq[j+1]
+        for i in range(n):
+            for j in range(n-1):    # 每一轮冒泡如果满足条件交换相邻的元素
+                if seq[j] > seq[i]:
+                    seq[j], seq[i] = seq[i], seq[j]    # swap seq[j], seq[i]
         # 冒泡实际上可以优化，设置一个flag，如果有一轮没有交换操作就说明已经有序了
 
     def select_sort(seq):
@@ -527,7 +528,7 @@ n^2 < n^3 < a^n。
         return new_list
 
 6章: Linked Structure
---------------------
+------------------------
 
 list是最常用的数据结构，但是list在中间增减元素的时候效率会很低，这时候linked
 list会更适合，缺点就是获取元素的平均时间复杂度变成了O(n)
@@ -1020,11 +1021,11 @@ List，双链表，每个节点多了个prev指向前一个节点。双链表可
 
     printInOrder(3)    # 正序输出
 
-Properties of Recursion: 使用stack解决的问题都能用递归解决 - A recursive
-solution must contain a base case; 递归出口，代表最小子问题(n ==
-0退出打印) - A recursive solution must contain a recursive case;
-可以分解的子问题 - A recursive solution must make progress toward the
-base case. 递减n使得n像递归出口靠近
+Properties of Recursion: 使用stack解决的问题都能用递归解决
+
+- A recursive solution must contain a base case; 递归出口，代表最小子问题(n == 0退出打印)
+- A recursive solution must contain a recursive case; 可以分解的子问题
+- A recursive solution must make progress toward the base case. 递减n使得n像递归出口靠近
 
 Tail Recursion: occurs when a function includes a single recursive call
 as the last statement of the function. In this case, a stack is not
@@ -1053,7 +1054,7 @@ and thus a solution can be implemented using a iterative loop instead.
 11章：Hash Tables
 --------------------
 
-基于比较的搜索（线性搜索，有序数组的二分搜索）最好的时间复杂度只能达到O(logn)，利用hash可以实现O(1)查找，python内置dict的实现方式就是hash，你会发现dict的key必须要是实现了\_\_hash\ **和**\ eq\_\_方法的。
+基于比较的搜索（线性搜索，有序数组的二分搜索）最好的时间复杂度只能达到O(logn)，利用hash可以实现O(1)查找，python内置dict的实现方式就是hash，你会发现dict的key必须要是实现了 `__hash__` 和 `__eq__` 方法的。
 
 Hashing: hashing is the process of mapping a search a key to a limited
 range of array indeices with the goal of providing direct access to the
@@ -1290,7 +1291,7 @@ implementation <http://www.laurentluce.com/posts/python-dictionary-implementatio
 --------------
 
 12章: Advanced Sorting
----------------------
+-------------------------------
 
 第5章介绍了基本的排序算法，本章介绍高级排序算法。
 
@@ -1377,7 +1378,7 @@ implementation <http://www.laurentluce.com/posts/python-dictionary-implementatio
 
 ::
 
-    def quicksort(theSeq, first, last):
+    def quicksort(theSeq, first, last):    # average: O(nlog(n))
         """
         quicksort :也是分而治之，但是和归并排序不同的是，采用选定主元（pivot）而不是从中间
         进行数组划分
@@ -1451,7 +1452,7 @@ implementation <http://www.laurentluce.com/posts/python-dictionary-implementatio
 
     test_quicksort()
 
-利用快排中的partitionSeq操作，我们还能实现另一个算法，nth\_element，快速查找一个无序数组中的第k大元素
+利用快排中的partitionSeq操作，我们还能实现另一个算法，nth_element，快速查找一个无序数组中的第k大元素
 
 ::
 
