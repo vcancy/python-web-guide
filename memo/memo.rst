@@ -26,6 +26,21 @@ Python
    # 格式化 json
    cat some.json | python -m json.tool
 
+Pip
+---------------------------------------------------------------
+.. code-block:: python
+
+   # https://stackoverflow.com/questions/12332975/installing-python-module-within-code
+   # pip install 
+   import pip
+
+   def install(package):
+       pip.main(['install', package])
+
+   # Example
+   if __name__ == '__main__':
+       install('argh')
+
 
 IPython
 ---------------------------------------------------------------
