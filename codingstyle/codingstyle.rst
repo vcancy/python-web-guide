@@ -292,6 +292,13 @@ ORM和数据库相关：
 - 如果系统调用过程比较复杂， 最好用流程图标识一下。
 - 对于复杂的数据结构(比如嵌套类型)，可以适当注释出类型，比如最新的 tornado 源码里出现了这种注释 ` __impl_kwargs = None  # type: Dict[str, Any]`  。python3 实际上可以加上类型注解了，鉴于目前 python3 的普及程度，估计也没啥用武之地了。
 
+线程安全相关：
+- CPython 实现中，如果内置类型的操作是单个字节码(bytecode)操作，我们可以认为是原子的，操作能保证线程安全。比如 `L[0]=0` 线程安全但是 `L[0]+=1` 不是线程安全的。你可以用 dis 模块来查看操作的字节码。可以认为 GIL 以字节码为粒度。
+- 虽然有些操作是原子的，比如字典赋值，但是如果用户自己实现了 `__hash__` `__eq__` python 方法，就变成了非原子的。如果调研后无法确定是否是线程安全，最好使用锁。
+
+* `《Which Python Operations Are Atomic?》 <http://blog.qqrs.us/blog/2016/05/01/which-python-operations-are-atomic/<Paste>`_
+* `《Google Python Style Guide: Threading》 <https://google.github.io/styleguide/pyguide.html#Threading>`_
+
 python 代码性能优化相关：
 
 - 不要过早优化，虽然 python 性能一直被诟病。优化之前先使用 profile，火焰图 等工具查看性能瓶颈。基本上代码的耗时是遵守2/8定律的，集中优化最耗时的代码。其实很多 python 内置库都是 c 写的，优化空间并不大。而且大部分 web 应用瓶颈在 IO 这块。
