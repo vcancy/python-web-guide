@@ -108,6 +108,14 @@ Mac
    # updatedb https://superuser.com/questions/109590/whats-the-equivalent-of-linuxs-updatedb-command-for-the-mac
    sudo /usr/libexec/locate.updatedb
 
+   # homebrew 更换源, https://maomihz.com/2016/06/tutorial-6/
+   cd /usr/local
+   git remote set-url origin git://mirrors.ustc.edu.cn/brew.git
+
+   cd /usr/local/Library/Taps/homebrew/homebrew-core
+   git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-core.git
+
+
 如何发送 mac 通知，可以用来做提示
 
 .. code-block:: python
