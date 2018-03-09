@@ -270,6 +270,7 @@ SSH
 -------------------------------------------------------------
 
 .. code-block:: python
+
    # https://superuser.com/questions/98562/way-to-avoid-ssh-connection-timeout-freezing-of-gnome-terminal/98565#98565
    Press Enter, ~, . one after the other to disconnect from a frozen session.
 

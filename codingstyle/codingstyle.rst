@@ -290,12 +290,12 @@ ORM和数据库相关：
 - 不写注释就得确保你的代码高度可读，不然shit一样的代码又没注释和文档，你让接盘侠怎么活？
 - 注释有时候甚至可以帮助你思考设计，比如如果一个类、函数等如果难以用一句话描述它的职责，很有可能就违背了SRP（单一职责原则）。
 - 如果系统调用过程比较复杂， 最好用流程图标识一下。
-- 对于复杂的数据结构(比如嵌套类型)，可以适当注释出类型，比如最新的 tornado 源码里出现了这种注释 ` __impl_kwargs = None  # type: Dict[str, Any]`  。python3 实际上可以加上类型注解了，鉴于目前 python3 的普及程度，估计也没啥用武之地了。
+- 对于复杂的数据结构(比如嵌套类型)，可以适当注释出类型，比如最新的 tornado 源码里出现了这种注释 ` __impl_kwargs = None  # type: Dict[str, Any]`  。python3 实际上可以加上类型注解了，鉴于目前 python3 的普及程度，估计暂时也没啥用武之地了。
 
 线程安全相关：
 
 - CPython 实现中，如果内置类型的操作是单个字节码(bytecode)操作，我们可以认为是原子的，操作能保证线程安全。比如 `L[0]=0` 线程安全但是 `L[0]+=1` 不是线程安全的。你可以用 dis 模块来查看操作的字节码。可以认为 GIL 以字节码为粒度。
-- 虽然有些操作是原子的，比如字典赋值，但是如果用户自己实现了 `__hash__` `__eq__` python 方法，就变成了非原子的。如果调研后无法确定是否是线程安全，最好使用锁。
+- 虽然有些操作是原子的，比如字典赋值，但是如果用户自己实现了 `__hash__` 和 `__eq__` python 方法，就变成了非原子的。如果调研后无法确定是否是线程安全，最好使用锁。
 
 * `《Which Python Operations Are Atomic?》 <http://blog.qqrs.us/blog/2016/05/01/which-python-operations-are-atomic/<Paste>`_
 * `《Google Python Style Guide: Threading》 <https://google.github.io/styleguide/pyguide.html#Threading>`_
