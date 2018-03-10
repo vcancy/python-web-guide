@@ -35,3 +35,4 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
 欢迎你fork一份然后添加自己的章节，本书主要面对经验尚浅的同学作为自学的指导手册，并非速成指南，内容来自笔者工作经验总结。
 本电子版书集合了之前同事的智慧结晶，感谢你们带我入坑。
 本指南同时会有一些不负责任的吐槽。学到东西的请狂点 star，让笔者有动力更新更多业界实战干货，更多技术分享请关注作者知乎帐号 `pegasuswang <https://www.zhihu.com/people/pegasus-wang/activities>`_ ，知乎专栏 `Python 学习之路 <https://zhuanlan.zhihu.com/c_85234576>`_ ，`个人博客 <http://ningning.today/>`_ 。
+笔者还维护了一个 vim 视频教程专栏，感兴趣可以访问 `玩转vim <https://zhuanlan.zhihu.com/vim-video>`_
