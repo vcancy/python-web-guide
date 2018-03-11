@@ -298,6 +298,10 @@ Git
     [mergetool "pycharm"]
         cmd = /usr/local/bin/charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
+    # https://stackoverflow.com/questions/34549040/git-not-displaying-unicode-file-names
+    # git 显示中文文件名
+    git config --global core.quotePath false
+
     # 用来review：
     git log --since=1.days --committer=PegasusWang --author=PegasusWang
     git diff commit1 commit2
@@ -337,11 +341,12 @@ Git
     git branch new_branch
     git checkout new_branch
     git commit -a -m "..."
-	# 或者
+    # 或者
     git reset --soft HEAD^
-	git stash
+    git stash
     git checkout new_branch
-	git stash pop
+    git stash pop
+
     # 如果改了master但是没有add比较简单，三步走
     git stash
     git checkout -b new_branch
