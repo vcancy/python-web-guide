@@ -253,7 +253,7 @@ crontab
     from single_process import single_process    # pip install single_process
 
 
-    @single_process    # 保证不会同时执行，原理请看single_process源码
+    @single_process    # 保证不会同时执行，原理请看single_process源码。新版本貌似改了用法，非装饰器
     def main():
         time.sleep(10)
         print(time.time())
