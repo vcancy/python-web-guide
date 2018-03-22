@@ -297,7 +297,7 @@ ORM和数据库相关：
 - CPython 实现中，如果内置类型的操作是单个字节码(bytecode)操作，我们可以认为是原子的，操作能保证线程安全。比如 `L[0]=0` 线程安全但是 `L[0]+=1` 不是线程安全的。你可以用 dis 模块来查看操作的字节码。可以认为 GIL 以字节码为粒度。
 - 虽然有些操作是原子的，比如字典赋值，但是如果用户自己实现了 `__hash__` 和 `__eq__` python 方法，就变成了非原子的。如果调研后无法确定是否是线程安全，最好使用锁。
 
-* `《Which Python Operations Are Atomic?》 <http://blog.qqrs.us/blog/2016/05/01/which-python-operations-are-atomic/<Paste>`_
+* `《Which Python Operations Are Atomic?》 <http://blog.qqrs.us/blog/2016/05/01/which-python-operations-are-atomic/>`_
 * `《Google Python Style Guide: Threading》 <https://google.github.io/styleguide/pyguide.html#Threading>`_
 
 python 代码性能优化相关：
