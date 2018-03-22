@@ -115,6 +115,9 @@ Mac
    cd /usr/local/Library/Taps/homebrew/homebrew-core
    git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-core.git
 
+   # 从终端查 wifi 密码, https://apple.stackexchange.com/questions/176119/how-to-access-the-wi-fi-password-through-terminal
+   security find-generic-password -ga "ROUTERNAME" | grep "password:"
+
 
 如何发送 mac 通知，可以用来做提示
 
