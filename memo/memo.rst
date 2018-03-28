@@ -91,6 +91,9 @@ Ipdb
 
    alias pd for k in sorted(%1.keys()): print "%s: %s" % (k, (%1[k]))
 
+   # https://stackoverflow.com/questions/21123473/how-do-i-manipulate-a-variable-whose-name-conflicts-with-pdb-commands
+   # 如果 pdb 里的内置命令和内置函数冲突了，可以加上 ! 使用内置函数
+   !next(iter)
 
 Mac
 ---------------------------------------------------------------
