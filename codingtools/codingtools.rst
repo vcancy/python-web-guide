@@ -125,7 +125,7 @@ DSL
 --------------------------------------
 - ipdb/pdb: ipdb 支持自动补全，比原生的 pdb 要好用一些。
 - curl
-- https://curl.trillworks.com/ 把 curl 命令参数转成 requests 代码
+- https://curl.trillworks.com/ 把 curl 命令参数转成 requests 代码。 https://github.com/NickCarneiro/curlconverter/
 - httpie
 - postman: 接口调试 gui 工具，其实相比gui 工具，笔者更喜欢命令行，比较自由。甚至经常用 requests 发请求来调试 http 接口，因为可以很方便地修改各种 header，请求参数等。
 - httpbin.org
