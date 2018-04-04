@@ -31,7 +31,7 @@ Pip
 .. code-block:: python
 
    # https://stackoverflow.com/questions/12332975/installing-python-module-within-code
-   # pip install 
+   # pip install
    import pip
 
    def install(package):
