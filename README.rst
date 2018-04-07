@@ -36,3 +36,9 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
 本电子版书集合了同事的智慧结晶，感谢你们带我入坑。
 本指南同时会有一些不负责任的吐槽。学到东西的请狂点 star，让笔者有动力更新更多业界实战干货，更多技术分享请关注作者知乎帐号 `pegasuswang <https://www.zhihu.com/people/pegasus-wang/activities>`_ ，知乎专栏 `Python 学习之路 <https://zhuanlan.zhihu.com/c_85234576>`_ ，`个人博客 <http://ningning.today/>`_ 。
 笔者还维护了一个 vim 视频教程专栏，感兴趣可以访问 `玩转vim <https://zhuanlan.zhihu.com/vim-video>`_
+
+TODO:
+========
+寻求协作者编写相关章节
+
+- 面试题指南（包括python、数据结构与算法、http、Linux、数据库、web 框架、系统设计等常考点）
