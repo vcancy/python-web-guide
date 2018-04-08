@@ -106,6 +106,7 @@ DSL
 - jupyter(ipython) notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做代码交互式 slideshow，非常好的工具
 - Confluence: 适合作为团队的项目文档工具，团队大了以后文档还是很重要的。
 - vimwiki/emacs org-mode: 依赖于vim/emacs 编辑器，可以做个人笔记，不过笔者还是比较倾向于独立于编辑器的工具。
+- Graphviz: 通过编写代码来生成图片 http://graphviz.org/
 
 日志、异常收集工具
 --------------------------------------
