@@ -68,10 +68,9 @@ Linux系统
 推荐：
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
-* `《CONQUERING THE COMMAND LINE》 <http://conqueringthecommandline.com/book/>`_
-  掌握这上面的命令基本就可以满足日常需求了。
-* `《鸟哥的Linux私房菜.基础学习篇》 <https://book.douban.com/subject/4889838/>`_
-  浅显易懂，入门Linux命令的好书。
+* `《CONQUERING THE COMMAND LINE》 <http://conqueringthecommandline.com/book/>`_ 掌握这上面的命令基本就可以满足日常需求了。
+* `《13 Linux Network Configuration and Troubleshooting Commands》 <https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/>`_
+* `《鸟哥的Linux私房菜.基础学习篇》 <https://book.douban.com/subject/4889838/>`_ 浅显易懂，入门Linux命令的好书。
 
 
 数据库
