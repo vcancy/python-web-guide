@@ -325,7 +325,7 @@ python 代码性能优化相关：
 
 * `《常见性能优化策略的总结-美团点评技术博客》 <https://zhuanlan.zhihu.com/p/24401056>`_
 * `《High Performance Python》 <http://ningning.today/2017/07/22/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/the-art-of-readable-code/>`_
-* `《深入理解 Python 异步编程》 <http://mp.weixin.qq.com/s/GgamzHPyZuSg45LoJKsofA>`_
+* `《深入理解 Python 异步编程》 <https://github.com/denglj/aiotutorial>`_
 * `《python性能优化》 <http://www.cnblogs.com/xybaby/p/6510941.html>`_
 * `《程序员必知的Python陷阱与缺陷列表》 <http://www.cnblogs.com/xybaby/p/7183854.html>`_
 

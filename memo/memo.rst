@@ -344,7 +344,7 @@ Git
 
     # 手残直接在master分之改了并且add了
     git reset --soft HEAD^
-    git branch new_branch
+    git branch new_branch # 切到一个新分支去 commit
     git checkout new_branch
     git commit -a -m "..."
     # 或者
@@ -382,7 +382,7 @@ Git
     # then git push -f
     # git rebase --abort
 
-    # 全局 ignore, 对于不同编辑器协作的人比较有用
+    # 全局 ignore, 对于不同编辑器协作的人比较有用，或者用来单独忽略一些自己建立的测试文件等
     git config --global core.excludesfile ~/.gitignore_global
 
     # 拉取别人远程分支，在 .git/config 里配置好
