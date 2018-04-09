@@ -181,7 +181,7 @@ Two-Demensional Arrays
             return len(self._the_rows[0])
 
         def clear(self, value):
-            for row in range(self.numRows):
+            for row in self._the_rows:
                 row.clear(value)
 
         def __getitem__(self, ndx_tuple):    # ndx_tuple: (x, y)
@@ -224,11 +224,11 @@ The Matrix ADT, m行，n列。这个最好用还是用pandas处理矩阵，自�
 
         @property
         def numRows(self):
-            return len(self._theGrid.numRows())
+            return self._theGrid.numRows
 
         @property
         def NumCols(self):
-            return len(self._theGrid.numCols())
+            return self._theGrid.numCols
 
         def __getitem__(self, ndxTuple):
             return self._theGrid[ndxTuple[0], ndxTuple[1]]
