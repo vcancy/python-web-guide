@@ -181,7 +181,7 @@ Two-Demensional Arrays
             return len(self._the_rows[0])
 
         def clear(self, value):
-            for row in range(self.numRows):
+            for row in self._the_rows:
                 row.clear(value)
 
         def __getitem__(self, ndx_tuple):    # ndx_tuple: (x, y)
