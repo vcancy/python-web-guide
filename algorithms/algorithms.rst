@@ -488,7 +488,7 @@ n^2 < n^3 < a^n。
                 if seq[j] < seq[min_idx]:   # find the minist element index
                     min_idx = j
             if min_idx != i:    # swap
-                seq[i] = seq[min_idx]
+                seq[i], seq[min_idx] = seq[min_idx], seq[i]
 
 
     def insertion_sort(seq):
