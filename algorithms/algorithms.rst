@@ -11,7 +11,7 @@
 
 How to select datastructures for ADT
 
-1. Dose the data structure provie for the storage requirements as specified by the domain of the ADT?
+1. Dose the data structure provide for the storage requirements as specified by the domain of the ADT?
 2. Does the data structure provide the data access and manipulation functionality to fully implement the ADT?
 3. Effcient implemention?  based on complexity analysis.
 
