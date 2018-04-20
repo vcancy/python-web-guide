@@ -73,7 +73,7 @@
 - yeoman: http://yeoman.io/generators/ 前端项目模板生成工具
 - ant-design: 后端管理后台项目解决方案 https://ant.design/docs/react/practical-projects-cn
 
-续持集成
+持续集成
 --------------------------------------
 - gitlab
 - Travis CI
