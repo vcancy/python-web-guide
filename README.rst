@@ -38,7 +38,9 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
 笔者还维护了一个 vim 视频教程专栏，感兴趣可以访问 `玩转vim <https://zhuanlan.zhihu.com/vim-video>`_
 
 TODO:
-========
-寻求协作者编写相关章节
+=================================================================
+您的打赏就是我写作的最大动力，呵呵哒！
 
 - 面试题指南（包括python、数据结构与算法、http、Linux、数据库、web 框架、系统设计等常考点）
+
+.. image:: http://7ktuty.com1.z0.glb.clouddn.com/weixin_dashang.png
