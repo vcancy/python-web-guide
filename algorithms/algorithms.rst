@@ -1050,7 +1050,7 @@ List，双链表，每个节点多了个prev指向前一个节点。双链表可
 
                        self.isfull = len(self.cache) >= self.maxsize
                        return value
-                   else:  # ful
+                   else:  # full
                        lru_node = self.access.headnode()
                        del self.cache[lru_node.key]
                        self.access.remove(lru_node)
