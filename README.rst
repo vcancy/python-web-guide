@@ -43,4 +43,8 @@ TODO:
 
 - 面试题指南（包括python、数据结构与算法、http、Linux、数据库、web 框架、系统设计等常考点）
 
-.. image:: http://7ktuty.com1.z0.glb.clouddn.com/weixin_dashang.png
+.. raw:: html
+
+   <center>
+    <img src="http://7ktuty.com1.z0.glb.clouddn.com/weixin_dashang.png" alt="微信打赏" width=260 height=300>
+   </center>
