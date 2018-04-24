@@ -322,11 +322,12 @@ python 代码性能优化相关：
 
   - 批量：批量接口；消除数据库慢查询等
   - 缓存：使用 redis 等缓存热数据，需要注意缓存失效问题(Cache-aside, Write-through, Write-back)
-  - 异步：使用 celery 结合消息队列等把任务交给离线 worker 执行，防止阻塞当前请求。或者使用异步框架，python3 asyncio(至今仍很不成熟) 等。
-  - 并发：使用 gevent(greenlet)、多线程 等并发请求数据
+  - 异步：使用 celery 结合消息队列等把任务交给离线 worker 执行，防止阻塞当前请求。或者使用异步框架，tornado, python3 asyncio(至今仍不成熟) 等。
+  - 并发：使用 gevent(greenlet)、多线程 等并发请求数据，配合 gunicorn 部署。
 
 * `《常见性能优化策略的总结-美团点评技术博客》 <https://zhuanlan.zhihu.com/p/24401056>`_
 * `《High Performance Python》 <http://ningning.today/2017/07/22/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/the-art-of-readable-code/>`_
+* `《gevent调度流程解析》 <http://www.cnblogs.com/xybaby/p/6370799.html#undefined>`_
 * `《深入理解 Python 异步编程》 <https://github.com/denglj/aiotutorial>`_
 * `《python性能优化》 <http://www.cnblogs.com/xybaby/p/6510941.html>`_
 * `《程序员必知的Python陷阱与缺陷列表》 <http://www.cnblogs.com/xybaby/p/7183854.html>`_
