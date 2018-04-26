@@ -471,13 +471,13 @@ n^2 < n^3 < a^n。
                 low = mid + 1
         return low
 
-    def bubble_sort(seq):    # O(n^2), n(n-1)/2 = 1/2(n^2 + n)
-        n = len(seq)
-        for i in range(n):
-            for j in range(n-1):    # 每一轮冒泡如果满足条件交换相邻的元素
-                if seq[j] > seq[i]:
-                    seq[j], seq[i] = seq[i], seq[j]    # swap seq[j], seq[i]
-        # 冒泡实际上可以优化，设置一个flag，如果有一轮没有交换操作就说明已经有序了
+   def bubble_sort(seq):  # O(n^2), n(n-1)/2 = 1/2(n^2 + n)
+       n = len(seq)
+       for i in range(n-1):
+           for j in range(n-1-i):    # 这里之所以 n-1 还需要 减去 i 是因为每一轮冒泡最大的元素都会冒泡到最后，无需再比较
+               if seq[j] > seq[j+1]:
+                   seq[j], seq[j+1] = seq[j+1], seq[j]
+
 
     def select_sort(seq):
         """可以看作是冒泡的改进，每次找一个最小的元素交换，每一轮只需要交换一次"""
