@@ -327,7 +327,10 @@ python 代码性能优化相关：
 
 * `《常见性能优化策略的总结-美团点评技术博客》 <https://zhuanlan.zhihu.com/p/24401056>`_
 * `《High Performance Python》 <http://ningning.today/2017/07/22/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/the-art-of-readable-code/>`_
+* `《gevent程序员指南》 <http://ningning.today/gevent-tutorial-cn/>`_
 * `《gevent调度流程解析》 <http://www.cnblogs.com/xybaby/p/6370799.html#undefined>`_
+* `《Pinterest How we use gevent to go fast》 <https://medium.com/@Pinterest_Engineering/how-we-use-gevent-to-go-fast-e30fa9f81334>`_
+* `《http://mauveweb.co.uk/posts/2014/07/gevent-asynchronous-io-made-easy.html》<http://mauveweb.co.uk/posts/2014/07/gevent-asynchronous-io-made-easy.html`_
 * `《深入理解 Python 异步编程》 <https://github.com/denglj/aiotutorial>`_
 * `《python性能优化》 <http://www.cnblogs.com/xybaby/p/6510941.html>`_
 * `《程序员必知的Python陷阱与缺陷列表》 <http://www.cnblogs.com/xybaby/p/7183854.html>`_
