@@ -11,7 +11,7 @@
 
 How to select datastructures for ADT
 
-1. Dose the data structure provie for the storage requirements as specified by the domain of the ADT?
+1. Dose the data structure provide for the storage requirements as specified by the domain of the ADT?
 2. Does the data structure provide the data access and manipulation functionality to fully implement the ADT?
 3. Effcient implemention?  based on complexity analysis.
 
@@ -181,7 +181,7 @@ Two-Demensional Arrays
             return len(self._the_rows[0])
 
         def clear(self, value):
-            for row in range(self.numRows):
+            for row in self._the_rows:
                 row.clear(value)
 
         def __getitem__(self, ndx_tuple):    # ndx_tuple: (x, y)
@@ -224,11 +224,11 @@ The Matrix ADT, m行，n列。这个最好用还是用pandas处理矩阵，自�
 
         @property
         def numRows(self):
-            return len(self._theGrid.numRows())
+            return self._theGrid.numRows
 
         @property
         def NumCols(self):
-            return len(self._theGrid.numCols())
+            return self._theGrid.numCols
 
         def __getitem__(self, ndxTuple):
             return self._theGrid[ndxTuple[0], ndxTuple[1]]
@@ -471,13 +471,13 @@ n^2 < n^3 < a^n。
                 low = mid + 1
         return low
 
-    def bubble_sort(seq):    # O(n^2), n(n-1)/2 = 1/2(n^2 + n)
-        n = len(seq)
-        for i in range(n):
-            for j in range(n-1):    # 每一轮冒泡如果满足条件交换相邻的元素
-                if seq[j] > seq[i]:
-                    seq[j], seq[i] = seq[i], seq[j]    # swap seq[j], seq[i]
-        # 冒泡实际上可以优化，设置一个flag，如果有一轮没有交换操作就说明已经有序了
+   def bubble_sort(seq):  # O(n^2), n(n-1)/2 = 1/2(n^2 + n)
+       n = len(seq)
+       for i in range(n-1):
+           for j in range(n-1-i):    # 这里之所以 n-1 还需要 减去 i 是因为每一轮冒泡最大的元素都会冒泡到最后，无需再比较
+               if seq[j] > seq[j+1]:
+                   seq[j], seq[j+1] = seq[j+1], seq[j]
+
 
     def select_sort(seq):
         """可以看作是冒泡的改进，每次找一个最小的元素交换，每一轮只需要交换一次"""
@@ -988,6 +988,90 @@ List，双链表，每个节点多了个prev指向前一个节点。双链表可
 
             newnode.next = curNode
             preNode.next = newnode
+
+利用循环双端链表我们可以实现一个经典的缓存失效算法，lru：
+
+::
+
+   # -*- coding: utf-8 -*-
+
+   class Node(object):
+       def __init__(self, prev=None, next=None, key=None, value=None):
+           self.prev, self.next, self.key, self.value = prev, next, key, value
+
+
+   class CircularDoubleLinkedList(object):
+       def __init__(self):
+           node = Node()
+           node.prev, node.next = node, node
+           self.rootnode = node
+
+       def headnode(self):
+           return self.rootnode.next
+
+       def tailnode(self):
+           return self.rootnode.prev
+
+       def remove(self, node):
+           if node is self.rootnode:
+               return
+           else:
+               node.prev.next = node.next
+               node.next.prev = node.prev
+
+       def append(self, node):
+           tailnode = self.tailnode()
+           tailnode.next = node
+           node.next = self.rootnode
+           self.rootnode.prev = node
+
+
+   class LRUCache(object):
+       def __init__(self, maxsize=16):
+           self.maxsize = maxsize
+           self.cache = {}
+           self.access = CircularDoubleLinkedList()
+           self.isfull = len(self.cache) >= self.maxsize
+
+       def __call__(self, func):
+           def wrapper(n):
+               cachenode = self.cache.get(n)
+               if cachenode is not None:  # hit
+                   self.access.remove(cachenode)
+                   self.access.append(cachenode)
+                   return cachenode.value
+               else:  # miss
+                   value = func(n)
+                   if not self.isfull:
+                       tailnode = self.access.tailnode()
+                       newnode = Node(tailnode, self.access.rootnode, n, value)
+                       self.access.append(newnode)
+                       self.cache[n] = newnode
+
+                       self.isfull = len(self.cache) >= self.maxsize
+                       return value
+                   else:  # full
+                       lru_node = self.access.headnode()
+                       del self.cache[lru_node.key]
+                       self.access.remove(lru_node)
+                       tailnode = self.access.tailnode()
+                       newnode = Node(tailnode, self.access.rootnode, n, value)
+                       self.access.append(newnode)
+                       self.cache[n] = newnode
+                   return value
+           return wrapper
+
+
+   @LRUCache()
+   def fib(n):
+       if n <= 2:
+           return 1
+       else:
+           return fib(n - 1) + fib(n - 2)
+
+
+   for i in range(1, 35):
+       print(fib(i))
 
 --------------
 

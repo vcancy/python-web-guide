@@ -270,15 +270,31 @@ crontab
 
 * `《crontab快速参考》 <http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html>`_
 
+
+Iterm2
+-------------------------------------------------------------
+
+.. code-block:: sh
+
+   # https://stackoverflow.com/questions/11913990/iterm2-keyboard-shortcut-for-moving-tabs-around
+   # Preferences/Keys 自定义配置使用 Cmd +jk 来在 Iterm2 tab 前后移动，模仿 vim 键位
+
+
 Tmux
 -------------------------------------------------------------
 
-.. code-block:: python
+.. code-block:: sh
 
    tmux rename -t oriname newname
    tmux att -t name -d               # -d 不同窗口全屏
    # 如果手贱在本机tmux里又ssh到服务器又进入服务器的tmux怎么办
    c-b c-b d
+
+   # Vim style pane selection
+   bind -n C-h select-pane -L
+   bind -n C-j select-pane -D
+   bind -n C-k select-pane -U
+   bind -n C-l select-pane -R
 
 SSH
 -------------------------------------------------------------
@@ -344,7 +360,7 @@ Git
 
     # 手残直接在master分之改了并且add了
     git reset --soft HEAD^
-    git branch new_branch
+    git branch new_branch # 切到一个新分支去 commit
     git checkout new_branch
     git commit -a -m "..."
     # 或者
@@ -382,7 +398,7 @@ Git
     # then git push -f
     # git rebase --abort
 
-    # 全局 ignore, 对于不同编辑器协作的人比较有用
+    # 全局 ignore, 对于不同编辑器协作的人比较有用，或者用来单独忽略一些自己建立的测试文件等
     git config --global core.excludesfile ~/.gitignore_global
 
     # 拉取别人远程分支，在 .git/config 里配置好

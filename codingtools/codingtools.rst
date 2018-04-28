@@ -21,7 +21,7 @@
 - tmate: https://tmate.io 终端共享工具，结对编程
 - asciinema: 终端会话记录工具。https://asciinema.org/
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
-- item2(mac)。替代原生的终端。
+- item2(mac)。替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
 - Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
 - Dash(mac): 强悍的文档查询工具。
@@ -71,8 +71,9 @@
 --------------------------------------
 - cookiecutter: 一系列项目模板生成工具，懒人必备。https://github.com/audreyr/cookiecutter。笔者之前内部项目就直接用 flask-cookiecutter 直接生成的。
 - yeoman: http://yeoman.io/generators/ 前端项目模板生成工具
+- ant-design: 后端管理后台项目解决方案 https://ant.design/docs/react/practical-projects-cn
 
-续持集成
+持续集成
 --------------------------------------
 - gitlab
 - Travis CI
@@ -101,7 +102,7 @@ DSL
 --------------------------------------
 - google doc/石墨: 支持多人协作编辑
 - gitbook + markdown: 可以写文档或电子书
-- sphinx + readthedoc(或者 mkdocs，支持 markdown) （代码即文档），python 项目很多在用这个生成文档。这本小书就是这么写出来的。
+- sphinx + readthedoc(或者 mkdocs，支持 markdown) （代码即文档），python 项目很多在用这个生成文档。这本小书就是这么写出来的。`编写《Redis 设计与实现》时用到的工具 <http://blog.huangz.me/diary/2013/tools-for-writing-redisbook.html>`_
 - swagger: 适合写 restful 文档
 - jupyter(ipython) notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做代码交互式 slideshow，非常好的工具
 - Confluence: 适合作为团队的项目文档工具，团队大了以后文档还是很重要的。
@@ -168,6 +169,12 @@ Rest
 - ab
 - wrk
 
+
+Profiler
+--------------------------------------
+- pyflame: https://github.com/uber/pyflame
+
+
 数据库工具
 --------------------------------------
 - mycli: mysql 命令行补全等。https://github.com/dbcli/mycli
@@ -178,6 +185,7 @@ Rest
 绘图工具
 --------------------------------------
 - processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求
+- draw.io: https://www.draw.io/
 
 量化投资
 --------------------------------------
@@ -189,4 +197,4 @@ Rest
 - teambiation/trello: todo list 工具，管理任务。今天做了什么；计划做什么；哪些困难导致工作被阻塞(实在搞不定的记下来及时向同事求助)；发现了什么问题；今天学到了什么。(类似于开发日志之类的玩意，每天都是真正做了事情的，并且最好每天都是学到了新东西的)
 - 音乐：选择类似于《阿尔法波高效记忆音乐》《巴洛克学习音乐》等，能帮助你隔绝噪音。反正笔者听歌的时候会想歌词反而会打扰思路，一般就是听这种不怎么让你瞎想的音乐。
 - 复盘。无论是写代码、做需求、改bug等，事后反思总结。分析并且记录耗时的地方和可以改进的地方(怎么让自己涨点记性，整理 checklist)，对于一些错误或者坑也可以记录成文档当做团队的知识财富。
-- zapier: https://zapier.com/ 一个连接 app 自动化工作流的工具，比如可以用来定期提醒发邮件等。
+- zapier: https://zapier.com/ 一个连接 app 自动化工作流的工具，比如可以用来定期提醒发邮件等，非程序员也能实现定时任务啦
