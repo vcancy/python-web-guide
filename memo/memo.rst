@@ -28,6 +28,7 @@ Python
 
    # brew install youtube-dl
    # https://askubuntu.com/questions/486297/how-to-select-video-quality-from-youtube-dl
+   # http://www.cnblogs.com/faunjoe88/p/7810427.html
    youtube-dl "http://www.youtube.com/watch?v=P9pzm5b6FFY"
 
 
