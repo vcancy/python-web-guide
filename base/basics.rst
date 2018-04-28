@@ -193,3 +193,5 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 对于有经验的工程师来说，系统设计也是一项重要的能力（也是除了存储系统、程序设计、网络通讯、操作系统之外经常被面试考到的）。比如设计一个短网址服务、简单的 feed 流系统、推荐系统、发号器服务等。笔者也处于学习中，推荐个资料供参考：
 
 * `《https://github.com/PegasusWang/system-design-primer》 <https://github.com/PegasusWang/system-design-primer>`_ 关于系统设计和架构设计相关的资料
+* `《backend-architectures》 <https://gist.github.com/PegasusWang/91294caa0ab26a5c67b9b52d56178905>`_
+* `《http://highscalability.com/》 <ttp://highscalability.com/>`_
