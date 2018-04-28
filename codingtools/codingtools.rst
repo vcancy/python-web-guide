@@ -68,6 +68,14 @@
 - buildout: 项目构建工具
 - pyenv/virtualenv/pipenv：多版本管理
 
+
+代码仓库托管
+---------------------------------------
+- gitlab: 公司用得多
+- github: 著名的程序员同性交友网站
+- bitbucket: 类似 github，好处是支持免费的私有仓库。当你不想共享代码的时候可以用
+
+
 脚手架
 --------------------------------------
 - cookiecutter: 一系列项目模板生成工具，懒人必备。https://github.com/audreyr/cookiecutter。笔者之前内部项目就直接用 flask-cookiecutter 直接生成的。

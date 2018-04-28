@@ -26,6 +26,11 @@ Python
    # 格式化 json
    cat some.json | python -m json.tool
 
+   # brew install youtube-dl
+   # https://askubuntu.com/questions/486297/how-to-select-video-quality-from-youtube-dl
+   youtube-dl "http://www.youtube.com/watch?v=P9pzm5b6FFY"
+
+
 Pip
 ---------------------------------------------------------------
 .. code-block:: python
