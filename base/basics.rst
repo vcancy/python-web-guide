@@ -197,3 +197,22 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 * `《https://github.com/PegasusWang/system-design-primer》 <https://github.com/PegasusWang/system-design-primer>`_ 关于系统设计和架构设计相关的资料
 * `《backend-architectures》 <https://gist.github.com/PegasusWang/91294caa0ab26a5c67b9b52d56178905>`_
 * `《http://highscalability.com/》 <ttp://highscalability.com/>`_
+
+Web 开发常用 Python 库
+----------------------------------------
+列举平常开发常用的一些库和框架，你不必一开始就掌握它们，但需要的了解它们的用法会大大提升你的开发效率：
+
+- web 框架：Django/Flask/Tornado
+- ORM: sqlalchemy
+- 表单验证：WTForms
+- 数据处理和分析：Numpy, Pandas, Matplotlib
+- 异步：celery, asyncio, tornado
+- 并发：gevent, threading, concurrent.futures
+- 部署：uwsgi, gunicorn
+- html: lxml, beautifulsoup
+- 爬虫：requests, Scrapy
+- 单元测试：unittest, nose, pytest
+- 图片处理：pillow
+- python2/3 兼容：six
+- 代码检测：autopep8, pylint, flake8
+- 调试：Ipython, Ipdb
