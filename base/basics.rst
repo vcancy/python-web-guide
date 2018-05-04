@@ -200,7 +200,8 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 
 Web 开发常用 Python 库
 ----------------------------------------
-列举平常开发常用的一些库和框架，你不必一开始就掌握它们，但需要的了解它们的用法会大大提升你的开发效率：
+列举平常开发常用的一些库和框架，你不必一开始就掌握它们，但需要的时候了解它们的用法会大大提升你的开发效率，
+在开发工具章节我还会列举到更多能够提升开发效率的工具。
 
 - web 框架：Django/Flask/Tornado
 - ORM: sqlalchemy
@@ -209,10 +210,10 @@ Web 开发常用 Python 库
 - 异步：celery, asyncio, tornado
 - 并发：gevent, threading, concurrent.futures
 - 部署：uwsgi, gunicorn
-- html: lxml, beautifulsoup
+- html 处理: lxml, beautifulsoup
 - 爬虫：requests, Scrapy
 - 单元测试：unittest, nose, pytest
 - 图片处理：pillow
-- python2/3 兼容：six
+- python2/3 兼容：six, 2to3
 - 代码检测：autopep8, pylint, flake8
 - 调试：Ipython, Ipdb
