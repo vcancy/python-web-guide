@@ -413,6 +413,10 @@ Git
     git fetch somebody somebranch
     git checkout -b somebranch origin/somebranch
 
+    # prune all the dead branches from all the remotes
+    # https://stackoverflow.com/questions/17933401/how-do-i-remove-deleted-branch-names-from-autocomplete?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+    git fetch --prune --all
+
 
 Git工作流
 ------------
