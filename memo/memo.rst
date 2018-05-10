@@ -304,6 +304,9 @@ Tmux
    bind -n C-k select-pane -U
    bind -n C-l select-pane -R
 
+   # https://stackoverflow.com/questions/22138211/how-do-i-disconnect-all-other-users-in-tmux
+   tmux a -dt <session-name>
+
 SSH
 -------------------------------------------------------------
 
