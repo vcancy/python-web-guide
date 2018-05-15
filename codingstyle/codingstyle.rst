@@ -316,18 +316,18 @@ python 代码性能优化相关：
 
 - 不要过早优化，虽然 python 性能一直被诟病。优化之前先使用 profile，火焰图 等工具查看性能瓶颈。基本上代码的耗时是遵守2/8定律的，集中优化最耗时的代码。其实很多 python 内置库都是 c 写的，优化空间并不大。而且大部分 web 应用瓶颈在 IO 这块。
 - 在优化和可读性之间寻找平衡。
-- 优先从数据结构、算法、数据库等层面优化，大部分 web 应用语言性能不会成为瓶颈。
+- 优先从数据结构、算法、数据库、网络IO等层面优化，大部分 web 应用语言性能不会成为瓶颈，不过有些项目语言本身性能确实会成为瓶颈。
 - 对于 cpu 密集的代码可以使用 cython(不是 CPython) 编写扩展来优化速度，性能提升很明显，在 reddit 和 知乎都有使用；或者使用一些知名库的比如 numpy，pandas处理矩阵等。http://cython.org/
 - 更换语言（比如切到 golang），框架（使用异步框架），数据库（Nosql）甚至架构（微服务架构等），成本较高，动作较大，应该是最后的备选方案。
 - 常见的 web 后端性能优化措施：
 
-  - 批量：批量接口；消除数据库慢查询等
-  - 缓存：使用 redis 等缓存热数据，需要注意缓存失效问题(Cache-aside, Write-through, Write-back)
+  - 批量：批量接口，避免多次网络IO；消除数据库慢查询等
+  - 缓存：使用 redis 等内存型数据库缓存热数据，需要注意缓存失效问题(Cache-aside, Write-through, Write-back)
   - 异步：使用 celery 结合消息队列等把任务交给离线 worker 执行，防止阻塞当前请求。或者使用异步框架，tornado, python3 asyncio(至今仍不成熟) 等。
-  - 并发：使用 gevent(greenlet)、多线程 等并发请求数据，配合 gunicorn 部署。
+  - 并发：使用 gevent(greenlet)、多线程 等并发请求数据，配合 gunicorn 部署。不过需要注意使用 gevent mysql driver 需要纯 python 编写的 driver。
 
 * `《常见性能优化策略的总结-美团点评技术博客》 <https://zhuanlan.zhihu.com/p/24401056>`_
-* `《High Performance Python》 <http://ningning.today/2017/07/22/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/the-art-of-readable-code/>`_
+* `《High Performance Python》 <http://ningning.today/2017/02/05/python/high-performance-python/>`_
 * `《gevent程序员指南》 <http://ningning.today/gevent-tutorial-cn/>`_
 * `《gevent调度流程解析》 <http://www.cnblogs.com/xybaby/p/6370799.html#undefined>`_
 * `《Pinterest How we use gevent to go fast》 <https://medium.com/@Pinterest_Engineering/how-we-use-gevent-to-go-fast-e30fa9f81334>`_
