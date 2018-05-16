@@ -316,18 +316,18 @@ python 代码性能优化相关：
 
 - 不要过早优化，虽然 python 性能一直被诟病。优化之前先使用 profile，火焰图 等工具查看性能瓶颈。基本上代码的耗时是遵守2/8定律的，集中优化最耗时的代码。其实很多 python 内置库都是 c 写的，优化空间并不大。而且大部分 web 应用瓶颈在 IO 这块。
 - 在优化和可读性之间寻找平衡。
-- 优先从数据结构、算法、数据库等层面优化，大部分 web 应用语言性能不会成为瓶颈。
+- 优先从数据结构、算法、数据库、网络IO等层面优化，大部分 web 应用语言性能不会成为瓶颈，不过有些项目语言本身性能确实会成为瓶颈。
 - 对于 cpu 密集的代码可以使用 cython(不是 CPython) 编写扩展来优化速度，性能提升很明显，在 reddit 和 知乎都有使用；或者使用一些知名库的比如 numpy，pandas处理矩阵等。http://cython.org/
 - 更换语言（比如切到 golang），框架（使用异步框架），数据库（Nosql）甚至架构（微服务架构等），成本较高，动作较大，应该是最后的备选方案。
 - 常见的 web 后端性能优化措施：
 
-  - 批量：批量接口；消除数据库慢查询等
-  - 缓存：使用 redis 等缓存热数据，需要注意缓存失效问题(Cache-aside, Write-through, Write-back)
+  - 批量：批量接口，避免多次网络IO；消除数据库慢查询等
+  - 缓存：使用 redis 等内存型数据库缓存热数据，需要注意缓存失效问题(Cache-aside, Write-through, Write-back)
   - 异步：使用 celery 结合消息队列等把任务交给离线 worker 执行，防止阻塞当前请求。或者使用异步框架，tornado, python3 asyncio(至今仍不成熟) 等。
-  - 并发：使用 gevent(greenlet)、多线程 等并发请求数据，配合 gunicorn 部署。
+  - 并发：使用 gevent(greenlet)、多线程 等并发请求数据，配合 gunicorn 部署。不过需要注意使用 gevent mysql driver 需要纯 python 编写的 driver。
 
 * `《常见性能优化策略的总结-美团点评技术博客》 <https://zhuanlan.zhihu.com/p/24401056>`_
-* `《High Performance Python》 <http://ningning.today/2017/07/22/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/the-art-of-readable-code/>`_
+* `《High Performance Python》 <http://ningning.today/2017/02/05/python/high-performance-python/>`_
 * `《gevent程序员指南》 <http://ningning.today/gevent-tutorial-cn/>`_
 * `《gevent调度流程解析》 <http://www.cnblogs.com/xybaby/p/6370799.html#undefined>`_
 * `《Pinterest How we use gevent to go fast》 <https://medium.com/@Pinterest_Engineering/how-we-use-gevent-to-go-fast-e30fa9f81334>`_
@@ -715,7 +715,7 @@ Python 做业务后端的优缺点分析
 - 解释性语言执行效率低，大部分时间用在 IO 密集场景，比如 web 后端。不过大部分公司不用担心性能问题，除非真到了一定用户量级。
 - 开发工具支持不够完善，不如 java 有那么完善的 IDE，Pycharm 还不错，但是依然解决不了滥用动态特性导致的补全和跳转等问题
 - 易编写，但难以重构和维护，易出错，工程上不够友好，较难写出 clean code(笔者基本上会强制上 pylint and autopep8, 模仿 gofmt 吧)。基本上重构只能依据字符串匹配，老实说每次重构有稍微大一些的改动都会有点担心
-- 滥用动态特性导致代码不好维护。这是个双刃剑，但是对工程来说还是不要滥用。有时候会利用一些动态特性使用黑魔法来快速完成需求，但是工程上来说这是很不利于维护的。
+- 滥用动态特性导致代码不好维护。这是个双刃剑，但是对工程来说还是不要滥用。有时候会利用一些动态特性使用黑魔法来快速完成需求，但是工程上来说这是很不利于维护的。这是很多人抨击动态语言不适合大型项目的原因，一般需要在编码规范里明确说明哪些能用，哪些不能用。
 - 没有类型声明，看不出一些复杂类型的数据结构（Python、php 都在不遗余力地加上 type hint），代码写糙了维护起来很累（看不出复杂变量的类型和结构，阅读代码吃力，我都是给复杂类型加上类型注释），命名和编码习惯很重要
 - 缺少一些最佳实践（技术、小白文章偏多，工程实践文章比较少），以很多 python 的中小公司在软件工程上管理不够，无规范、无文档、无注释、无单测、无持续集成的尿性，还是慎用动态语言瞎胡搞，后期维护成本会很高。
 - python2，3 不兼容，迁移有成本。我个人觉得 python 敢于抛弃当初的设计是值得赞赏的，但是很多企业并没有足够的资源来去迁移
