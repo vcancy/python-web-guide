@@ -331,8 +331,8 @@ python 代码性能优化相关：
 * `《gevent程序员指南》 <http://ningning.today/gevent-tutorial-cn/>`_
 * `《gevent调度流程解析》 <http://www.cnblogs.com/xybaby/p/6370799.html#undefined>`_
 * `《Pinterest How we use gevent to go fast》 <https://medium.com/@Pinterest_Engineering/how-we-use-gevent-to-go-fast-e30fa9f81334>`_
-* `《http://mauveweb.co.uk/posts/2014/07/gevent-asynchronous-io-made-easy.html》<http://mauveweb.co.uk/posts/2014/07/gevent-asynchronous-io-made-easy.html`_
 * `《深入理解 Python 异步编程》 <https://github.com/denglj/aiotutorial>`_
+* `《gevent-asynchronous-io-made-easy》 <http://mauveweb.co.uk/posts/2014/07/gevent-asynchronous-io-made-easy.html>`_
 * `《python性能优化》 <http://www.cnblogs.com/xybaby/p/6510941.html>`_
 * `《程序员必知的Python陷阱与缺陷列表》 <http://www.cnblogs.com/xybaby/p/7183854.html>`_
 
@@ -667,8 +667,6 @@ Code Review(代码复查)
 --------------------------------------
 调试也是个很重要的问题，不可能保证代码没bug，要命的是有时候写代码完成功能的时间还没调试的时间多。注意复现是排错的第一步，之后通过各种方式确定原因（访问日志、邮件报的异常记录）等，通过走查代码、断点调试（二分法等）确定错误位置，确定好错误原因了就好改了。修复后最好反思下问题的原因、类型等，哪些地方可以改进，争取下次不犯一样的错，慢慢减少错误才能越来越高效。
 
-* `《调试九法》 <http://www.wklken.me/posts/2015/11/29/debugging-9-rules.html>`_
-
 尽量写出对自己也对其他人负责的代码，上边费了牛劲都是在阐述这个显而易见但是没多少人严格遵守的东西。用动态语言写大型项目维护起来要稍麻烦，
 很多新手写代码不注重可维护性，甚至自己写的代码回头自己看都一脸懵逼，问了一句这代码TM是干啥的？
 一开始的负责会为以后协作和维护带来极大便利（当然你想干两天就走让其他人擦屁股就当我没说）。
@@ -681,6 +679,7 @@ Code Review(代码复查)
 - 看日志，各种日志(logging, nginx)，看 sentry 异常信息
 - 问同事，让同事帮忙 review 审查代码。有时候人有思维定势，你自己看不出来的别人可能一眼就看出来了。小黄鸭调试法
 - 断点调试。看变量值。二分法排查代码位置，快速试错定位。比如一个地方很有隐秘的错误，但是又不好快速确定位置，我们就可以用二分加断点的方式快速定位到具体哪一块出了问题。
+- 使用 ipdb/pdb 断点配合 python 一些内置方法比如 `print/vars/locals/pprint` 等断点调试，使用 curl/chrome 开发者工具/mitmproxy 等调试请求。
 - 不要死磕，一个法子不行换一个。死磕可能会耗费太长时间并且容易进入死胡同，在一个大型复杂系统中定位 bug 原因是对技术、经验、毅力、灵感、心理素质的很大考验，休息一会可能就解决了。
 - 极难排查和复现的 bug 可以无限期搁置。
 - 找到 bug 修复以后增加相应单元测试用例，这样对回归测试非常有利，同时避免重复犯一样的错误。tricky 的地方要加上注释。
@@ -688,6 +687,9 @@ Code Review(代码复查)
 - bug 总结：建立错误检查表(核对清单)，哪些可以避免的记录下来，防止以后再犯。(团队的知识财富)
 
   大多数 bug 都可以通过设计复审、代码审查、代码静态分析、测试等找出来，我们可以综合利用以上手段尽量减少代码缺陷。
+
+* `《调试九法》 <http://www.wklken.me/posts/2015/11/29/debugging-9-rules.html>`_
+* `《Python ipdb 调试大法[视频]》 <https://zhuanlan.zhihu.com/p/36810978>`_
 
 重构与维护
 --------------------------------------
