@@ -141,6 +141,7 @@ DSL
 调试工具
 --------------------------------------
 - ipdb/pdb: ipdb 支持自动补全，比原生的 pdb 要好用一些。
+- pdbpp: https://pypi.org/project/pdbpp/
 - curl
 - https://curl.trillworks.com/ 把 curl 命令参数转成 requests 代码。 https://github.com/NickCarneiro/curlconverter/
 - httpie

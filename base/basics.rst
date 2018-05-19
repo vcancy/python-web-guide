@@ -217,4 +217,4 @@ Web 开发常用 Python 库
 - 图片处理：pillow
 - python2/3 兼容：six, 2to3
 - 代码检测：autopep8, pylint, flake8
-- 调试：Ipython, Ipdb
+- 调试：Ipython, Ipdb, pdbpp
