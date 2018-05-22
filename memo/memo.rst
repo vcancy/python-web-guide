@@ -129,6 +129,9 @@ Mac
    # 从终端查 wifi 密码, https://apple.stackexchange.com/questions/176119/how-to-access-the-wi-fi-password-through-terminal
    security find-generic-password -ga "ROUTERNAME" | grep "password:"
 
+   # XXX.APP已损坏,打不开.你应该将它移到废纸篓 MACOS 10.12 SIERRA
+   sudo spctl --master-disable
+
 
 如何发送 mac 通知，可以用来做提示
 
