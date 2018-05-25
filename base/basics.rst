@@ -189,11 +189,12 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 - 加分项：github、个人技术博客、开源项目、技术论坛帐号等，让面试官有更多渠道了解你，有时候仅仅根据几十分钟的面试来评判面试者是有失偏颇的。（比如面试者临场发挥不好；面试官个人偏好；会的都不问，问的都不会等）
 
 * `《interview_python》 <https://github.com/taizilongxu/interview_python>`_ python 面试题
-* `《程序员面试金典》 <https://github.com/taizilongxu/interview_python>`_ 程序员面试
+* `《程序员面试金典》 <https://github.com/taizilongxu/interview_python>`_ 程序员面试，很多公司会比较重视基础知识
 
 系统设计进阶
 ------------
 对于有经验的工程师来说，系统设计也是一项重要的能力（也是除了存储系统、程序设计、网络通讯、操作系统之外经常被面试考到的）。比如设计一个短网址服务、简单的 feed 流系统、推荐系统、发号器服务等。笔者也处于学习中，推荐个资料供参考：
+(其实中高后端涉及的其他东西还挺多的，大数据存储、消息队列、分布式、缓存、并发优化等)
 
 * `《https://github.com/PegasusWang/system-design-primer》 <https://github.com/PegasusWang/system-design-primer>`_ 关于系统设计和架构设计相关的资料
 * `《backend-architectures》 <https://gist.github.com/PegasusWang/91294caa0ab26a5c67b9b52d56178905>`_
@@ -201,11 +202,11 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 
 Web 开发常用 Python 库
 ----------------------------------------
-列举平常开发常用的一些库和框架，你不必一开始就掌握它们，但需要的时候了解它们的用法会大大提升你的开发效率，
+列举平常开发常用的一些库和框架(你可以很容易 google 到它们的用法)，你不必一开始就掌握它们，但需要的时候了解它们的用法会大大提升你的开发效率，
 在开发工具章节我还会列举到更多能够提升开发效率的工具。
 
 - web 框架：Django/Flask/Tornado
-- ORM: sqlalchemy
+- ORM: sqlalchemy, Peewee
 - 表单验证：WTForms
 - 数据处理和分析：Numpy, Pandas, Matplotlib
 - 异步：celery, asyncio, tornado
@@ -216,5 +217,5 @@ Web 开发常用 Python 库
 - 单元测试：unittest, nose, pytest
 - 图片处理：pillow
 - python2/3 兼容：six, 2to3
-- 代码检测：autopep8, pylint, flake8
+- 代码检测：autopep8, pylint, flake8, mypy(python3)
 - 调试：Ipython, Ipdb, pdbpp
