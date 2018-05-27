@@ -132,6 +132,11 @@ Mac
    # XXX.APP已损坏,打不开.你应该将它移到废纸篓 MACOS 10.12 SIERRA
    sudo spctl --master-disable
 
+   # 使用 mounty 挂载 ntfs 盘，Item "file.mov" is used by Mac OS X and cannot be opened.
+   # https://apple.stackexchange.com/questions/136157/mov-file-in-external-hd-greyed-out-and-wont-open-this-item-is-used-by-mac-o?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+   cd /Volumes/[drive name]
+   xattr -d com.apple.FinderInfo *
+
 
 如何发送 mac 通知，可以用来做提示
 
