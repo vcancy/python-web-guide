@@ -43,6 +43,7 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
 推荐书籍:
 
 * `《Python 算法与数据结构中文教程》 <https://github.com/PegasusWang/python_data_structures_and_algorithms>`_ 笔者自己撸的一个教程，包含免费的讲义和代码以及付费视频。
+* `《网易云课堂-Python 算法与数据结构教程》 <http://study.163.com/course/introduction.htm?courseId=1005526003>`_ Python 算法和数据结构视频教程
 * `《算法图解》 <https://book.douban.com/subject/26979890/>`_
 * `《算法导论》 <https://book.douban.com/subject/20432061/>`_
   你可以挑选感兴趣的章节啃一啃，也可以去网易公开课看下视频教程。如果不是计算机专业的可以看下《计算机科学导论》这门公开课，正好也是以Python语言讲解的。
