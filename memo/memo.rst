@@ -137,6 +137,9 @@ Mac
    cd /Volumes/[drive name]
    xattr -d com.apple.FinderInfo *
 
+   # 使用 rmtrash 删除到 trash，防止危险的 rm 删除命令找不回来。在 bashrc or zshrc alias rm='rmtrash '
+   brew install rmtrash
+
 
 如何发送 mac 通知，可以用来做提示
 
