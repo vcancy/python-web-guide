@@ -40,6 +40,13 @@
 
 * `《使用vim+tmux+zsh+autojump高效工作》 <http://ningning.today/2016/11/09/tools/vim-tmux-zsh-autojump/>`_
 
+
+打字速度练习
+--------------------------------------
+- https://typing.io/
+- https://www.keybr.com/
+
+
 Chrome 插件
 --------------------------------------
 - vimium: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作。
