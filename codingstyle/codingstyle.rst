@@ -321,7 +321,7 @@ python 代码性能优化相关：
 - 更换语言（比如切到 golang），框架（使用异步框架），数据库（Nosql）甚至架构（微服务架构等），成本较高，动作较大，应该是最后的备选方案。
 - 常见的 web 后端性能优化措施：
 
-  - 批量：批量接口，避免多次网络IO；消除数据库慢查询等
+  - 批量：批量接口，避免多次网络IO；消除数据库慢查询，索引优化等
   - 缓存：使用 redis 等内存型数据库缓存热数据，需要注意缓存失效问题(Cache-aside, Write-through, Write-back)
   - 异步：使用 celery 结合消息队列等把任务交给离线 worker 执行，防止阻塞当前请求。或者使用异步框架，tornado, python3 asyncio(至今仍不成熟) 等。
   - 并发：使用 gevent(greenlet)、多线程 等并发请求数据，配合 gunicorn 部署。不过需要注意使用 gevent mysql driver 需要纯 python 编写的 driver。
@@ -334,6 +334,7 @@ python 代码性能优化相关：
 * `《深入理解 Python 异步编程》 <https://github.com/denglj/aiotutorial>`_
 * `《gevent-asynchronous-io-made-easy》 <http://mauveweb.co.uk/posts/2014/07/gevent-asynchronous-io-made-easy.html>`_
 * `《python性能优化》 <http://www.cnblogs.com/xybaby/p/6510941.html>`_
+* `《性能优化指南：性能优化的一般性原则与方法》 <http://www.cnblogs.com/xybaby/p/9055734.html>`_
 * `《程序员必知的Python陷阱与缺陷列表》 <http://www.cnblogs.com/xybaby/p/7183854.html>`_
 
 
