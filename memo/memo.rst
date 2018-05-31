@@ -136,6 +136,9 @@ Mac
    # https://apple.stackexchange.com/questions/136157/mov-file-in-external-hd-greyed-out-and-wont-open-this-item-is-used-by-mac-o?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
    cd /Volumes/[drive name]
    xattr -d com.apple.FinderInfo *
+   # or
+   SetFile -c "" -t "" path/to/file.mov
+
 
    # 使用 rmtrash 删除到 trash，防止危险的 rm 删除命令找不回来。在 bashrc or zshrc alias rm='rmtrash '
    brew install rmtrash
