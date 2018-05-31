@@ -45,6 +45,7 @@
 --------------------------------------
 - https://typing.io/
 - https://www.keybr.com/
+- http://www.speedcoder.net/
 
 
 Chrome 插件
@@ -56,6 +57,7 @@ Chrome 插件
 代码辅助和检测工具
 --------------------------------------
 - pylint: 代码静态检测工具，请务必集成在你的编辑器或者IDE里（推荐）。能帮你少犯很多错误，动态语言写项目要十分谨慎，非常容易犯错。或者在CI加上 hook 每次 push 代码的时候检测。pylintrc 参考：https://github.com/PegasusWang/linux_config/blob/master/pylintrc 这里我忽略了很多无关紧要的提示，默认的 pylint 配置对代码检查实在是太严格了，很多老鸟也过不了。我敢打赌大部分 python 项目用默认 pylint 检查都是不及格分。（pylint 会给代码算个分, 10分制）
+- mypy: 类型检查工具
 - pep8: python代码风格检测工具(推荐)。懒人可以试试 autopep8 工具，自动格式化。所有人的代码都过一遍 pylint 和 autopep8(放宽行长度) 看起来就比较一致了。甚至可以配置编辑器保存后自动执行 autopep8，类似 gofmt
 - autopep8/yapf: python 代码自动格式化工具，懒人必备。都可以集成到 vim 里，比如使用  Plugin 'Chiel92/vim-autoformat'  工具一键格式化。不过注意有时会无法正确处理多重缩进，这个比较危险，代码逻辑都变了，还是自己写代码的时候注意下格式。
 - prospector: 集成了众多python代码检测工具
