@@ -336,6 +336,7 @@ python 代码性能优化相关：
 * `《python性能优化》 <http://www.cnblogs.com/xybaby/p/6510941.html>`_
 * `《性能优化指南：性能优化的一般性原则与方法》 <http://www.cnblogs.com/xybaby/p/9055734.html>`_
 * `《程序员必知的Python陷阱与缺陷列表》 <http://www.cnblogs.com/xybaby/p/7183854.html>`_
+* `《知乎是怎么运行 tornado web 服务的》 <https://zhuanlan.zhihu.com/p/31635068>`_ 知乎使用 gunicorn gevent 部署
 
 
 嗯，一开始就开启pep8和pylint检测能显著提升代码质量（各种错误警告逼着你写出规范的代码）。咱写不了诗一样的代码，也不能写shǐ 一样的代码，维护一个ugly的代码仓库能有效减少你的寿命。可能很多东西对老鸟来说都是显而易见的，不过菜鸟和高级菜鸟们还是需要多多练习积累经验。慢慢摸索吧骚年。。。。。。如果能主动读一读《代码大全》《编程匠艺》《clean code》《重构》之类的书更好(或者flask等优秀的开源项目代码)，别人会更乐意和你一起合作编程，不然你总会心想『天呐，千万别让我改那个家伙的代码，我宁愿离职！！！』
