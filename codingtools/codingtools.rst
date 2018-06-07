@@ -149,6 +149,7 @@ DSL
 
 调试工具
 --------------------------------------
+- IPython/Bpython: 代替原生的解释器，支持补全，语法高亮等
 - ipdb/pdb: ipdb 支持自动补全，比原生的 pdb 要好用一些。
 - pdbpp: https://pypi.org/project/pdbpp/
 - curl
