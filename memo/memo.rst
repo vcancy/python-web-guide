@@ -99,6 +99,15 @@ IPython
        print '{%s}' % ',\n'.join("'%s': '%s'" % pair for pair in d.iteritems())
 
 
+   # http://shawnleezx.github.io/blog/2015/08/03/some-notes-on-ipython-startup-script/
+   from IPython import get_ipython
+   ipython = get_ipython()
+
+   # ipython.magic("pylab")
+   ipython.magic("load_ext autoreload")
+   ipython.magic("autoreload 2")
+
+
 Ipdb
 ---------------------------------------------------------------
 .. code-block:: python
