@@ -17,10 +17,11 @@
 - keycastr: mac 按键回显到屏幕，最近录制 vim 视频教程的时候有用到。https://github.com/keycastr/keycastr
 - meld/vimdiff: 文本比对工具。
 - tmux/tmuxp。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
+- wemux: tmux 共享，https://github.com/zolrath/wemux
 - sshfs: 本地挂在服务器文件夹
 - tmate: https://tmate.io 终端共享工具，结对编程。很多现代化编辑器 vscode, atom 提供结对编程的插件。
 - asciinema: 终端会话记录工具。https://asciinema.org/
-- oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
+- oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题，支持插件。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
 - Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
@@ -57,7 +58,7 @@ Chrome 插件
 代码辅助和检测工具
 --------------------------------------
 - pylint: 代码静态检测工具，请务必集成在你的编辑器或者IDE里（推荐）。能帮你少犯很多错误，动态语言写项目要十分谨慎，非常容易犯错。或者在CI加上 hook 每次 push 代码的时候检测。pylintrc 参考：https://github.com/PegasusWang/linux_config/blob/master/pylintrc 这里我忽略了很多无关紧要的提示，默认的 pylint 配置对代码检查实在是太严格了，很多老鸟也过不了。我敢打赌大部分 python 项目用默认 pylint 检查都是不及格分。（pylint 会给代码算个分, 10分制）
-- mypy: 类型检查工具
+- mypy: 类型检查工具，结合 python3 的 type hint 或者 python2 中的类型注释可以做类型检查。
 - pep8: python代码风格检测工具(推荐)。懒人可以试试 autopep8 工具，自动格式化。所有人的代码都过一遍 pylint 和 autopep8(放宽行长度) 看起来就比较一致了。甚至可以配置编辑器保存后自动执行 autopep8，类似 gofmt
 - autopep8/yapf: python 代码自动格式化工具，懒人必备。都可以集成到 vim 里，比如使用  Plugin 'Chiel92/vim-autoformat'  工具一键格式化。不过注意有时会无法正确处理多重缩进，这个比较危险，代码逻辑都变了，还是自己写代码的时候注意下格式。
 - prospector: 集成了众多python代码检测工具

@@ -52,6 +52,17 @@ Pip
 
 IPython
 ---------------------------------------------------------------
+
+.. code-block:: sh
+
+   # ipython 如何使用 autoreload，每次重新修改了文件都得重新重启 ipython 很麻烦，解决方式
+   # https://support.enthought.com/hc/en-us/articles/204469240-Jupyter-IPython-After-editing-a-module-changes-are-not-effective-without-kernel-restart
+   # https://stackoverflow.com/questions/1254370/reimport-a-module-in-python-while-interactive
+   # http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html
+   In [1]: %load_ext autoreload
+   In [2]: %autoreload 2
+
+
 .. code-block:: python
 
    # -*- coding: utf-8 -*-
@@ -86,6 +97,7 @@ IPython
    def repr_dict(d):
        """https://stackoverflow.com/questions/25118698/print-python-dictionary-with-utf8-values"""
        print '{%s}' % ',\n'.join("'%s': '%s'" % pair for pair in d.iteritems())
+
 
 Ipdb
 ---------------------------------------------------------------
