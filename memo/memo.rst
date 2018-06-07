@@ -100,6 +100,10 @@ IPython
 
 
    # http://shawnleezx.github.io/blog/2015/08/03/some-notes-on-ipython-startup-script/
+   """
+   !!! 注意，如果遇到了 TypeError: super(type, obj): obj must be an instance or subtype of type 
+   请禁用 autoreload, http://thomas-cokelaer.info/blog/2011/09/382/
+   """
    from IPython import get_ipython
    ipython = get_ipython()
 
