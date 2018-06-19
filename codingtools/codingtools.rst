@@ -232,6 +232,7 @@ Profiler
 视频录制
 --------------------------------------
 在 mac 下录制了一些 vim 和 python 的视频教程，记录下使用到的一些硬件和软件工具，硬件工具均可网购，部分软件收费：
+
 - youbute-dl: https://github.com/rg3/youtube-dl 命令行油管视频下载工具
 - Camtasia: 屏幕录制，剪辑工具，收费
 - HandBrake: 视频压缩工具
