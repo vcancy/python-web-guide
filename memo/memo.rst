@@ -169,7 +169,7 @@ Mac
    brew install rmtrash
 
    # 增加 terminal 光标移动速度, https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal
-   defaults write NSGlobalDomain KeyRepeat -int 0
+   defaults write NSGlobalDomain KeyRepeat -int 1
 
 
 如何发送 mac 通知，可以用来做提示
