@@ -25,7 +25,7 @@
 - item2(mac)。替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
 - Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
-- Dash(mac): 强悍的文档查询工具。
+- Dash(mac): 强悍的文档查询工具。支持非常多编程语言和框架
 - devdocs.io: 文档查询工具
 - Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements
 - autojump。方便在命令行里来回跳转目录。
@@ -237,7 +237,8 @@ Profiler
 - FFmpeg: 强大的音视频处理工具
 - Camtasia: 屏幕录制，剪辑工具，收费
 - MediaInfo: 查看视频信息
-- HandBrake: 视频压缩工具，免费工具
+- HandBrake: 视频压缩工具，免费工具。直接从 Camtasia 等录屏工具导出的视频体积可能会非常大，可以压缩后上传到网站
 - SketchBookPro/Deskscribble: 白板/黑板工具，配合 wacom 手写板可以把屏幕当成黑板或者白板使用。模仿可汗学院的授课方式
 - Wacom 手绘板：用来实现屏幕手写，配合绘图或者白板软件
 - Blue yeti usb 电容麦克风：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客麦克风
+- VideoScribe: 制作手绘风格视频
