@@ -160,10 +160,11 @@ DSL
 - httpbin.org
 - curl/requests 互相转化: https://github.com/oeegor/curlify https://github.com/spulec/uncurl
 
-抓包工具
+抓包和下载工具
 --------------------------------------
 - mitmproxy: 用 python 实现的终端命令行抓包工具，可以将请求直接导出成 python 代码，笔者经常用来抓包和调试。
 - charles: 抓包软件(收费)
+
 
 爬虫相关
 --------------------------------------
@@ -234,6 +235,7 @@ Profiler
 在 mac 下录制了一些 vim 和 python 的视频教程，记录下使用到的一些硬件和软件工具，硬件工具均可网购，部分软件收费：
 
 - youbute-dl: https://github.com/rg3/youtube-dl 命令行油管视频下载工具
+- aria2: https://aria2.github.io/ 轻量级的命令行下载工具
 - FFmpeg: 强大的音视频处理工具
 - Camtasia: 屏幕录制，剪辑工具，收费
 - MediaInfo: 查看视频信息
