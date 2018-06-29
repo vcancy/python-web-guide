@@ -236,8 +236,9 @@ Profiler
 
 - youbute-dl: https://github.com/rg3/youtube-dl 命令行油管视频下载工具
 - aria2: https://aria2.github.io/ 轻量级的命令行下载工具
-- FFmpeg: 强大的音视频处理工具
+- FFmpeg: 强大的视频处理工具
 - Camtasia: 屏幕录制，剪辑工具，收费
+- iZotope RX6: 音频降噪工具，去除杂音、呼吸声等等
 - MediaInfo: 查看视频信息
 - HandBrake: 视频压缩工具，免费工具。直接从 Camtasia 等录屏工具导出的视频体积可能会非常大，可以压缩后上传到网站
 - SketchBookPro/Deskscribble: 白板/黑板工具，配合 wacom 手写板可以把屏幕当成黑板或者白板使用。模仿可汗学院的授课方式
