@@ -153,8 +153,8 @@ DSL
 - IPython/Bpython: 代替原生的解释器，支持补全，语法高亮等
 - ipdb/pdb: ipdb 支持自动补全，比原生的 pdb 要好用一些。
 - pdbpp: https://pypi.org/project/pdbpp/
-- curl
-- https://curl.trillworks.com/ 把 curl 命令参数转成 requests 代码。 https://github.com/NickCarneiro/curlconverter/
+- curl: 如果不想使用 postman 等 GUI 工具（比如在服务器上本地测试无法使用这种工具），可以用 curl 命令或者 python requests 库模拟请求
+- https://curl.trillworks.com/ 把 curl 命令参数转成 requests 代码。 https://github.com/NickCarneiro/curlconverter/。
 - httpie
 - postman: 接口调试 gui 工具，其实相比gui 工具，笔者更喜欢命令行，比较自由。甚至经常用 requests 发请求来调试 http 接口，因为可以很方便地修改各种 header，请求参数等。
 - httpbin.org
