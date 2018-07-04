@@ -51,9 +51,11 @@
 
 Chrome 插件
 --------------------------------------
-- vimium: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作。
+- vimium: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作。替代品：SurfingKeys, Cvim
 - FE助手：前端插件，Json 格式化等很多有用的工具
-- octotree: Chrome github 浏览插件
+- Octotree: Chrome github 浏览插件
+- Momentum: 美化 Chrome 界面
+
 
 代码辅助和检测工具
 --------------------------------------
