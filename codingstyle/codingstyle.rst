@@ -137,7 +137,7 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 * 可读性第一定理：代码的写法应当使别人理解它的时间最小化。如果有非常直白的表现方式，就不要用语法糖复杂化，导致理解困难。
 * KISS原则，Keep It Simple, Stupid。能简单的绝对不要复杂，不要炫耀代码技巧，简单可读最重要，后人会感谢你的，软件构建的核心就是控制复杂度。开发可以工作的、最简单的解决方案。除非有不可辩驳的原因，否则不要使用模式、原则和高难度技术之类的东西。很多新手没有控制复杂度的意识，很快弄出一堆难以维护的代码。
 * DRY原则，Don't Repeat Yourself。代码复杂重复了就及时抽取出来，至少不会碰到大问题。当然不要矫枉过正，过度追求设计和通用可能导致难以维护和理解。重复代码一旦接口变动的时候就是灾难，要修改很多地方，一定要十分警惕代码重复(警惕复制粘贴，往往代码重复是设计、抽象不合理、意图不明确的表现，而且复制代码经常会出现忘记修改一些细节产生 bug)。事不过三原则。Prefer duplication over the wrong abstraction. - Sandi Metz
-* YAGNI(You Aren't Gonna Need It)，不要猜测性编码，不用的及时删除，估计以后也不太可能会用到，冗余的无用代码会给维护者带来很多混淆和麻烦。Build the simplest thing that we need right now。『少即是多』
+* YAGNI(You Aren't Gonna Need It)，不要猜测性编码，不用的及时删除，估计以后也不太可能会用到(经验表名你觉得将来可能会用到的基本都用不到，最后成了死代码)，冗余的无用代码会给维护者带来很多混淆和麻烦。Build the simplest thing that we need right now。『少即是多』
 * SLAP(Single Level of Abstraction Principle): 保持一个方法中的代码在同一个抽象层。
 * Clean Coder Rule: Always leave the code cleaner than you found it.  不用的代码及时清除，留着只会造成冗余和误解(如果你认为某段代码将来可能会用到，我明确告诉你基本上它是用不到的)。笔者经验是用动态语言写代码很难写出 clean code，必须上各种静态检测工具和规范来约束，防止代码腐化。
 * 快速失败，灵活使用断言。契约式编程(先验条件和后置条件)，越早失败，越容易排查错误。
