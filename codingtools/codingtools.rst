@@ -189,8 +189,9 @@ Rest
 
 数据处理
 --------------------------------------
-- pandas: 处理报表经常用，非常适合处理矩阵、DataFrame、excel 等。配合一些前端可视化库可以弄报表啥的。
-- matplotlib: python 绘图
+- pandas: 处理报表经常用，非常适合处理矩阵、DataFrame、excel 等。配合一些前端可视化库可以弄报表啥的。碰到  Excel
+  处理的强烈建议使用。录了一个小视频讲了下简单的 pands 处理 excel https://zhuanlan.zhihu.com/p/37654682
+- matplotlib: python 绘图。数据可视化有很多其他 python 和前端解决方案
 
 
 压测工具
