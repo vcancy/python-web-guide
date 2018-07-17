@@ -83,7 +83,7 @@ Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合P
     def f(a, b=[])
         pass
 
-    # good, 可变类型使用 None 作为占位符
+    # good, 可变类型使用 None 作为占位符，因为可变类型可能会被函数修改(副作用)，导致调用代码后边使用它的地方出问题
     def f(a, b=None):
         if b is None:
             b = []
