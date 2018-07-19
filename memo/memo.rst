@@ -353,6 +353,18 @@ Tmux
    # https://stackoverflow.com/questions/22138211/how-do-i-disconnect-all-other-users-in-tmux
    tmux a -dt <session-name>
 
+   # 如何 ssh 后自动 attach 到某个 session
+   if [[ "$TMUX" == "" ]] && [[ "$SSH_CONNECTION" != "" ]]; then
+       # Attempt to discover a detached session and attach it, else create a new session
+       WHOAMI="lens"   # attach 的 session 名称
+       if tmux has-session -t $WHOAMI 2>/dev/null; then
+           tmux -2 attach-session -t $WHOAMI
+       else
+           tmux -2 new-session -s $WHOAMI
+       fi
+   fi
+
+
 SSH
 -------------------------------------------------------------
 
