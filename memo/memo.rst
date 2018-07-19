@@ -543,6 +543,11 @@ vim
    :windo diffthis
    :diffoff!
 
+   # 解决中文输入法的问题
+   # https://www.jianshu.com/p/4d81b7e32bff
+   # https://zhuanlan.zhihu.com/p/23939198
+
+
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
 用markdown文件制作html ppt
