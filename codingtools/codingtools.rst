@@ -145,6 +145,12 @@ DSL
 - vimwiki/emacs org-mode: 依赖于vim/emacs 编辑器，可以做个人笔记，不过笔者还是比较倾向于独立于编辑器的工具。
 - Graphviz: 通过编写代码来生成图片 http://graphviz.org/
 
+静态博客工具
+--------------------------------------
+静态建站工具允许我们用 github pages 建立静态博客，省去了服务器的费用。笔者的 http://ningning.today 就是基于 hexo 搭建
+
+- hexo: 基于 nodejs 编写的静态博客工具 https://hexo.io/zh-cn/
+
 日志、异常收集工具
 --------------------------------------
 
