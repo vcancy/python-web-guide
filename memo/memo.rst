@@ -415,8 +415,9 @@ Git
     # 手残 add 完以后输入错了 commit 信息
     git commit --amend
 
-    # 撤销 add （暂存）
+    # 撤销 add （暂存），此时还没有 commit。比如 add 了不该 add 的文件
     git reset -- file
+    git reset # 撤销所有的 add
 
     # 撤销修改
     git checkout -- file
