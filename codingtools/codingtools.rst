@@ -62,8 +62,9 @@ Chrome 插件
 --------------------------------------
 - vimium: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作。替代品：SurfingKeys, Cvim
 - FE助手：前端插件，Json 格式化等很多有用的工具
-- Octotree: Chrome github 浏览插件
-- Momentum: 美化 Chrome 界面
+- Octotree: Chrome github 浏览插件，可以把 github 项目的目录树结构展示出来，非常方便
+- Momentum: 美化 Chrome 界面的插件，有很多漂亮的图片
+- [LGTM](https://chrome.google.com/webstore/detail/lgtm/oeacdmeoegfagkmiecjjikpfgebmalof): 有些开发过程中，需要一个同事review 代码后评价 LGTM(Looks Good To Me)才能 merge 代码，这里是图片版的 LGTM
 
 
 代码辅助和检测工具
