@@ -592,6 +592,14 @@ Benchmark
     sudo apt-get install apache2-utils
     ab -c 并发数量 -n 总数量 url
 
+Ffmpeg
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+   # 截取视频
+   ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 -c copy output.mp4
+
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《slide show》 <http://slideshow-s9.github.io/>`_
 * `《markdown sheet》 <http://commonmark.org/help/>`_
