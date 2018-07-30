@@ -262,18 +262,18 @@ Profiler
 - zapier: https://zapier.com/ 一个连接 app 自动化工作流的工具，比如可以用来定期提醒发邮件等，非程序员也能实现定时任务啦
 
 
-视频录制
+视频课程录制
 --------------------------------------
 在 mac 下录制了一些 vim 和 python 的视频教程，记录下使用到的一些硬件和软件工具，硬件工具均可网购，部分软件收费：
 
 - youbute-dl: https://github.com/rg3/youtube-dl 命令行油管视频下载工具
 - aria2: https://aria2.github.io/ 轻量级的命令行下载工具
-- FFmpeg: 强大的视频处理工具
-- Camtasia: 屏幕录制，剪辑工具，收费
-- iZotope RX6: 音频降噪工具，去除杂音、呼吸声等等
+- FFmpeg: 强大的视频处理工具，可以用来截图，截取视频片段等
+- Camtasia/ScreenFlow: 屏幕录制，剪辑工具，收费。笔者用来录制屏幕
+- iZotope RX6: 音频降噪工具，去除杂音、呼吸声等等，收费
 - MediaInfo: 查看视频信息
 - HandBrake: 视频压缩工具，免费工具。直接从 Camtasia 等录屏工具导出的视频体积可能会非常大，可以压缩后上传到网站
-- SketchBookPro/Deskscribble: 白板/黑板工具，配合 wacom 手写板可以把屏幕当成黑板或者白板使用。模仿可汗学院的授课方式
-- Wacom 手绘板：用来实现屏幕手写，配合绘图或者白板软件
-- Blue yeti usb 电容麦克风：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客麦克风
-- VideoScribe: 制作手绘风格视频
+- SketchBookPro/Deskscribble(收费): 白板/黑板工具，配合 wacom 手写板可以把屏幕当成黑板或者白板使用。模仿可汗学院的授课方式
+- Wacom 手绘板：用来实现屏幕手写，配合绘图或者白板软件当做黑板使用
+- Blue yeti usb 电容麦克风：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客级麦克风
+- VideoScribe: 制作手绘风格视频，提升视频趣味性
