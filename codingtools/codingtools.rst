@@ -277,3 +277,4 @@ Profiler
 - Wacom 手绘板：用来实现屏幕手写，配合绘图或者白板软件当做黑板使用
 - Blue yeti usb 电容麦克风：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客级麦克风
 - VideoScribe: 制作手绘风格视频，提升视频趣味性
+- 课件制作: PowerPoint, Keynote, AxeSlide, Focusky 等
