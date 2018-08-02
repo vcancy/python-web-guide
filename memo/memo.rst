@@ -603,6 +603,14 @@ Ffmpeg
    # 截图
    ffmpeg -ss 00:10:00 -i "Apache Sqoop Tutorial.mp4" -y -f image2 -vframes 1 test.png
 
+   # 连接视频
+   $ cat input.txt
+   file '/path/to/file1'
+   file '/path/to/file2'
+   file '/path/to/file3'
+   # 注意用 -safe 0
+   ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4
+
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《slide show》 <http://slideshow-s9.github.io/>`_
 * `《markdown sheet》 <http://commonmark.org/help/>`_
