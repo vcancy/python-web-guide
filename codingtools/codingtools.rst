@@ -278,3 +278,13 @@ Profiler
 - Blue yeti usb 电容麦克风：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客级麦克风
 - VideoScribe: 制作手绘风格视频，提升视频趣味性
 - 课件制作: PowerPoint, Keynote, AxeSlide, Focusky 等
+
+
+HTML Presentation Tools
+--------------------------------------
+如果觉得用 ppt 做分享比较老套，可以尝试一些使用 HTML 来做 slide show 的工具。
+
+- reveal.js: The HTML Presentation Framework
+- RISE: 在 jupyter 里做 slide show。 https://github.com/damianavila/RISE
+
+* `《HTML-presentation-tools.md》 <https://gist.github.com/PegasusWang/5d00c2e32943f1e3258e964eb64ce4aa>`_
