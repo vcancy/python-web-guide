@@ -270,6 +270,7 @@ Profiler
 - aria2: https://aria2.github.io/ 轻量级的命令行下载工具
 - FFmpeg: 强大的视频处理工具，可以用来截图，截取视频片段等
 - Camtasia/ScreenFlow: 屏幕录制，剪辑工具，收费。笔者用来录制屏幕
+- TunesKit Video Cutter(mac): 视频分割、合并工具
 - iZotope RX6: 音频降噪工具，去除杂音、呼吸声等等，收费
 - MediaInfo: 查看视频信息
 - HandBrake: 视频压缩工具，免费工具。直接从 Camtasia 等录屏工具导出的视频体积可能会非常大，可以压缩后上传到网站
