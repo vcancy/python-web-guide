@@ -191,6 +191,8 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 
 * `《interview_python》 <https://github.com/taizilongxu/interview_python>`_ python 面试题
 * `《程序员面试金典》 <https://github.com/taizilongxu/interview_python>`_ 程序员面试，很多公司会比较重视基础知识
+* `《Python后端工程师必备技能》 <http://skycrab.github.io/PythonEngineer>`_
+
 
 系统设计进阶
 ------------

@@ -180,7 +180,7 @@ DSL
 
 抓包和下载工具
 --------------------------------------
-- mitmproxy: 用 python 实现的终端命令行抓包工具，可以将请求直接导出成 python 代码，笔者经常用来抓包和调试。
+- mitmproxy: 用 python 实现的终端命令行抓包工具，可以将请求直接导出成 curl 请求，python 代码甚至 locust 测试脚本，非常方便，笔者经常用来抓包和调试。
 - charles: 抓包软件(收费)
 
 
@@ -270,6 +270,7 @@ Profiler
 - aria2: https://aria2.github.io/ 轻量级的命令行下载工具
 - FFmpeg: 强大的视频处理工具，可以用来截图，截取视频片段等
 - Camtasia/ScreenFlow: 屏幕录制，剪辑工具，收费。笔者用来录制屏幕
+- TunesKit Video Cutter(mac): 视频分割、合并工具
 - iZotope RX6: 音频降噪工具，去除杂音、呼吸声等等，收费
 - MediaInfo: 查看视频信息
 - HandBrake: 视频压缩工具，免费工具。直接从 Camtasia 等录屏工具导出的视频体积可能会非常大，可以压缩后上传到网站
@@ -278,3 +279,14 @@ Profiler
 - Blue yeti usb 电容麦克风：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客级麦克风
 - VideoScribe: 制作手绘风格视频，提升视频趣味性
 - 课件制作: PowerPoint, Keynote, AxeSlide, Focusky 等
+
+
+HTML Presentation Tools
+--------------------------------------
+如果觉得用 ppt 做分享比较老套，可以尝试一些使用 HTML 来做 slide show 的工具。
+
+- reveal.js: The HTML Presentation Framework
+- RISE: 在 jupyter 里做 slide show，甚至可以直接在网页里运行 Python 代码。 https://github.com/damianavila/RISE
+- remark: A simple, in-browser, markdown-driven slideshow tool. https://github.com/gnab/remark
+
+* `《HTML-presentation-tools.md》 <https://gist.github.com/PegasusWang/5d00c2e32943f1e3258e964eb64ce4aa>`_
