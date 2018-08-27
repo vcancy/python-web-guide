@@ -26,13 +26,6 @@ Python
    # 格式化 json
    cat some.json | python -m json.tool
 
-   # brew install youtube-dl
-   # https://askubuntu.com/questions/486297/how-to-select-video-quality-from-youtube-dl
-   # http://www.cnblogs.com/faunjoe88/p/7810427.html
-   youtube-dl -F "http://www.youtube.com/watch?v=P9pzm5b6FFY"
-   youtube-dl -f 22 "http://www.youtube.com/watch?v=P9pzm5b6FFY"
-   youtube-dl -f bestvideo+bestaudio "http://www.youtube.com/watch?v=P9pzm5b6FFY"
-
 
 Pip
 ---------------------------------------------------------------
@@ -597,6 +590,13 @@ Ffmpeg
 
 .. code-block:: shell
 
+   # brew install youtube-dl
+   # https://askubuntu.com/questions/486297/how-to-select-video-quality-from-youtube-dl
+   # http://www.cnblogs.com/faunjoe88/p/7810427.html
+   youtube-dl -F "http://www.youtube.com/watch?v=P9pzm5b6FFY"
+   youtube-dl -f 22 "http://www.youtube.com/watch?v=P9pzm5b6FFY"
+   youtube-dl -f bestvideo+bestaudio "http://www.youtube.com/watch?v=P9pzm5b6FFY"
+
    # 截取视频
    ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 -c copy output.mp4
    # https://gist.github.com/PegasusWang/11b9203ffa699cd8f07e29559cc4d055
@@ -610,6 +610,50 @@ Ffmpeg
    file '/path/to/file3'
    # 注意用 -safe 0
    ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4
+
+   # youtube-dl 下载音频: https://askubuntu.com/questions/178481/how-to-download-an-mp3-track-from-a-youtube-video
+   youtube-dl --extract-audio --audio-format mp3 <video URL>
+
+.. code-block:: python
+
+   # 脚本下载 youtube 视频
+   #!/usr/bin/env python
+   # -*- coding:utf-8 -*-
+
+   from __future__ import unicode_literals
+   import youtube_dl
+
+
+   class MyLogger(object):
+       def debug(self, msg):
+           pass
+
+       def warning(self, msg):
+           pass
+
+       def error(self, msg):
+           print(msg)
+
+
+   def my_hook(d):
+       if d['status'] == 'finished':
+           print('Done downloading, now converting ...')
+
+
+   ydl_opts = {
+       'format': 'bestaudio/best',
+       'postprocessors': [{
+           'key': 'FFmpegExtractAudio',
+           'preferredcodec': 'mp3',
+           'preferredquality': '192',
+       }],
+       'logger': MyLogger(),
+       'progress_hooks': [my_hook],
+   }
+   with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+       url = 'https://www.youtube.com/watch?v=48VSP-atSeI'
+       ydl.download([url])
+
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《slide show》 <http://slideshow-s9.github.io/>`_
