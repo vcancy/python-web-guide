@@ -655,6 +655,14 @@ Ffmpeg
        url = 'https://www.youtube.com/watch?v=48VSP-atSeI'
        ydl.download([url])
 
+Curl
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+   # 记录 curl 过程, https://askubuntu.com/questions/944788/how-does-curl-print-to-terminal-while-piping
+   curl -v http://httpbin.org/headers > t.txt 2>&1
+
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《slide show》 <http://slideshow-s9.github.io/>`_
