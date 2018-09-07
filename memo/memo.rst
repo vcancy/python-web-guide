@@ -167,6 +167,8 @@ Mac
    # 增加 terminal 光标移动速度, https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal
    defaults write NSGlobalDomain KeyRepeat -int 1
 
+   # 如何在文件更新之后自动刷新浏览器，需要首先 pip 安装 when-changed
+   alias flush_watch_refresh_chrome=" when-changed -v -r -1 -s ./ osascript -e 'tell application \"Google Chrome\" to tell the active tab of its first window to reload' "
 
 
 如何发送 mac 通知，可以用来做提示
@@ -174,6 +176,7 @@ Mac
 .. code-block:: python
 
    # https://stackoverflow.com/questions/17651017/python-post-osx-notification
+   # 配合 crontab 可以用来做一个简单的定时任务提醒功能
 
    import os
 
