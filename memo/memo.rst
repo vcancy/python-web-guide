@@ -94,7 +94,7 @@ IPython
 
    # http://shawnleezx.github.io/blog/2015/08/03/some-notes-on-ipython-startup-script/
    """
-   !!! 注意，如果遇到了 TypeError: super(type, obj): obj must be an instance or subtype of type 
+   !!! 注意，如果遇到了 TypeError: super(type, obj): obj must be an instance or subtype of type
    请禁用 autoreload, http://thomas-cokelaer.info/blog/2011/09/382/
    """
    from IPython import get_ipython
@@ -623,7 +623,8 @@ Ffmpeg
    #!/usr/bin/env python
    # -*- coding:utf-8 -*-
 
-   # pip install youtube-dl
+   # pip install youtube_dl，如果报错尝试升级
+   # pip install --upgrade youtube_dl
    from __future__ import unicode_literals
    import youtube_dl
 
