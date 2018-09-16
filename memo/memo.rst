@@ -23,7 +23,7 @@ Python
    # pyenv 安装多个版本的 python : https://github.com/pyenv/pyenv
    # pyenv-virtualenv https://github.com/pyenv/pyenv-virtualenv
 
-   # 格式化 json
+   # 格式化 json，这个可以配置在 vim 里用来格式化当前 json 文本
    cat some.json | python -m json.tool
 
 
@@ -555,6 +555,10 @@ vim
    # 解决中文输入法的问题
    # https://www.jianshu.com/p/4d81b7e32bff
    # https://zhuanlan.zhihu.com/p/23939198
+
+   # 如果跳转到跳转之前的位置, https://vi.stackexchange.com/questions/2001/how-do-i-jump-to-the-location-of-my-last-edit
+   # 使用场景：比如在当前函数里使用了logging，发现logging import，我会跳转到文件头去 import logging，编辑完后进入normal模式使用  `` 就可以跳转到之前编辑位置
+   `` which will bring you back to where the cursor was before you made your last jump. See :help `` for more information.
 
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
