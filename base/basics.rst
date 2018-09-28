@@ -61,6 +61,7 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
   非常不错的爬虫教程。感谢原作者，其实感觉这种把学习的内容总结成小书的方式很好。
 * `《Python3 网络爬虫实战》 <https://germey.gitbooks.io/python3webspider/>`_
 * `《使用 Flask-RESTful 设计 RESTful API》 <http://www.pythondoc.com/flask-restful/second.html>`_
+* `《restful-api-guidelines》 <https://opensource.zalando.com/restful-api-guidelines/index.html#table-of-contents>`_
 
 
 Linux系统
