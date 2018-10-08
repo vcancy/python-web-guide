@@ -267,7 +267,7 @@ python2 编码问题：
 类相关:
 
 - 你真的需要一个类吗？不要到处OOP，也不要只会写function。你了解OOP的几大原则吗？
-- 业务逻辑代码中禁止使用元类，尽量避免使用 getattr/setattr 等动态特性，可能会给代码维护造成问题。除非是写框架，绝对不推荐在业务逻辑中使用黑魔法，以后维护起来简直就是噩梦。
+- 业务逻辑代码中禁止使用元类，尽量避免使用 getattr/setattr 等动态特性，可能会给代码维护造成问题。除非是写框架，绝对不推荐在业务逻辑中使用任何黑魔法，以后维护起来简直就是噩梦。
 - 保持类的继承层级简单，适当使用mixin。
 - 注意不要轻易在非 __init__ 中给类添加属性。
 - 尝试使用CRC(clas-responsibility-collaboration)：类-职责-交互卡片设计类。
@@ -298,6 +298,12 @@ ORM和数据库相关：
 - Mysql需要存储表情：`CREATE DATABASE mydb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`
 
 * `《MySQL互联网业务数据库设计规范》 <https://www.verynull.com/2017/02/18/MySQL%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/>`_
+
+
+Web 框架相关：
+
+- 推荐使用 Django/Tornado 统一管理路由配置的方式，而不是使用 Flask 装饰器路由的方式，方便统一查询和管理。
+
 
 文档注释相关:
 
