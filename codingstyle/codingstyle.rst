@@ -166,7 +166,7 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 `《Unix 编程艺术》 <https://book.douban.com/subject/1467587/>`_   如果你有时间可以当成小说看看，感觉有点宗教主义
 
 
-还有OOP那一套，当你设计一个类的时候需要有所注意(SOLID原则):
+还有OOP那一套(封装、继承、多态)，当你设计一个类的时候需要有所注意(SOLID原则):
 
 * 单一职责原则(Single-Responsibility Principle): It should have a single purpose in the system, and there should be only one reason to change it.
 * 开闭原则(Open-Closed Principle): 对修改关闭，对扩展开放。Code should open to extension but closed to modification.
