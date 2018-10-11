@@ -340,6 +340,8 @@ python 代码性能优化相关：
   - 并发：使用 gevent(greenlet)、多线程 等并发请求数据，配合 gunicorn(master-slave模型) 部署。不过需要注意使用 gevent mysql driver 需要纯 python 编写的 driver 才能被 monkey patch
   - 多线程/多进程：python 虽然有 GIL，但是 I/O 期间会释放 GIL，多线程仍可以大幅提升 I/O 密集应用的性能；多进程适用于 cpu 密集型应用。(threading/multiprocessing/concurrent.futures)
 
+目前来看基于 gevent 的并发方案是目前比较成熟的方案，也是很多公司首选的方案，在很多公司都有使用，asyncio 生态圈依然不成熟。
+
 * `《常见性能优化策略的总结-美团点评技术博客》 <https://zhuanlan.zhihu.com/p/24401056>`_
 * `《High Performance Python》 <http://ningning.today/2017/02/05/python/high-performance-python/>`_
 * `《gevent程序员指南》 <http://ningning.today/gevent-tutorial-cn/>`_
