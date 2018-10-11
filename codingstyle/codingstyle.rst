@@ -28,7 +28,7 @@
 * `《python编程规范》 <http://blog.ganyutao.com/downloading/python%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83.pdf>`_
 
 
-一个简洁的代码规范(想偷懒的话直接用pylint 和 autopep8 过一遍):
+一个简洁的代码规范(想偷懒的话直接用pylint 和 autopep8 过一遍，强烈建议项目开始的时候就使用 pylint 检测代码，保持 clean code):
 
 - 格式请遵守pep8,务必开启编辑器的pylint和pep8检测。vim请试试python-mode插件，现在不过一下 pylint 都不太敢提交代码了，动态语言太容易出错。
 - 业务逻辑应该限制一些过于灵活的特性，防止代码难以维护。比如元编程，随意的设置属性等，尽量保持业务代码易维护、易修改、易测试。
