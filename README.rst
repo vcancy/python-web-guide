@@ -39,12 +39,12 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
 
 TODO:
 =================================================================
-您的打赏就是我写作的最大动力，呵呵哒！
+您的微信打赏就是我写作的最大动力，呵呵哒！
 
 - 面试题指南（包括python、数据结构与算法、http、Linux、数据库、web 框架、系统设计等常考点）
 
 .. raw:: html
 
    <center>
-    <img src="http://7ktuty.com1.z0.glb.clouddn.com/weixin_dashang.png" alt="微信打赏" width=260 height=300>
+    <img src="https://user-images.githubusercontent.com/4470478/47126924-74800900-d2bd-11e8-8f24-6d03ddafbc07.png" alt="微信打赏" width=260 height=300>
    </center>
