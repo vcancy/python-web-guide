@@ -30,6 +30,7 @@
 - autojump。方便在命令行里来回跳转目录。
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
 - tig: text-mode interface for git. 喜欢命令行的可以尝试下。 https://github.com/jonas/tig
+- git-extras: 提供了很多方便的 git 工具，比如 git summary 可以输出代码的提交统计。https://github.com/tj/git-extras
 - tldr: 更好的man手册
 - EditorConfig: http://editorconfig.org/ 用来统一编辑器配置。如果成员用不同的操作系统和编辑器，建议使用。尤其是对于 python 这种使用缩进的语言
 - mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
