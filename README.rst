@@ -24,12 +24,13 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
 
 .. code-block:: python
 
+    # 本项目页面托管在 readthedoc，如果国内因为网络原因打不开，可以使用如下方式在本地构建
     git clone https://github.com/PegasusWang/python-web-guide.git    # 协作请fork一份你自己的地址
-    pip install -r requeirements.txt
-    make html
-    python3.4 -m http.server
-    or
-    python -m SimpleHTTPServer    # open _build/html
+    pip install -r requeirements.txt  # 安装 Sphinx==1.3.4
+    make html   # 构建 html 电子书，之后会在本地生成一个 _build/html 文件夹
+    cd _build/html   # 切换到构建好的 html 静态文件夹里
+    python3 -m http.server  # 启动一个本地文件服务器，或者 python2 用 python -m SimpleHTTPServer
+    # 之后打开 http://127.0.0.1:8000/ 即可本地访问电子书
 
 文档采用rst格式书写，用 `readthedocs <https://readthedocs.org/>`_ 托管。一个快速的rst语法demo `教程 <http://azuwis.github.io/sphinx_demo/demo.html>`_。 如果使用vim编写可以使用rst插件 `riv.vim <https://github.com/Rykka/riv.vim>`_ 配合 `InstantRst <https://github.com/Rykka/InstantRst>`_ 本地预览，定期pull一下拉取更新。
 欢迎你fork一份然后添加自己的章节，本书主要面对经验尚浅的同学作为自学的指导手册，并非速成指南，内容来自笔者工作经验总结。
