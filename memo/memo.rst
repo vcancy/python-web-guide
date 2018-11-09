@@ -104,6 +104,12 @@ IPython
    ipython.magic("load_ext autoreload")
    ipython.magic("autoreload 2")
 
+   # Ipython 技巧，如何查询文档，比如 time.time 方法的文档
+   # https://jakevdp.github.io/PythonDataScienceHandbook/01.01-help-and-documentation.html
+   >>> import time
+   >>> time.time?  # 回车之后可以输出该函数的 docstring 文档
+   >>> time.time??  # 回车之后可以输出该函数的定义
+
 
 Ipdb
 ---------------------------------------------------------------
