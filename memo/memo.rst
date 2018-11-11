@@ -182,8 +182,10 @@ Mac
 .. code-block:: python
 
    # https://stackoverflow.com/questions/17651017/python-post-osx-notification
-   # 配合 crontab 可以用来做一个简单的定时任务提醒功能
+   # 配合 crontab 可以用来做一个简单的定时任务提醒功能 57-59 17 * * * python ~/.tmp/noti.py
 
+
+   # ~/.tmp/noti.py
    import os
 
    def notify(title, text):
