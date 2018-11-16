@@ -488,6 +488,8 @@ Git
     # 如果一个文件已经被 git 跟踪但是你之后又不想提交针对它的修改了，可以这么做（比如我想修改一些配置，本地 debug 等）
     git update-index --assume-unchanged <file>    # 忽略一个已经 tracked 的文件，修改后不会被 commit
     git update-index --no-assume-unchanged <file>   # undo 上一步
+    # 那如何列出这些文件呢？ https://stackoverflow.com/questions/2363197/can-i-get-a-list-of-files-marked-assume-unchanged
+    git ls-files -v | grep '^[[:lower:]]'
 
 
 Git工作流
