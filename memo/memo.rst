@@ -483,6 +483,12 @@ Git
     # https://stackoverflow.com/questions/17933401/how-do-i-remove-deleted-branch-names-from-autocomplete?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
     git fetch --prune --all
 
+    # https://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore
+    # https://wildlyinaccurate.com/git-ignore-changes-in-already-tracked-files/
+    # 如果一个文件已经被 git 跟踪但是你之后又不想提交针对它的修改了，可以这么做（比如我想修改一些配置，本地 debug 等）
+    git update-index --assume-unchanged <file>    # 忽略一个已经 tracked 的文件，修改后不会被 commit
+    git update-index --no-assume-unchanged <file>   # undo 上一步
+
 
 Git工作流
 ------------
