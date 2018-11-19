@@ -26,3 +26,11 @@ pdf: latex
 
 clean:
 	rm -rf build
+
+.PHONY: livehtml
+livehtml:
+	sphinx-autobuild -b html $(SPHINXOPTS) $(BUILD_DIR)/html
+
+.PHONY: serve
+serve:
+	sphinx-autobuild -b html $(SPHINXOPTS) $(BUILD_DIR)/html
