@@ -491,6 +491,10 @@ Git
     # 那如何列出这些文件呢？ https://stackoverflow.com/questions/2363197/can-i-get-a-list-of-files-marked-assume-unchanged
     git ls-files -v | grep '^[[:lower:]]'
 
+    # https://stackoverflow.com/questions/48341920/git-branch-command-behaves-like-less
+    # 禁止 git brach 的时候使用交互式
+    git config --global pager.branch false
+
 
 Git工作流
 ------------
