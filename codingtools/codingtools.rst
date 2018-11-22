@@ -116,6 +116,7 @@ Chrome 插件
 - gitlab
 - Travis CI
 - Jenkins
+- Sonar: https://www.sonarqube.org/ 代码质量管理
 
 Api 工具
 --------------------------------------
