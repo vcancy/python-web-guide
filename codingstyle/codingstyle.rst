@@ -672,7 +672,7 @@ Code Review(代码复查)
     - 是否健壮（安全性、性能、异常捕获）
     - 必要的文档和注释（意图，外部链接需要注上）
     - 可读性和可维护性(是否有过于复杂的逻辑)
-    - commit 信息（commit信息是否准确，比如附上 jira 或者需求文档地址，bug 地址等，有迹可循, 目前团队加上了提交模板，对于 bug fix、新特性、重构等都需要填写对应的模板信息 https://www.conventionalcommits.org/zh/v1.0.0-beta.2/）
+    - commit 信息（commit信息是否准确，比如附上 jira 或者需求文档地址，bug 地址等，你的代码变动都应该有迹可循, 目前团队加上了提交模板，对于 bug fix、新特性、重构等都需要填写对应的模板信息 https://www.conventionalcommits.org/zh/v1.0.0-beta.2/）
     - 代码洁癖要适度，如果代码遵守了规范并能正确解决问题，就不要吹毛求疵。review 过程中出现分歧是很常见的，每个人都有自己的编码习惯。如果出现难以解决的分歧，可以列出优劣表格，对各自的方式有一个量化的分析（比如从实现难度、可读性、可扩展性、可维护性等方面打分）。如果无伤大雅，不必吹毛求疵。
 
 * `《https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html》 <https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html>`_
