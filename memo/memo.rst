@@ -84,13 +84,23 @@ IPython
        pass
 
    print("(imported datetime, os, pprint, re, sys, time, json)")
-   pp = pprint.pprint
 
+   def _json_dumps(dict_data, indent=4):
+       """用来处理一些包含中文的 json 输出"""
+       print(json.dumps(dict_data, indent=indent, ensure_ascii=False))
 
-   def repr_dict(d):
+   def _repr_dict(d):
        """https://stackoverflow.com/questions/25118698/print-python-dictionary-with-utf8-values"""
-       print '{%s}' % ',\n'.join("'%s': '%s'" % pair for pair in d.iteritems())
+       print('{%s}' % ',\n'.join("'%s': '%s'" % pair for pair in d.iteritems()))
 
+   def _json_dumps(dict_data, indent=4):
+       """用来处理一些包含中文的 json 输出"""
+       print(json.dumps(dict_data, indent=indent, ensure_ascii=False))
+
+
+   repr_dict = _repr_dict
+   pp = pprint.pprint
+   json_dumps = _json_dumps
 
    # http://shawnleezx.github.io/blog/2015/08/03/some-notes-on-ipython-startup-script/
    """
