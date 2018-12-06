@@ -23,7 +23,7 @@
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题，支持插件。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
-- Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
+- Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件(比如直接输入app名前缀快速切换不同app)。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
 - Dash(mac): 强悍的文档查询工具。支持非常多编程语言和框架
 - devdocs.io: 文档查询工具
 - Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements
@@ -34,6 +34,7 @@
 - tldr: 更好的man手册
 - EditorConfig: http://editorconfig.org/ 用来统一编辑器配置。如果成员用不同的操作系统和编辑器，建议使用。尤其是对于 python 这种使用缩进的语言
 - mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
+- CheatSheet: https://www.mediaatelier.com/CheatSheet/ 显示 mac 快捷键
 
 一定要有个趁手的开发工具(它甚至比你女朋友都重要)，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道(提升编辑效率的秘诀在于多用键盘快捷键，少用鼠标，以及可以高度定制、和扩展功能的编辑器)。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1', 'l', 'I', '0', 'O', 'S', '5'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。最后注意你用编辑器的话一定要用 pylint，pep8 检测插件，否则不遵守规范可能会导致用 IDE 打开项目后一堆警告(别人会想问候你祖宗的)。
 更多 mac 工具可以参考：https://github.com/jaywcjlove/awesome-mac 。搜 awesome-python 或者 awesome-flask 等有很多类似项目。
@@ -95,6 +96,7 @@ Chrome 插件
 - pigar: 找出项目使用到的依赖库
 - buildout: 项目构建工具
 - pyenv/virtualenv/pipenv：多版本管理
+- cloc: 命令行代码行数统计工具
 
 
 代码仓库托管
@@ -115,6 +117,7 @@ Chrome 插件
 - gitlab
 - Travis CI
 - Jenkins
+- Sonar: https://www.sonarqube.org/ 代码质量管理
 
 Api 工具
 --------------------------------------
@@ -193,6 +196,8 @@ DSL
 - tornado: 异步的 http client 可以写爬虫
 - redis/celery: 实现队列、异步爬虫。异步方案也比较多
 - phantomjs/puppeteer: 用来处理动态网站。puppeteer 基于 nodejs
+- portia: 类似造数、八爪鱼之类的可视化爬虫 https://github.com/scrapinghub/portia
+
 
 异步任务框架
 --------------------------------------
@@ -257,7 +262,7 @@ Profiler
 --------------------------------------
 - 番茄工作法：人长期专注的时间是有限的，找到适合自己的最佳番茄钟，并且每个时间段都专注于一件事，每件事分清轻重缓急，要事优先。在休息时间处理喝水、上厕所等杂事，做几个深呼吸给脑瓜子充点氧，或者活动下筋骨，眺望下远处。预防职业病（最近有看到工程师视网膜脱落的，要重视身体健康）。
 - teambiation/trello: todo list 工具，管理任务。今天做了什么；计划做什么；哪些困难导致工作被阻塞(实在搞不定的记下来及时向同事求助)；发现了什么问题；今天学到了什么。(类似于开发日志之类的玩意，每天都是真正做了事情的，并且最好每天都是学到了新东西的)。有时候一些小灵感或者解决问题的思路在没有纸笔的情况下也能迅速记录到工具里，防止遗忘。
-- 降噪耳机和音乐：选择类似于《阿尔法波高效记忆音乐》《巴洛克学习音乐》等，能帮助你隔绝噪音。反正笔者听歌的时候会想歌词反而会打扰思路，一般就是听这种不怎么让你瞎想的音乐。降噪耳机如果不差钱可以考虑主动降噪耳机，效果好一些。
+- 降噪耳机和音乐：选择类似于《阿尔法波高效记忆音乐》《巴洛克学习音乐》等，能帮助你隔绝噪音，或者你可以在youtube等网站搜索到很多类似工作或学习音乐。反正笔者听歌的时候会想歌词反而会打扰思路，一般就是听这种不怎么让你瞎想的音乐。降噪耳机如果不差钱可以考虑主动降噪耳机，效果好一些。
 - 复盘。无论是写代码、做需求、改bug等，事后反思总结。分析并且记录耗时的地方和可以改进的地方(怎么让自己涨点记性，整理 checklist)，对于一些错误或者坑也可以记录成文档当做团队的知识财富。
 - zapier: https://zapier.com/ 一个连接 app 自动化工作流的工具，比如可以用来定期提醒发邮件等，非程序员也能实现定时任务啦
 
