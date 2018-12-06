@@ -600,6 +600,19 @@ vim
    # Reveal.js - Jupyter/IPython Slideshow Extension, also known as live_reveal
    # https://github.com/damianavila/RISE
 
+
+PPT
+-------------------------------------------------------------
+
+
+.. code-block:: shell
+
+   # 如何粘贴代码到 PPT 里边，转成 rtf
+   # https://superuser.com/questions/85948/how-can-i-embed-programming-source-code-in-powerpoint-slide-and-keep-code-highli
+   # pip install Pygments
+   pygmentize -f rtf code.py | pbcopy
+
+
 Benchmark
 -------------------------------------------------------------
 
