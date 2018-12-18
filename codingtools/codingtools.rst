@@ -26,7 +26,7 @@
 - Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件(比如直接输入app名前缀快速切换不同app)。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
 - Dash(mac): 强悍的文档查询工具。支持非常多编程语言和框架
 - devdocs.io: 文档查询工具
-- Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements
+- Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements 可以用来禁用内置键盘
 - autojump。方便在命令行里来回跳转目录。
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
 - tig: text-mode interface for git. 喜欢命令行的可以尝试下。 https://github.com/jonas/tig
