@@ -23,8 +23,9 @@ Python
    # pyenv 安装多个版本的 python : https://github.com/pyenv/pyenv
    # pyenv-virtualenv https://github.com/pyenv/pyenv-virtualenv
 
-   # 格式化 json
+   # 格式化 json，这个可以配置在 vim 里用来格式化当前 json 文本
    cat some.json | python -m json.tool
+
 
 Pip
 ---------------------------------------------------------------
@@ -44,6 +45,17 @@ Pip
 
 IPython
 ---------------------------------------------------------------
+
+.. code-block:: sh
+
+   # ipython 如何使用 autoreload，每次重新修改了文件都得重新重启 ipython 很麻烦，解决方式
+   # https://support.enthought.com/hc/en-us/articles/204469240-Jupyter-IPython-After-editing-a-module-changes-are-not-effective-without-kernel-restart
+   # https://stackoverflow.com/questions/1254370/reimport-a-module-in-python-while-interactive
+   # http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html
+   In [1]: %load_ext autoreload
+   In [2]: %autoreload 2
+
+
 .. code-block:: python
 
    # -*- coding: utf-8 -*-
@@ -72,12 +84,42 @@ IPython
        pass
 
    print("(imported datetime, os, pprint, re, sys, time, json)")
-   pp = pprint.pprint
 
+   def _json_dumps(dict_data, indent=4):
+       """用来处理一些包含中文的 json 输出"""
+       print(json.dumps(dict_data, indent=indent, ensure_ascii=False))
 
-   def repr_dict(d):
+   def _repr_dict(d):
        """https://stackoverflow.com/questions/25118698/print-python-dictionary-with-utf8-values"""
-       print '{%s}' % ',\n'.join("'%s': '%s'" % pair for pair in d.iteritems())
+       print('{%s}' % ',\n'.join("'%s': '%s'" % pair for pair in d.iteritems()))
+
+   def _json_dumps(dict_data, indent=4):
+       """用来处理一些包含中文的 json 输出"""
+       print(json.dumps(dict_data, indent=indent, ensure_ascii=False))
+
+
+   repr_dict = _repr_dict
+   pp = pprint.pprint
+   json_dumps = _json_dumps
+
+   # http://shawnleezx.github.io/blog/2015/08/03/some-notes-on-ipython-startup-script/
+   """
+   !!! 注意，如果遇到了 TypeError: super(type, obj): obj must be an instance or subtype of type
+   请禁用 autoreload, http://thomas-cokelaer.info/blog/2011/09/382/
+   """
+   from IPython import get_ipython
+   ipython = get_ipython()
+
+   # ipython.magic("pylab")
+   ipython.magic("load_ext autoreload")
+   ipython.magic("autoreload 2")
+
+   # Ipython 技巧，如何查询文档，比如 time.time 方法的文档
+   # https://jakevdp.github.io/PythonDataScienceHandbook/01.01-help-and-documentation.html
+   >>> import time
+   >>> time.time?  # 回车之后可以输出该函数的 docstring 文档
+   >>> time.time??  # 回车之后可以输出该函数的定义
+
 
 Ipdb
 ---------------------------------------------------------------
@@ -121,13 +163,39 @@ Mac
    # 从终端查 wifi 密码, https://apple.stackexchange.com/questions/176119/how-to-access-the-wi-fi-password-through-terminal
    security find-generic-password -ga "ROUTERNAME" | grep "password:"
 
+   # XXX.APP已损坏,打不开.你应该将它移到废纸篓 MACOS 10.12 SIERRA
+   sudo spctl --master-disable
+
+   # 使用 mounty 挂载 ntfs 盘，Item "file.mov" is used by Mac OS X and cannot be opened.
+   # https://apple.stackexchange.com/questions/136157/mov-file-in-external-hd-greyed-out-and-wont-open-this-item-is-used-by-mac-o?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+   cd /Volumes/[drive name]
+   xattr -d com.apple.FinderInfo *
+   # or
+   SetFile -c "" -t "" path/to/file.mov
+
+   # mac 使用命令挂载
+   diskutil mount /dev/disk1s2
+   diskutil unmount /dev/disk1s2
+
+   # 使用 rmtrash 删除到 trash，防止危险的 rm 删除命令找不回来。在 bashrc or zshrc alias rm='rmtrash '
+   brew install rmtrash
+
+   # 增加 terminal 光标移动速度, https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal
+   defaults write NSGlobalDomain KeyRepeat -int 1
+
+   # 如何在文件更新之后自动刷新浏览器，需要首先 pip 安装 when-changed
+   alias flush_watch_refresh_chrome=" when-changed -v -r -1 -s ./ osascript -e 'tell application \"Google Chrome\" to tell the active tab of its first window to reload' "
+
 
 如何发送 mac 通知，可以用来做提示
 
 .. code-block:: python
 
    # https://stackoverflow.com/questions/17651017/python-post-osx-notification
+   # 配合 crontab 可以用来做一个简单的定时任务提醒功能 57-59 17 * * * python ~/.tmp/noti.py
 
+
+   # ~/.tmp/noti.py
    import os
 
    def notify(title, text):
@@ -136,6 +204,11 @@ Mac
                  """.format(text, title))
 
    notify("开会啦", "Go Go Go !!!")
+
+Proxy
+---------------------------------------------------------------
+
+mac电脑下设置socks5代理 https://blog.csdn.net/fafa211/article/details/78387899
 
 
 Zsh
@@ -296,6 +369,21 @@ Tmux
    bind -n C-k select-pane -U
    bind -n C-l select-pane -R
 
+   # https://stackoverflow.com/questions/22138211/how-do-i-disconnect-all-other-users-in-tmux
+   tmux a -dt <session-name>
+
+   # 如何 ssh 后自动 attach 到某个 session
+   if [[ "$TMUX" == "" ]] && [[ "$SSH_CONNECTION" != "" ]]; then
+       # Attempt to discover a detached session and attach it, else create a new session
+       WHOAMI="lens"   # attach 的 session 名称
+       if tmux has-session -t $WHOAMI 2>/dev/null; then
+           tmux -2 attach-session -t $WHOAMI
+       else
+           tmux -2 new-session -s $WHOAMI
+       fi
+   fi
+
+
 SSH
 -------------------------------------------------------------
 
@@ -346,8 +434,9 @@ Git
     # 手残 add 完以后输入错了 commit 信息
     git commit --amend
 
-    # 撤销 add （暂存）
+    # 撤销 add （暂存），此时还没有 commit。比如 add 了不该 add 的文件
     git reset -- file
+    git reset # 撤销所有的 add
 
     # 撤销修改
     git checkout -- file
@@ -404,6 +493,22 @@ Git
     # 拉取别人远程分支，在 .git/config 里配置好
     git fetch somebody somebranch
     git checkout -b somebranch origin/somebranch
+
+    # prune all the dead branches from all the remotes
+    # https://stackoverflow.com/questions/17933401/how-do-i-remove-deleted-branch-names-from-autocomplete?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+    git fetch --prune --all
+
+    # https://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore
+    # https://wildlyinaccurate.com/git-ignore-changes-in-already-tracked-files/
+    # 如果一个文件已经被 git 跟踪但是你之后又不想提交针对它的修改了，可以这么做（比如我想修改一些配置，本地 debug 等）
+    git update-index --assume-unchanged <file>    # 忽略一个已经 tracked 的文件，修改后不会被 commit
+    git update-index --no-assume-unchanged <file>   # undo 上一步
+    # 那如何列出这些文件呢？ https://stackoverflow.com/questions/2363197/can-i-get-a-list-of-files-marked-assume-unchanged
+    git ls-files -v | grep '^[[:lower:]]'
+
+    # https://stackoverflow.com/questions/48341920/git-branch-command-behaves-like-less
+    # 禁止 git brach 的时候使用交互式
+    git config --global pager.branch false
 
 
 Git工作流
@@ -482,6 +587,15 @@ vim
    :windo diffthis
    :diffoff!
 
+   # 解决中文输入法的问题
+   # https://www.jianshu.com/p/4d81b7e32bff
+   # https://zhuanlan.zhihu.com/p/23939198
+
+   # 如果跳转到跳转之前的位置, https://vi.stackexchange.com/questions/2001/how-do-i-jump-to-the-location-of-my-last-edit
+   # 使用场景：比如在当前函数里使用了logging，发现logging import，我会跳转到文件头去 import logging，编辑完后进入normal模式使用  `` 就可以跳转到之前编辑位置
+   `` which will bring you back to where the cursor was before you made your last jump. See :help `` for more information.
+
+
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
 用markdown文件制作html ppt
@@ -505,6 +619,19 @@ vim
    # Reveal.js - Jupyter/IPython Slideshow Extension, also known as live_reveal
    # https://github.com/damianavila/RISE
 
+
+PPT
+-------------------------------------------------------------
+
+
+.. code-block:: shell
+
+   # 如何粘贴代码到 PPT 里边，转成 rtf
+   # https://superuser.com/questions/85948/how-can-i-embed-programming-source-code-in-powerpoint-slide-and-keep-code-highli
+   # pip install Pygments
+   pygmentize -f rtf code.py | pbcopy
+
+
 Benchmark
 -------------------------------------------------------------
 
@@ -512,6 +639,86 @@ Benchmark
 
     sudo apt-get install apache2-utils
     ab -c 并发数量 -n 总数量 url
+
+Ffmpeg
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+   # brew install youtube-dl
+   # https://askubuntu.com/questions/486297/how-to-select-video-quality-from-youtube-dl
+   # http://www.cnblogs.com/faunjoe88/p/7810427.html
+   youtube-dl -F "http://www.youtube.com/watch?v=P9pzm5b6FFY"
+   youtube-dl -f 22 "http://www.youtube.com/watch?v=P9pzm5b6FFY"
+   youtube-dl -f bestvideo+bestaudio "http://www.youtube.com/watch?v=P9pzm5b6FFY"
+
+   # 截取视频
+   ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 -c copy output.mp4
+   # https://gist.github.com/PegasusWang/11b9203ffa699cd8f07e29559cc4d055
+   # 截图
+   ffmpeg -ss 00:10:00 -i "Apache Sqoop Tutorial.mp4" -y -f image2 -vframes 1 test.png
+
+   # 连接视频
+   $ cat input.txt
+   file '/path/to/file1'
+   file '/path/to/file2'
+   file '/path/to/file3'
+   # 注意用 -safe 0
+   ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4
+
+   # youtube-dl 下载音频: https://askubuntu.com/questions/178481/how-to-download-an-mp3-track-from-a-youtube-video
+   youtube-dl --extract-audio --audio-format mp3 <video URL>
+
+.. code-block:: python
+
+   # 脚本下载 youtube 视频
+   #!/usr/bin/env python
+   # -*- coding:utf-8 -*-
+
+   # pip install youtube_dl，如果报错尝试升级
+   # pip install --upgrade youtube_dl
+   from __future__ import unicode_literals
+   import youtube_dl
+
+
+   class MyLogger(object):
+       def debug(self, msg):
+           pass
+
+       def warning(self, msg):
+           pass
+
+       def error(self, msg):
+           print(msg)
+
+
+   def my_hook(d):
+       if d['status'] == 'finished':
+           print('Done downloading, now converting ...')
+
+
+   ydl_opts = {
+       'format': 'bestaudio/best',
+       'postprocessors': [{
+           'key': 'FFmpegExtractAudio',
+           'preferredcodec': 'mp3',
+           'preferredquality': '192',
+       }],
+       'logger': MyLogger(),
+       'progress_hooks': [my_hook],
+   }
+   with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+       url = 'https://www.youtube.com/watch?v=48VSP-atSeI'
+       ydl.download([url])
+
+Curl
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+   # 记录 curl 过程, https://askubuntu.com/questions/944788/how-does-curl-print-to-terminal-while-piping
+   curl -v http://httpbin.org/headers > t.txt 2>&1
+
 
 * `《Linux工具快速教程》 <https://linuxtools-rst.readthedocs.io/zh_CN/latest/>`_
 * `《slide show》 <http://slideshow-s9.github.io/>`_

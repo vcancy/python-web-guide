@@ -30,7 +30,7 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
 
 * `《Python3 Cookbook》 <http://python3-cookbook.readthedocs.io/>`_ Python进阶读物，汇集了很多技巧。
 
-* `《Python高级编程》 <http://dongweiming.github.io/Expert-Python/>`_ 豆瓣工程师董伟明先生写的python高级编程 ppt
+* `《Dabeaz》 <http://www.dabeaz.com/>`_ Python 培训领域 number one，Pycon 常客，有很多高质量的教程
 
 
 当然还有Python的官方文档作为参考，不过有些文档比较晦涩，还是推荐书籍入门。网上目前也可以搜到很多免费的电子书。
@@ -43,9 +43,10 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
 推荐书籍:
 
 * `《Python 算法与数据结构中文教程》 <https://github.com/PegasusWang/python_data_structures_and_algorithms>`_ 笔者自己撸的一个教程，包含免费的讲义和代码以及付费视频。
+* `《网易云课堂-Python 算法与数据结构教程》 <http://study.163.com/course/introduction.htm?courseId=1005526003>`_ Python 算法和数据结构视频教程
 * `《算法图解》 <https://book.douban.com/subject/26979890/>`_
-* `《算法导论》 <https://book.douban.com/subject/20432061/>`_
-  你可以挑选感兴趣的章节啃一啃，也可以去网易公开课看下视频教程。如果不是计算机专业的可以看下《计算机科学导论》这门公开课，正好也是以Python语言讲解的。
+* `《算法导论》 <https://book.douban.com/subject/20432061/>`_  你可以挑选感兴趣的章节啃一啃，也可以去网易公开课看下视频教程。如果不是计算机专业的可以看下《计算机科学导论》这门公开课，正好也是以Python语言讲解的。
+* `《awesome-algorithm》 <https://github.com/PegasusWang/awesome-algorithm>`_
 
 
 计算机网络
@@ -59,6 +60,8 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
 * `《网络爬虫教程》 <https://piaosanlang.gitbooks.io/spiders/01day/README1.html>`_
   非常不错的爬虫教程。感谢原作者，其实感觉这种把学习的内容总结成小书的方式很好。
 * `《Python3 网络爬虫实战》 <https://germey.gitbooks.io/python3webspider/>`_
+* `《使用 Flask-RESTful 设计 RESTful API》 <http://www.pythondoc.com/flask-restful/second.html>`_
+* `《restful-api-guidelines》 <https://opensource.zalando.com/restful-api-guidelines/index.html#table-of-contents>`_
 
 
 Linux系统
@@ -76,9 +79,19 @@ Linux系统
 
 数据库
 ----------
-现在网站业务后端用得比较多的有三种类型的数据库，关系型数据库（mysql等），文档型数据库（mongodb等），和内存型数据库（redis等）。三种数据库各有优势和其使用场景，后端程序员需要了解下不同类型数据库的使用方法和应用场景，灵活应用到后端代码中。
-关于各种数据库网上已经有不少资料，读者可以自行搜索学习，mysql 和 redis（包括使用、设计、优化）是重中之重。
+了解常用的关系型和非关系型(NoSQL, Not Only SQL)的数据库的使用。
+现在网站业务后端用得比较多的数据库:
+
+- 传统关系型数据库（mysql等），使用广泛，不够灵活
+- 内存型(k-v型)数据库（redis等）
+- 文档型数据库（mongodb等）
+- 列式存储(HBase)，大数据场景下的 IO 问题
+- 全文搜索型(Elasticsearch)
+
+每种数据库各有优势和其使用场景，后端程序员需要了解下不同类型数据库的使用方法和应用场景，灵活应用到后端存储设计之中。
+关于各种数据库网上已经有不少资料，读者可以自行搜索学习，mysql 和 redis（包括使用、设计、优化）是重中之重。可以看看《Mysql 必知必会》和《Redis 实战》
 对大数据感兴趣的可以学习下 Hadoop 生态系统。
+
 
 * `《Designing Data-Intensive Applications》 <https://book.douban.com/subject/26197294/>`_
   了解各种数据存储模型，本书覆盖面很广，适合有一定基础的人阅读
@@ -147,6 +160,7 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 推荐一些文章供参考:
 
 
+* `《2018 Python Web 学习路线图[视频]》 <https://zhuanlan.zhihu.com/p/36267942>`_
 * `《全栈增长工程师指南》 <https://github.com/phodal/growth-ebook>`_
 * `《web开发路线图》 <http://skill.phodal.com/>`_
 * `《后端都要学习什么？》 <https://www.zhihu.com/question/24952874>`_
@@ -171,25 +185,57 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 - 在 linux server 部署你的 python web 服务。你需要学习 linux 常用命令，web 服务器 nginx 等。最好能独立部署一个网站出来。(笔者经常安利 linux 或者 mac，即使不用来作为开发环境，也要熟悉 linux 命令，能帮助你在服务器上快速修改和调试代码)
 - 对照招聘网站中意的公司的招聘需求查漏补缺。初期就是要多学多练多 google，不是做项目就是在刷题。可以做一些博客、论坛、管理后台等小网站练手。
 - 老实说相比 java 和 php，python 后端岗位是比较少的，如果你学完了还没找到工作然后来臭骂我一顿我会感觉委屈的。我个人倾向于 python 是因为真爱，并且学习python 性价比很高，可以做很多事。如果你觉得不好找工作或者只是把 python 当玩具玩(比如用 pandas 分析自己的投资收益，回测等)，换个语言和技术栈后端路线图基本上还是这些，不会白学的。
-- 建议坚持写技术博客，学习笔记等。你可以使用 hexo 之类的静态博客，或者知乎专栏等现成的服务，或者 readthedoc、gitbook 之类的文档工具。好的技术博客是找工作的一大加分项，笔者工作以后依然坚持写博客记录日常所学，可以是读书笔记、学习心得、对某个技术的理解和实践、甚至是备忘录等。
+- 建议坚持写技术博客，学习笔记等，总结输出(比如所谓的费曼学习法就是强调你要把学到的讲给别人听才是真正理解了)。你可以使用 hexo 之类的静态博客，或者知乎专栏等现成的服务，或者 readthedoc、gitbook 之类的文档工具。好的技术博客是找工作的一大加分项，笔者工作以后依然坚持写博客记录日常所学，可以是读书笔记、学习心得、对某个技术的理解和实践、甚至是备忘录等。
 - 进阶建议：看《Fluent Python》 之类的进阶书籍；看优秀的源码，比如 python 一些内置库，flask 等优秀的框架源码(可以用 gitx 之类的工具从代码的最初提交开始看起)，能学到很多惯用法和稍微底层一些的东西。尝试仿写，比如实现个简单的 web 小框架，大概就了解框架的运行原理了。
+
+* `《How to be a Programmer 中文版》 <https://braydie.gitbooks.io/how-to-be-a-programmer/content/zh/>`_
+
 
 求职与面试
 ------------
-最近笔者也开始当面试官了，之前求职的时候每次面试都会充分准备（当然也挂过很多次），提前一个月左右开始回顾重点理论知识(看面试相关的书)，刷常用算法，练习手写代码，看相对岗位的招聘需求等。最近面试就发现很多面试者无论是否是有经验都准备不足，忽略了基础知识。
+之前求职的时候每次面试都会充分准备（自己挂过很多次），提前一个月左右开始回顾重点理论知识(看面试相关的书)，刷常用算法，练习手写代码，看相对岗位的招聘需求等。最近面试就发现很多面试者无论是否是有经验都准备不足，忽略了基础知识。
 如果没有知名公司或者项目相关背景，很多招聘要求比较高的公司都会比较看重理论基础和学习能力。公司最好能有一份针对初级、中级、高级岗位的题目，尽量覆盖面广泛、难度适中，防止因为面试官的个人喜好影响面试结果。
 
 - 电子简历尽量用 pdf 格式，方便跨平台打开。doc 等格式在不同的电脑上打开会有排版问题，很多后端技术面试官可能使用的是 mac 或者 linux。
 - 提前复习回顾重点知识，防止卡在基础上。比如 mac 下著名的 brew 工具作者面试 google 就因为没写出来反转二叉树被拒，后来去了苹果😂.(这就只能看人品和运气和眼缘了，如果没见到二面面试官或者 hr，大概率是挂了)。（树、链表、哈希表、二分、快排、TCP/UDP、HTTP、数据库ACID、索引优化等常考点）。
 - 白板编程，练习在纸上手写代码。虽然很多求职者都很抵触手写代码，但是白板编程确实是一种比较好的区分方式。你的思考过程、编码习惯、编码规范等都能看出来。
+- 如果被问到工程里不会使用但是比较刁钻的算法题，建议你和面试官沟通的时候问问这个算法或者题目在开发中有哪些实际使用场景，看看对方怎么说😎。
 - 面试的时候准备充分，简历要与招聘方需求对等。笔者每次面试都会带上白纸、笔、简历、电脑等，即使面试没过，至少也让面试官感觉我是有诚意的，给对方留下好印象。
 - 加分项：github、个人技术博客、开源项目、技术论坛帐号等，让面试官有更多渠道了解你，有时候仅仅根据几十分钟的面试来评判面试者是有失偏颇的。（比如面试者临场发挥不好；面试官个人偏好；会的都不问，问的都不会等）
 
 * `《interview_python》 <https://github.com/taizilongxu/interview_python>`_ python 面试题
-* `《程序员面试金典》 <https://github.com/taizilongxu/interview_python>`_ 程序员面试
+* `《程序员面试金典》 <https://github.com/taizilongxu/interview_python>`_ 程序员面试，很多公司会比较重视基础知识
+* `《Python后端工程师必备技能》 <http://skycrab.github.io/PythonEngineer>`_
+
 
 系统设计进阶
 ------------
 对于有经验的工程师来说，系统设计也是一项重要的能力（也是除了存储系统、程序设计、网络通讯、操作系统之外经常被面试考到的）。比如设计一个短网址服务、简单的 feed 流系统、推荐系统、发号器服务等。笔者也处于学习中，推荐个资料供参考：
+(其实中高级后端涉及的其他东西还挺多的，系统设计、大数据存储、消息队列、分布式、缓存、并发优化、软件工程等)
 
+* `《backend-architectures》 <https://gist.github.com/PegasusWang/91294caa0ab26a5c67b9b52d56178905>`_
+* `《http://highscalability.com/》 <http://highscalability.com/>`_
+* `《https://github.com/PegasusWang/system-design-interview》 <https://github.com/PegasusWang/system-design-interview>`_
 * `《https://github.com/PegasusWang/system-design-primer》 <https://github.com/PegasusWang/system-design-primer>`_ 关于系统设计和架构设计相关的资料
+* `《系统设计(System Design)》<https://legacy.gitbook.com/book/soulmachine/system-design/details>`_   常见系统设计题目
+
+
+Web 开发常用 Python 库
+----------------------------------------
+列举平常开发常用的一些库和框架(你可以很容易 google 到它们的用法)，你不必一开始就掌握它们，但需要的时候了解它们的用法会大大提升你的开发效率，
+在开发工具章节我还会列举到更多能够提升开发效率的工具。
+
+- web 框架：Django/Flask/Tornado
+- ORM: sqlalchemy, Peewee
+- 表单验证：WTForms
+- 数据处理和分析：Numpy, Pandas, Matplotlib
+- 异步：celery, asyncio, tornado
+- 并发：gevent, threading, concurrent.futures
+- 部署：uwsgi, gunicorn
+- html 处理: lxml, beautifulsoup
+- 爬虫：requests, Scrapy
+- 单元测试：unittest, nose, pytest
+- 图片处理：pillow
+- python2/3 兼容：six, 2to3
+- 代码检测：autopep8, pylint, flake8, mypy(python3)
+- 调试：Ipython, Ipdb, pdbpp
